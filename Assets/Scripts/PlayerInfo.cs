@@ -14,7 +14,6 @@ public class PlayerInfo : MonoBehaviour
     //Загрузка спрайтов
     void Awake()
     {
-        Debug.Log(Application.dataPath);
  
         skinRender.sprite = skin;
         headRender.sprite = head;
