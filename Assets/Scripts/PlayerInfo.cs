@@ -7,14 +7,14 @@ public class PlayerInfo : MonoBehaviour
     public double HP;
     public int score;    
 
-    public Sprite skin, head;
-    public SpriteRenderer skinRender, headRender; 
+    public Sprite skin;
+    public SpriteRenderer skinRender;
 
 
     //Загрузка спрайтов
     void Awake()
     {
         skinRender.sprite = skin;
-        headRender.sprite = head;
+
     }
 }

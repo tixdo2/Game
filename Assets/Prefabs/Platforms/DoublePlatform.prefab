@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3523935300282904067}
   - component: {fileID: 1663399274}
   - component: {fileID: 8902673992157308048}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DoublePlatform
   m_TagString: 2
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550113364340138423}
   - component: {fileID: 3118364800102456331}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlatformLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8591849290601044944}
   - component: {fileID: 964078617553755186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlatformRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

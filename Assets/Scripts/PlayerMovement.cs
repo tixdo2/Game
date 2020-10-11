@@ -6,43 +6,59 @@ public class PlayerMovement : MonoBehaviour
 {
     public float horizontalSpeed;
     public float verticalImpulse;
-    //public Transform groundCheck;
     public LayerMask whatIsGround;
-    //public float checkRadius;
 
     private float moveInput;
-    //private bool isGrounded=true;
+    private bool isGrounded=true;
     private bool facingRight = true;
 
     float speedX;
+    int playerObject,collideObject;
+    Animator anim;
     Rigidbody2D rb;
+
     
     
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();   
+        anim = GetComponent<Animator>();
+        playerObject=LayerMask.NameToLayer("Player");
+        collideObject=LayerMask.NameToLayer("Platform");
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)                                              
+        {
+            rb.velocity = Vector2.up * verticalImpulse;
+            anim.SetTrigger("Jump");
+        }
+
+        if (rb.velocity.y>0)
+        {
+            Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
+        }
+        else 
+        {
+            Physics2D.IgnoreLayerCollision(playerObject, collideObject, false);
+        }
+    }
     
     void FixedUpdate()
     {
         //Хотьба
-        moveInput = Input.GetAxis("Horizontal");                                                               
+        moveInput = Input.GetAxis("Horizontal");   
+        anim.SetFloat("Speed", Mathf.Abs(moveInput));  
+        anim.SetBool("Ground", isGrounded);      
+                                                          
         rb.velocity = new Vector2(moveInput * horizontalSpeed, rb.velocity.y);
 
         if (Input.GetAxis("Horizontal") > 0 && !facingRight)
             Flip();
         else if (Input.GetAxis("Horizontal") < 0 && facingRight)
             Flip();
-
-        //Прыжок
-        //isGrounded = Physics2D.OverlapArea(new Vector2 (transform.position.x-0.5f,transform.position.y-0.6f),
-        //new Vector2 (transform.position.x+0.5f,transform.position.y-0.51f), whatIsGround);
-
-        if (Input.GetKeyDown(KeyCode.Space) /*&& isGroundedFunc()*/)                                              
-        {
-            rb.velocity = Vector2.up * verticalImpulse;
-        }
+        
     }
 
     void Flip()
@@ -50,23 +66,12 @@ public class PlayerMovement : MonoBehaviour
         facingRight = !facingRight;
         transform.Rotate(0f,180f,0f);
     }
-    /*
-    private bool isGroundedFunc()
-    {
-        float extraHeightText=.01f;
-        RaycastHit2D raycastHit = Physics2D.Raycast(BoxCollider2D.bounds.center,Vector2.down,BoxCollider2D.bounds.extents.y+extraHeightText);
-        Color rayColor;
-        if (raycastHit.collider!=null)
-        {
-            rayColor=Color.green;
-        }
-        else
-        {
-            rayColor=Color.red;
-        }
-        Debug.DrawRay(BoxCollider2D.bounds.center,Vector2.down*(BoxCollider2D.bounds.extents.y+extraHeightText));
-        return raycastHit.collider !=null;
-        
+
+    void OnTriggerStay2D(Collider2D col){                                           //если в тригере что то есть и у обьекта тег платформы
+        if (col.tag == "1"||col.tag == "2"||col.tag == "3") isGrounded = true;      //то включаем переменную "на земле"
     }
-       */
+     void OnTriggerExit2D(Collider2D col){                                          //если из триггера что то вышло и у обьекта тег платформы
+        if (col.tag == "1"||col.tag == "2"||col.tag == "3") isGrounded = false;     //то вЫключаем переменную "на земле"
+    }
+
 }

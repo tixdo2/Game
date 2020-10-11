@@ -8,105 +8,85 @@ public class Customizer : MonoBehaviour
 
     public GameManager GM;
 
-    public SpriteRenderer skinsR, headsR;
+    public SpriteRenderer skinsR;
 
 
-    public int skinsCount, headsCount;
+    public int skinsCount;
 
-    List<Sprite> skins, heads;
+    List<Sprite> skins;
 
-    public int skinIndex = 0, headIndex = 0; 
+    public int skinIndex = 0;
 
     void Awake()
     {
-
         
         skins = new List<Sprite>();
 
-        heads = new List<Sprite>();
-
         skinIndex = GM.skinIndex;
-        headIndex = GM.headIndex;
 
-        
-        
 
-        skins.Add(Resources.Load<Sprite>("Sprites/Customized/Skins/MarlowStandart"));
+        skins.Add(Resources.Load<Sprite>("Sprites/Customized/Skins/Marlow"));
 
-        heads.Add(Resources.Load<Sprite>("Sprites/Customized/Heads/MarlowHeadStandart"));
-        heads.Add(Resources.Load<Sprite>("Sprites/Customized/Heads/MarlowHead2"));
+        Debug.Log(skins[0]);
 
         skinsCount = skins.Count;
-        headsCount = heads.Count;
-        if(PlayerPrefs.GetInt("headIndex") == null && PlayerPrefs.GetInt("skinIndex") == null)
+
+        if(PlayerPrefs.GetInt("skinIndex") == null)
         {
-            PlayerCustomizer.head = heads[0];
             PlayerCustomizer.skin = skins[0];
+            skinsR.sprite = skins[0];
         }
         else
         {
-            headIndex = PlayerPrefs.GetInt("headIndex");
             skinIndex = PlayerPrefs.GetInt("skinIndex");
 
-            PlayerCustomizer.head = heads[headIndex];
             PlayerCustomizer.skin = skins[skinIndex];
+            skinsR.sprite = skins[skinIndex];
         }
-
-        headsR.sprite = heads[headIndex];
     }
 
-    public void NextHead()
+    public void Next()
     {
-        
 
-
-
-        if(headIndex < headsCount-1)
+        if(skinIndex < skinsCount-1)
         {
-            headIndex++;
-            headsR.sprite = heads[headIndex];
+            skinIndex++;
+            skinsR.sprite = skins[skinIndex];
             return;
 
         }
 
-        if(headIndex == headsCount-1)
+        if(skinIndex == skinsCount-1)
         {
-            headIndex = 0;
-            headsR.sprite = heads[headIndex];
-
+            skinIndex = 0;
+            skinsR.sprite = skins[skinIndex];
+            return;
         }
  
 
     }
 
-    public void PrevHead()
+    public void Prev()
     {
-        if(headIndex == 0) 
+        if(skinIndex == 0) 
         {
-            headIndex = headsCount-1;
-            headsR.sprite = heads[headIndex];
+            skinIndex = skinIndex-1;
+            skinsR.sprite = skins[skinIndex];
             return;
         }
         
-        if(headIndex >= 0)
+        if(skinIndex >= 0)
         {
-            headIndex--;
-            headsR.sprite = heads[headIndex];
+            skinIndex--;
+            skinsR.sprite = skins[skinIndex];
             return;
         }            
     }
 
     public void Accept()
     {
-        ChangeHead();
         ChangeSkin();
         PlayerPrefs.Save();
-    }
-
-    void ChangeHead()
-    {
-        PlayerCustomizer.head = heads[headIndex];
-        PlayerPrefs.SetInt("headIndex", headIndex);
     }
 
     void ChangeSkin()
