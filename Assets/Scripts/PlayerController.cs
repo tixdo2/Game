@@ -17,9 +17,6 @@ public class PlayerController : MonoBehaviour
     public void ChangeHead(Sprite newHead)
     {
         PI.head = newHead;
-        Debug.Log(newHead);
         PI.headRender.sprite = newHead;
     }
-
-    
 }
