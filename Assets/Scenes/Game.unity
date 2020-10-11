@@ -169,9 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerGO: {fileID: 441444222}
   skin: {fileID: 0}
-  head: {fileID: 0}
   skinIndex: 0
-  headIndex: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -341,6 +339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359658965355088516, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6475784408955117258, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
