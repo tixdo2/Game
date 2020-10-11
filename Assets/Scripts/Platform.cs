@@ -39,7 +39,7 @@ public class Platform : MonoBehaviour
         x = this.transform.position.x;
         y = this.transform.position.y;
 
-        //transform.Translate(0, -(speed * Time.deltaTime), 0);
+        transform.Translate(0, -(speed * Time.deltaTime), 0);
 
         if(y < -7.48f )
         {
