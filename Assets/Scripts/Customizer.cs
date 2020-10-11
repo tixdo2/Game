@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Customizer : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Customizer : MonoBehaviour
 
     public GameManager GM;
 
-    public SpriteRenderer skinsR;
+    public Image skinsR;
 
 
     public int skinsCount;
