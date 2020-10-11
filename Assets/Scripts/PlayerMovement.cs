@@ -6,23 +6,25 @@ public class PlayerMovement : MonoBehaviour
 {
     public float horizontalSpeed;
     public float verticalImpulse;
-    //public Transform groundCheck;
     public LayerMask whatIsGround;
-    //public float checkRadius;
 
     private float moveInput;
     private bool isGrounded=true;
     private bool facingRight = true;
 
-    Animator anim;
     float speedX;
+    int playerObject,collideObject;
+    Animator anim;
     Rigidbody2D rb;
+
     
     
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();   
         anim = GetComponent<Animator>();
+        playerObject=LayerMask.NameToLayer("Player");
+        collideObject=LayerMask.NameToLayer("Platform");
     }
 
     void Update()
@@ -31,6 +33,15 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.up * verticalImpulse;
             anim.SetTrigger("Jump");
+        }
+
+        if (rb.velocity.y>0)
+        {
+            Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
+        }
+        else 
+        {
+            Physics2D.IgnoreLayerCollision(playerObject, collideObject, false);
         }
     }
     
@@ -56,10 +67,10 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(0f,180f,0f);
     }
 
-    void OnTriggerStay2D(Collider2D col){               //если в тригере что то есть и у обьекта тег "ground"
+    void OnTriggerStay2D(Collider2D col){                                           //если в тригере что то есть и у обьекта тег платформы
         if (col.tag == "1"||col.tag == "2"||col.tag == "3") isGrounded = true;      //то включаем переменную "на земле"
     }
-     void OnTriggerExit2D(Collider2D col){              //если из триггера что то вышло и у обьекта тег "ground"
+     void OnTriggerExit2D(Collider2D col){                                          //если из триггера что то вышло и у обьекта тег платформы
         if (col.tag == "1"||col.tag == "2"||col.tag == "3") isGrounded = false;     //то вЫключаем переменную "на земле"
     }
 
