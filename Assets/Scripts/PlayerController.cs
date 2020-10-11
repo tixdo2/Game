@@ -12,14 +12,4 @@ public class PlayerController : MonoBehaviour
         PI.skin = newSkin;
         PI.skinRender.sprite = PI.skin;
     }
-
-    //Изменения спрайта головы
-    public void ChangeHead(Sprite newHead)
-    {
-        PI.head = newHead;
-        Debug.Log(newHead);
-        PI.headRender.sprite = newHead;
-    }
-
-    
 }
