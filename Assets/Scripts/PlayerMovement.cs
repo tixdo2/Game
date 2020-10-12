@@ -55,14 +55,14 @@ public class PlayerMovement : MonoBehaviour
 
         //телепорт из-за границ экрана
         pos.y=transform.position.y;
-        if (transform.position.x>=3.17f)
+        if (transform.position.x>=4.26f)
             {
-                pos.x=-3.1f;
+                pos.x=-4.27f;
                 transform.position=pos;
             }
-            else if (transform.position.x<=-3.3f)
+            else if (transform.position.x<=-4.3f)
             {
-                pos.x=3.15f;
+                pos.x=4.3f;
                 transform.position=pos;
             };  
         
