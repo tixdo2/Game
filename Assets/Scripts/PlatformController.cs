@@ -26,7 +26,7 @@ public class PlatformController : MonoBehaviour
     void Start()
     {
         //Генерация 9 платформ для старта 
-        for(int i = 0;i<8;i++)
+        for(int i = 0;i<5;i++)
             SpawnPlat();
         y-=1.83f; // погрешность при спавнах
     }

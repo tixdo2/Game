@@ -11,6 +11,8 @@ public class Platform : MonoBehaviour
     public int size = 0; // Тип обьекта 1х 2х 3х
     public bool MoveControl = false; //Переменная для контроля движения платформы
 
+    public List<GameObject> Children = new List<GameObject>(); 
+
     //движение
     private Vector3 movement = Vector3.left * 0.1f; // скорость движения влево-вправо 1х Платформы
     private float speed = 1f; // скорость движения платформ вниз
@@ -20,6 +22,7 @@ public class Platform : MonoBehaviour
         //Локальнаые данные обьекта на котором висит скрипт
         Tag = this.tag;
 
+        // Применение переменной size по Тегу размер
         switch(Tag)
         {
             case "1":
@@ -33,6 +36,33 @@ public class Platform : MonoBehaviour
                 break;
         }
 
+        // Добавление в список детей родителя
+        foreach (Transform child in transform)
+        {
+            Children.Add(child.gameObject);
+        }
+
+        // Случайная генерация сломаных дочерних элементов платформы
+        switch(size)
+        {
+            case 2:
+                int ChanceForDestroy2x = Random.Range(1,61); // Весы
+                if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
+                    Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
+                else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
+                    Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                break;
+            case 3:
+                int ChanceForDestroy3x = Random.Range(1,81);
+                if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
+                    Children[0].GetComponent<ChildPlatform>().isBroke = true;
+                else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
+                    Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
+                    Children[2].GetComponent<ChildPlatform>().isBroke = true;
+                break;
+        }
+        
         //Будет ли платформа двигаться влево-вправо
         int ChanceForMove = Random.Range(1,21);
         if(size == 1)
