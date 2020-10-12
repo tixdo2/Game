@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8154937419214310664}
   - component: {fileID: 5563853473336783105}
   - component: {fileID: 8554922664388572608}
-
   - component: {fileID: 6475784408955117258}
   - component: {fileID: 1473200329701898355}
   m_Layer: 8
@@ -114,7 +113,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!61 &5349440198118953001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -206,6 +205,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
+  startPos: {x: 0, y: 0}
+  direction: {x: 0, y: 0}
+  directionChosen: 0
 --- !u!61 &1473200329701898355
 BoxCollider2D:
   m_ObjectHideFlags: 0
