@@ -17,7 +17,7 @@ public class ChildPlatform : MonoBehaviour
     // Задержка перед удалением обькта
     private IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 }

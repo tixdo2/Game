@@ -17,6 +17,9 @@ public class Platform : MonoBehaviour
     private Vector3 movement = Vector3.left * 0.1f; // скорость движения влево-вправо 1х Платформы
     private float speed = 1f; // скорость движения платформ вниз
 
+    //спрайтs
+    public Sprite BrokeLeft, BrokeMiddle, BrokeRight;
+
     void Start()
     {
         //Локальнаые данные обьекта на котором висит скрипт
@@ -48,18 +51,31 @@ public class Platform : MonoBehaviour
             case 2:
                 int ChanceForDestroy2x = Random.Range(1,61); // Весы
                 if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
+                {
                     Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
+                    Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight; // Меняем спрайт
+                }
                 else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
-                    Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                    {Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;}
                 break;
             case 3:
                 int ChanceForDestroy3x = Random.Range(1,81);
                 if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
+                {
                     Children[0].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight;
+                }
                 else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
+                {
                     Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[1].GetComponent<SpriteRenderer>().sprite = BrokeMiddle;
+                }
                 else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
+                {
                     Children[2].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[2].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
+                }
                 break;
         }
         
