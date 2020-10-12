@@ -49,7 +49,7 @@ MonoBehaviour:
   x: 0
   y: 0
   size: 0
-  isDestroy: 0
+  MoveControl: 0
   Plat3x: {fileID: 3218659552156727817, guid: 51eec02b700a59b4480d3674ac3a7e8b, type: 3}
   Plat2x: {fileID: 150457252013194123}
   Plat1x: {fileID: 7569335860570375610, guid: fbb1ce3468c600444a1467ac19952212, type: 3}

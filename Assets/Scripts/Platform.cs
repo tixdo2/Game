@@ -14,11 +14,6 @@ public class Platform : MonoBehaviour
     //движение
     private Vector3 movement = Vector3.left * 0.1f; // скорость движения влево-вправо 1х Платформы
     private float speed = 1f; // скорость движения платформ вниз
-    
-    //Префабы
-    public GameObject Plat3x; 
-    public GameObject Plat2x;
-    public GameObject Plat1x;
 
     void Start()
     {
@@ -56,12 +51,6 @@ public class Platform : MonoBehaviour
         // Движение всех платформ
         transform.Translate(0, -(speed * Time.deltaTime), 0);
 
-        // Удаление платформы которая вышла за поля
-        if(y < -8.48f )
-        {
-            Destroy(gameObject);
-        }
-
         // Движение 1х платформы влево-вправо
         if(size==1 && MoveControl)
         {
@@ -70,23 +59,6 @@ public class Platform : MonoBehaviour
             else if (this.transform.position.x < -2.55f)
                 movement = Vector3.right * 0.05f;
             this.transform.Translate(movement);
-        }
-    }
-
-        // Генерация платформ
-    public void ClonePlatform(int size, float x, float y)
-    {
-        switch (size)
-        {
-            case 1:
-                Instantiate(Plat1x, new Vector3(x, y, 0), Quaternion.identity);
-                break;
-            case 2:
-                Instantiate(Plat2x, new Vector3(x, y, 0), Quaternion.identity);
-                break;
-            case 3:
-                Instantiate(Plat3x, new Vector3(x, y, 0), Quaternion.identity);
-                break;
         }
     }
 }

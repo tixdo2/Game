@@ -463,7 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PC: {fileID: 0}
   GM: {fileID: 913722176}
-  skinsR: {fileID: 0}
+  skinsR: {fileID: 695406160}
   skinsCount: 0
   skinIndex: 0
 --- !u!114 &913722176
