@@ -11,20 +11,21 @@ public class Platform : MonoBehaviour
     public int size = 0; // Тип обьекта 1х 2х 3х
     public bool MoveControl = false; //Переменная для контроля движения платформы
 
+    public List<GameObject> Children = new List<GameObject>(); 
+
     //движение
     private Vector3 movement = Vector3.left * 0.1f; // скорость движения влево-вправо 1х Платформы
     private float speed = 1f; // скорость движения платформ вниз
-    
-    //Префабы
-    public GameObject Plat3x; 
-    public GameObject Plat2x;
-    public GameObject Plat1x;
+
+    //спрайтs
+    public Sprite BrokeLeft, BrokeMiddle, BrokeRight;
 
     void Start()
     {
         //Локальнаые данные обьекта на котором висит скрипт
         Tag = this.tag;
 
+        // Применение переменной size по Тегу размер
         switch(Tag)
         {
             case "1":
@@ -38,6 +39,46 @@ public class Platform : MonoBehaviour
                 break;
         }
 
+        // Добавление в список детей родителя
+        foreach (Transform child in transform)
+        {
+            Children.Add(child.gameObject);
+        }
+
+        // Случайная генерация сломаных дочерних элементов платформы
+        switch(size)
+        {
+            case 2:
+                int ChanceForDestroy2x = Random.Range(1,61); // Весы
+                if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
+                {
+                    Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
+                    Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight; // Меняем спрайт
+                }
+                else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
+                    {Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;}
+                break;
+            case 3:
+                int ChanceForDestroy3x = Random.Range(1,81);
+                if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
+                {
+                    Children[0].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight;
+                }
+                else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
+                {
+                    Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[1].GetComponent<SpriteRenderer>().sprite = BrokeMiddle;
+                }
+                else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
+                {
+                    Children[2].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[2].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
+                }
+                break;
+        }
+        
         //Будет ли платформа двигаться влево-вправо
         int ChanceForMove = Random.Range(1,21);
         if(size == 1)
@@ -56,12 +97,6 @@ public class Platform : MonoBehaviour
         // Движение всех платформ
         transform.Translate(0, -(speed * Time.deltaTime), 0);
 
-        // Удаление платформы которая вышла за поля
-        if(y < -8.48f )
-        {
-            Destroy(gameObject);
-        }
-
         // Движение 1х платформы влево-вправо
         if(size==1 && MoveControl)
         {
@@ -70,23 +105,6 @@ public class Platform : MonoBehaviour
             else if (this.transform.position.x < -2.55f)
                 movement = Vector3.right * 0.05f;
             this.transform.Translate(movement);
-        }
-    }
-
-        // Генерация платформ
-    public void ClonePlatform(int size, float x, float y)
-    {
-        switch (size)
-        {
-            case 1:
-                Instantiate(Plat1x, new Vector3(x, y, 0), Quaternion.identity);
-                break;
-            case 2:
-                Instantiate(Plat2x, new Vector3(x, y, 0), Quaternion.identity);
-                break;
-            case 3:
-                Instantiate(Plat3x, new Vector3(x, y, 0), Quaternion.identity);
-                break;
         }
     }
 }
