@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlatformController : MonoBehaviour
 {
     public Platform pl; //ссылка на скрипт Platform
+    public SpawnController spwn;
     public List<GameObject> Platforms; // Список с платформами на сцене
 
     //Локальные данные для генерации обькта в нужных координатах
@@ -17,6 +18,8 @@ public class PlatformController : MonoBehaviour
     public GameObject Plat2x;
     public GameObject Plat1x;
 
+    public GameObject PlatformsStash; // Обьект на канвасе
+
     // Инициализация списка до старта
     void Awake()
     {
@@ -26,7 +29,7 @@ public class PlatformController : MonoBehaviour
     void Start()
     {
         //Генерация 9 платформ для старта 
-        for(int i = 0;i<6;i++)
+        for(int i = 0;i<7;i++)
             SpawnPlat();
         y-=1.83f; // погрешность при спавнах
     }
@@ -65,6 +68,8 @@ public class PlatformController : MonoBehaviour
                 Platforms.Add(go3);
                 break;
         }
+        Platforms[Platforms.Count-1].transform.SetParent(PlatformsStash.transform);
+        spwn.SpawnBonus(Platforms[Platforms.Count-1]);
     }
 
     void FixedUpdate()

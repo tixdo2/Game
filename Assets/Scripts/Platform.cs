@@ -17,8 +17,12 @@ public class Platform : MonoBehaviour
     private Vector3 movement = Vector3.left * 0.1f; // скорость движения влево-вправо 1х Платформы
     private float speed = 1f; // скорость движения платформ вниз
 
+    private GameObject curBonus;
     //спрайтs
     public Sprite BrokeLeft, BrokeMiddle, BrokeRight;
+
+    //
+    public Transform StartPoint, EndPoint;
 
     void Start()
     {
@@ -56,15 +60,17 @@ public class Platform : MonoBehaviour
                     Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight; // Меняем спрайт
                 }
                 else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
-                    {Children[1].GetComponent<ChildPlatform>().isBroke = true;
-                    Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;}
+                {
+                    Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                    Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
+                }
                 break;
             case 3:
                 int ChanceForDestroy3x = Random.Range(1,81);
                 if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
                 {
                     Children[0].GetComponent<ChildPlatform>().isBroke = true;
-                    Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight;
+                    Children[0].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
                 }
                 else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
                 {
@@ -74,7 +80,7 @@ public class Platform : MonoBehaviour
                 else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
                 {
                     Children[2].GetComponent<ChildPlatform>().isBroke = true;
-                    Children[2].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
+                    Children[2].GetComponent<SpriteRenderer>().sprite = BrokeRight;
                 }
                 break;
         }
@@ -106,5 +112,16 @@ public class Platform : MonoBehaviour
                 movement = Vector3.right * 0.05f;
             this.transform.Translate(movement);
         }
+    }
+
+    public void SpawnBonus(GameObject Bonus)
+    {
+        float offset = 0.488f;
+        float x1 = StartPoint.position.x;
+        float x2 = EndPoint.position.x;
+        float xSpawn = Random.Range(x1, x2);
+        Vector3 curPlace = new Vector3(xSpawn, this.transform.position.y + offset, 0);
+        curBonus = Instantiate(Bonus, curPlace, Quaternion.identity);
+        curBonus.transform.SetParent(this.transform);
     }
 }
