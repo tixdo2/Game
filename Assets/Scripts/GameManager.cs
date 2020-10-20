@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         PC = playerGO.GetComponent<PlayerController>();
-
-        Debug.Log(PlayerCustomizer.skin);
     
         PC.ChangeSkin(PlayerCustomizer.skin);
     }
