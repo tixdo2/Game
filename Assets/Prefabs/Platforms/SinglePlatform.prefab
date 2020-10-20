@@ -157,6 +157,6 @@ MonoBehaviour:
   size: 0
   MoveControl: 0
   Children: []
-  BrokeLeft: {fileID: 21300000, guid: efbb666ad74888741a9c394e42a52937, type: 3}
-  BrokeMiddle: {fileID: 21300000, guid: 107f4a96e91fb4e4a8152b64327f85f2, type: 3}
-  BrokeRight: {fileID: 21300000, guid: 1280c33b45a6b994eabd4363e646d702, type: 3}
+  BrokeLeft: {fileID: 21300000, guid: e19cfa7e57745db45bde58c21d88caa2, type: 3}
+  BrokeMiddle: {fileID: 21300000, guid: 8e1f9b35bdfe7fc4bb7f81f0c62754b5, type: 3}
+  BrokeRight: {fileID: 21300000, guid: d8e55065416b0ea4883b2fff792911ea, type: 3}
