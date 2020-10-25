@@ -5,7 +5,11 @@ using System.Linq;
 
 public class SpawnController : MonoBehaviour
 {
-    public GameObject Bonus;
+    // Префабы бонусов
+    public GameObject Healing;
+    public GameObject Poison;
+    public GameObject JumpSub;
+    private GameObject Item;
 
     void Start()
     {
@@ -13,11 +17,19 @@ public class SpawnController : MonoBehaviour
     } 
     public void SpawnBonus(GameObject platform)
     {
-        int RandomBonusSpawn = Random.Range(1, 51);
-        if (RandomBonusSpawn < 20)
-            platform.GetComponent<Platform>().SpawnBonus(Bonus);
-        else if(RandomBonusSpawn >= 20 && RandomBonusSpawn <= 50) 
-            return; 
+        int ItemToStawn = Random.Range(1, 31); // случайный выбор бонуса
+
+            if (ItemToStawn <= 10)
+                Item = Healing;
+            else if(ItemToStawn > 10 && ItemToStawn <= 20)
+                Item = Poison;
+            else if(ItemToStawn > 20 && ItemToStawn <= 30)
+                Item = JumpSub;
+
+        int RandomBonusSpawn = Random.Range(1, 51); // случайное создание бонуса
+        
+            if (RandomBonusSpawn < 10)
+                platform.GetComponent<Platform>().SpawnBonus(Item);
     }
 
     void Update()

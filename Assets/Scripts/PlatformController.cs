@@ -7,6 +7,9 @@ public class PlatformController : MonoBehaviour
     public Platform pl; //ссылка на скрипт Platform
     public SpawnController spwn;
     public List<GameObject> Platforms; // Список с платформами на сцене
+    public GameObject Player;
+
+    private float offset = 10; // смещение первой платформы при старте
 
     //Локальные данные для генерации обькта в нужных координатах
     private float x = -2.577f;
@@ -29,9 +32,9 @@ public class PlatformController : MonoBehaviour
     void Start()
     {
         //Генерация 9 платформ для старта 
-        for(int i = 0;i<7;i++)
+        for(int i = 0;i<12;i++)
             SpawnPlat();
-        y-=1.83f; // погрешность при спавнах
+        //y-=1.83f; // погрешность при спавнах
     }
   
     // Метод для контроля генерацит платформ
@@ -51,20 +54,20 @@ public class PlatformController : MonoBehaviour
         {
             case 1:
                 x = Random.Range(-2.57f, 2.58f); // Область по ширине, в которой будет генерироваться платформа
-                y += 3f; // Расстояние между платформами
-                GameObject go1 = Instantiate(Plat1x, new Vector3(x, y, 0), Quaternion.identity); // Создание платформы 
+                y += 2.7f; // Расстояние между платформами
+                GameObject go1 = Instantiate(Plat1x, new Vector3(x, y+offset, 0), Quaternion.identity); // Создание платформы 
                 Platforms.Add(go1); // Добавление платформы в список платформ
                 break;
             case 2:
                 x = Random.Range(-2.79f, 0.31f);
-                y += 3f;
-                GameObject go2 = Instantiate(Plat2x, new Vector3(x, y, 0), Quaternion.identity);
+                y += 2.7f;
+                GameObject go2 = Instantiate(Plat2x, new Vector3(x, y+offset, 0), Quaternion.identity);
                 Platforms.Add(go2);
                 break;
             case 3:
                 x = -2.440343f;
-                y += 3f;
-                GameObject go3 = Instantiate(Plat3x, new Vector3(x, y, 0), Quaternion.identity);
+                y += 2.7f;
+                GameObject go3 = Instantiate(Plat3x, new Vector3(x, y+offset, 0), Quaternion.identity);
                 Platforms.Add(go3);
                 break;
         }
@@ -75,11 +78,10 @@ public class PlatformController : MonoBehaviour
     void FixedUpdate()
     {
         // спавн новой платформы при удалении первой платформы
-        if(Platforms[0].transform.position.y < - 8.48f)
+        if(Platforms[0].transform.position.y < Player.transform.position.y - 6)
         {
             Destroy(Platforms[0]);
             Platforms.Remove(Platforms[0]);
-            y-=3f; // погрешность при спавнах
             SpawnPlat();
         }
     }

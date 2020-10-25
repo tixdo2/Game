@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour
 {
-    public double HP;
+    public float HP = 50f;
     public int score;    
 
     public Sprite skin;
@@ -17,4 +17,5 @@ public class PlayerInfo : MonoBehaviour
         skinRender.sprite = skin;
 
     }
+
 }

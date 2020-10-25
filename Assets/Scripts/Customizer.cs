@@ -25,10 +25,9 @@ public class Customizer : MonoBehaviour
 
         skinIndex = GM.skinIndex;
 
-
         skins.Add(Resources.Load<Sprite>("Sprites/Customized/Skins/Marlow"));
-
-        Debug.Log(skins[0]);
+        skins.Add(Resources.Load<Sprite>("Sprites/Customized/Skins/MarlowFriend"));
+        skins.Add(Resources.Load<Sprite>("Sprites/Customized/Skins/Marlow3"));
 
         skinsCount = skins.Count;
 
@@ -49,6 +48,7 @@ public class Customizer : MonoBehaviour
     public void Next()
     {
 
+        Debug.Log(1);
         if(skinIndex < skinsCount-1)
         {
             skinIndex++;
@@ -63,15 +63,15 @@ public class Customizer : MonoBehaviour
             skinsR.sprite = skins[skinIndex];
             return;
         }
- 
-
     }
 
     public void Prev()
     {
+        Debug.Log(0);
+
         if(skinIndex == 0) 
         {
-            skinIndex = skinIndex-1;
+            skinIndex = skinsCount-1;
             skinsR.sprite = skins[skinIndex];
             return;
         }

@@ -11,18 +11,15 @@ public class Platform : MonoBehaviour
     public int size = 0; // Тип обьекта 1х 2х 3х
     public bool MoveControl = false; //Переменная для контроля движения платформы
 
-    public List<GameObject> Children = new List<GameObject>(); 
+    public List<GameObject> Children = new List<GameObject>(); // список дочерних элементов у каждой платформы
 
-    //движение
-    private Vector3 movement = Vector3.left * 0.1f; // скорость движения влево-вправо 1х Платформы
-    private float speed = 1f; // скорость движения платформ вниз
+    private Vector3 movement = Vector3.left; // скорость движения влево-вправо 1х Платформы
 
-    private GameObject curBonus;
-    //спрайтs
-    public Sprite BrokeLeft, BrokeMiddle, BrokeRight;
+    private GameObject curBonus; // текущий бонус на платформе
 
-    //
-    public Transform StartPoint, EndPoint;
+    public Sprite BrokeLeft, BrokeMiddle, BrokeRight; // спрайты поломаных частей платформы
+
+    public Transform StartPoint, EndPoint; // Промежуток в котором создаются обьекты
 
     void Start()
     {
@@ -93,16 +90,8 @@ public class Platform : MonoBehaviour
                 MoveControl = true;
         }
     }
-
-    void FixedUpdate ()
+    void FixedUpdate()
     {
-        //Постоянно изменяемые координаты платформы
-        x = this.transform.position.x;
-        y = this.transform.position.y;
-        
-        // Движение всех платформ
-        transform.Translate(0, -(speed * Time.deltaTime), 0);
-
         // Движение 1х платформы влево-вправо
         if(size==1 && MoveControl)
         {
@@ -113,15 +102,28 @@ public class Platform : MonoBehaviour
             this.transform.Translate(movement);
         }
     }
+    void Update ()
+    {
+        //Постоянно изменяемые координаты платформы
+        x = this.transform.position.x;
+        y = this.transform.position.y;
+    }
 
+    // спавн бонуса на платформе
     public void SpawnBonus(GameObject Bonus)
     {
-        float offset = 0.488f;
+        float offset = 0f;
+        if(Bonus.tag == "JumpSub")  // смещение бонуса "Батут"
+        {
+            offset = 0.181f;
+        }else{offset = 0.488f;}
+
         float x1 = StartPoint.position.x;
         float x2 = EndPoint.position.x;
-        float xSpawn = Random.Range(x1, x2);
-        Vector3 curPlace = new Vector3(xSpawn, this.transform.position.y + offset, 0);
-        curBonus = Instantiate(Bonus, curPlace, Quaternion.identity);
-        curBonus.transform.SetParent(this.transform);
+        float xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
+        
+        Vector3 curPlace = new Vector3(xSpawn, this.transform.position.y + offset, 0); // место где создается бонус
+        curBonus = Instantiate(Bonus, curPlace, Quaternion.identity); // создание бонуса
+        curBonus.transform.SetParent(this.transform); // присвоение бонуса родительскому элементу
     }
 }

@@ -8,6 +8,10 @@ TagManager:
   - 2
   - 3
   - Portal
+  - JumpSub
+  - Healing
+  - Poison
+  - destroy
   layers:
   - Default
   - TransparentFX
