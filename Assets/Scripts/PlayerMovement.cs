@@ -7,9 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalSpeed;
     public float verticalImpulse;
     public LayerMask whatIsGround;
+    public bool isGrounded=true;
 
     private float moveInput;
-    private bool isGrounded=true;
     private bool facingRight = true;
 
     float speedX;
@@ -170,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {                                           
         if (collision.gameObject.tag=="1"|| collision.gameObject.tag == "2"|| collision.gameObject.tag == "3") 

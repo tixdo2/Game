@@ -17,7 +17,16 @@ public class ChildPlatform : MonoBehaviour
     // Задержка перед удалением обькта
     private IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
+    }
+
+    // Вынос игрока из дочерних объектов
+    private void OnCollisionExit2D(Collision2D collision)
+    {                                           
+        if (collision.gameObject.tag=="Player") 
+        {
+            collision.transform.SetParent(null);
+        }   
     }
 }
