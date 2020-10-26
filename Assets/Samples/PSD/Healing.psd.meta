@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 5333991f85ae6c74e8e66a729e712213
+<<<<<<< HEAD:Assets/Resources/Sprites/HPBar.png.meta
+guid: 57facffa1adc78749ad916cea8a0177f
+=======
+guid: e2c6fbfcc95ffa342b78cdf8f14ad83b
+>>>>>>> af61337a9436b416621dbab24cbf9264842d5de4:Assets/Samples/PSD/Healing.psd.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -89,4 +93,3 @@ TextureImporter:
   pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
-  assetBundleVariant: 

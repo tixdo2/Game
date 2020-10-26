@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Sprites/HPBar1.png.meta
 guid: 0a0e12ebfc49b7749a9658634b19a7aa
+=======
+guid: abcf99719dc157a4b93ac5c5ea107d5d
+>>>>>>> af61337a9436b416621dbab24cbf9264842d5de4:Assets/Samples/PSD/HealingPoison.psd.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

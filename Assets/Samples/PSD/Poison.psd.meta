@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 83fcaf91139f6ec498c902187957c84b
+<<<<<<< HEAD:Assets/Resources/Sprites/Healing.png.meta
+guid: f1b814f9814da1c4bad7ca4679396015
+=======
+guid: 61f3065f3d461474592521c692af6a62
+>>>>>>> af61337a9436b416621dbab24cbf9264842d5de4:Assets/Samples/PSD/Poison.psd.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
