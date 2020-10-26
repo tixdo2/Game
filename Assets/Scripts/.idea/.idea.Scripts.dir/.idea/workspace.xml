@@ -80,6 +80,7 @@
     <setting file="file://$PROJECT_DIR$/PlatformController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CameraController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -87,6 +88,7 @@
       <list>
         <option value="$PROJECT_DIR$/PlayerInfo.cs" />
         <option value="$PROJECT_DIR$/GameManager.cs" />
+        <option value="$PROJECT_DIR$/CameraController.cs" />
       </list>
     </option>
   </component>
@@ -127,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603725275608</updated>
-      <workItem from="1603725302155" duration="5762000" />
+      <workItem from="1603725302155" duration="6503000" />
     </task>
     <servers />
   </component>
