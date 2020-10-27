@@ -21,7 +21,7 @@ public class PlatformController : MonoBehaviour
     public GameObject Plat2x;
     public GameObject Plat1x;
 
-    public GameObject PlatformsStash; // Обьект на канвасе
+    public ObjectsPooler objPool;
 
     // Инициализация списка до старта
     void Awake()
@@ -55,24 +55,23 @@ public class PlatformController : MonoBehaviour
             case 1:
                 x = Random.Range(-2.57f, 2.58f); // Область по ширине, в которой будет генерироваться платформа
                 y += 2.7f; // Расстояние между платформами
-                GameObject go1 = Instantiate(Plat1x, new Vector3(x, y+offset, 0), Quaternion.identity); // Создание платформы 
+                GameObject go1 = objPool.SpawnFromPool("1xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity); // Создание платформы 
                 Platforms.Add(go1); // Добавление платформы в список платформ
                 break;
             case 2:
                 x = Random.Range(-2.79f, 0.31f);
                 y += 2.7f;
-                GameObject go2 = Instantiate(Plat2x, new Vector3(x, y+offset, 0), Quaternion.identity);
+                GameObject go2 = objPool.SpawnFromPool("2xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity);
                 Platforms.Add(go2);
                 break;
             case 3:
                 x = -2.440343f;
                 y += 2.7f;
-                GameObject go3 = Instantiate(Plat3x, new Vector3(x, y+offset, 0), Quaternion.identity);
+                GameObject go3 = objPool.SpawnFromPool("3xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity);
                 Platforms.Add(go3);
                 break;
         }
-        Platforms[Platforms.Count-1].transform.SetParent(PlatformsStash.transform);
-        spwn.SpawnBonus(Platforms[Platforms.Count-1]);
+        spwn.RandomBonus(Platforms[Platforms.Count-1]);
     }
 
     void Update()
@@ -80,7 +79,11 @@ public class PlatformController : MonoBehaviour
         // спавн новой платформы при удалении первой платформы
         if(Platforms[0].transform.position.y < Player.transform.position.y - 6)
         {
-            Destroy(Platforms[0]);
+            Platforms[0].SetActive(false);
+            foreach (Transform child in Platforms[0].transform)
+            {
+                child.gameObject.SetActive(true);
+            }
             Platforms.Remove(Platforms[0]);
             SpawnPlat();
         }
