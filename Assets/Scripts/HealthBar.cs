@@ -5,16 +5,13 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Image Bar;
-    public float fill;
+    public Transform Bar;
 
-    void Start()
+    public void UpdateHealth(float x)
     {
-        fill = 0.5f;
-    }
 
-    void Update()
-    {
-        Bar.fillAmount = fill;
+        Bar.localPosition = new Vector2(Bar.localPosition.x + x, Bar.localPosition.y);
+
     }
+    
 }

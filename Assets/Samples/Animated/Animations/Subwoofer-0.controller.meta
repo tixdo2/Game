@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Samples/Animated/Animations/Subwoofer-0.controller.meta
 guid: 66461a6fd64105e4d805bb4def70bbc8
 NativeFormatImporter:
+=======
+guid: a23ed6d08c552324196844fdc31da493
+folderAsset: yes
+DefaultImporter:
+>>>>>>> d601d080c2ccf21a9fb9596bc5094c299d46958c:Assets/Samples/Animated/HealingEffect_f.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 

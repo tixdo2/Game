@@ -75,7 +75,7 @@ public class PlatformController : MonoBehaviour
         spwn.SpawnBonus(Platforms[Platforms.Count-1]);
     }
 
-    void FixedUpdate()
+    void Update()
     {
         // спавн новой платформы при удалении первой платформы
         if(Platforms[0].transform.position.y < Player.transform.position.y - 6)

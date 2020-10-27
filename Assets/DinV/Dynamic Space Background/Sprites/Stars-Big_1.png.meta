@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Sprites/Poison.png.meta
+guid: a0c2a151e8bd78c4199f39848c7993f7
+=======
 guid: c6944f9f15bd0ca4087bcdf033f0e162
+>>>>>>> af61337a9436b416621dbab24cbf9264842d5de4:Assets/DinV/Dynamic Space Background/Sprites/Stars-Big_1.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

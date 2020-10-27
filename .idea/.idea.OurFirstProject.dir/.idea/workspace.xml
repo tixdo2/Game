@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="398e6b77-f734-4eec-9b7c-140f0310485b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/DinV.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Nebula Aqua-Pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Nebula Aqua-Pink.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Nebula Blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Nebula Blue.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Nebula Red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Nebula Red.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Stars Small_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Stars Small_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Stars-Big_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/DinV/Dynamic Space Background/Sprites/Stars-Big_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Healing.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Healing.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Poison.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Poison.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Subwoofer-0.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Subwoofer-0.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealingSlave.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealingSlave.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PoisonSlave.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PoisonSlave.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Subwoofer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Subwoofer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Untitled-1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Untitled-1.cpp.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixel Font - Tripfive/Fonts/19783 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Font - Tripfive/Fonts/19783 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/SinglePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/SinglePlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PSD.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/HPBar.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/HPBar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/HPBar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/HPBar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/HPBar1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/HPBar1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Healing.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Healing.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Poison.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Poison.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animated/Subwoofer_f/Subwoofer-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/HPBar.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/HPBar.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/Healing.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/Healing.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/HealingPoison.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/HealingPoison.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/Poison.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/Poison.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChildPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChildPlatform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlatformController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1jQ8XqpYd1oPyzbeJAo3Y4RMeOb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="398e6b77-f734-4eec-9b7c-140f0310485b" name="Default Changelist" comment="" />
+      <created>1603725026865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603725026865</updated>
+      <workItem from="1603725030296" duration="99000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

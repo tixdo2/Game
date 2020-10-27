@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour
 {
-    public float HP = 50f;
-    public int score;    
-
+    public float HP;
+    public int Score;    
+    public bool isAlive {get {return HP>0f;}}
     public Sprite skin;
     public SpriteRenderer skinRender;
+
+    
+
 
 
     //Загрузка спрайтов
