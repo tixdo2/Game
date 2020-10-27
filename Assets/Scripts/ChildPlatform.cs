@@ -18,7 +18,7 @@ public class ChildPlatform : MonoBehaviour
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(0.3f);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     // Вынос игрока из дочерних объектов

@@ -74,7 +74,6 @@ public class GameManager : MonoBehaviour
             DeadMenu();
         }
 
-        Debug.Log("Max: "+ maxPosition.y + "Position: " + PC.transform.position.y);
         if ((maxPosition.y > (PC.transform.position.y + 20))) DeadMenu();
 
 

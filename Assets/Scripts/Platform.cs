@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Platform : MonoBehaviour
+public class Platform : MonoBehaviour, IPooledInterface
 {
     //данные об обьекте
     public float x; // координата x
@@ -10,18 +10,19 @@ public class Platform : MonoBehaviour
     private string Tag; // Тэг обьекта
     public int size = 0; // Тип обьекта 1х 2х 3х
     public bool MoveControl = false; //Переменная для контроля движения платформы
+    private bool Broken = false;
 
     public List<GameObject> Children = new List<GameObject>(); // список дочерних элементов у каждой платформы
 
     private Vector3 movement = Vector3.left; // скорость движения влево-вправо 1х Платформы
 
-    private GameObject curBonus; // текущий бонус на платформе
+    public bool curBonus = false; // текущий бонус на платформе
 
     public Sprite BrokeLeft, BrokeMiddle, BrokeRight; // спрайты поломаных частей платформы
 
     public Transform StartPoint, EndPoint; // Промежуток в котором создаются обьекты
 
-    void Start()
+    public void OnObjectSpawn()
     {
         //Локальнаые данные обьекта на котором висит скрипт
         Tag = this.tag;
@@ -47,40 +48,48 @@ public class Platform : MonoBehaviour
         }
 
         // Случайная генерация сломаных дочерних элементов платформы
-        switch(size)
+        if(!Broken)
         {
-            case 2:
-                int ChanceForDestroy2x = Random.Range(1,61); // Весы
-                if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
-                {
-                    Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
-                    Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight; // Меняем спрайт
+            switch(size)
+            {
+                case 2:
+                    int ChanceForDestroy2x = Random.Range(1,61); // Весы
+                    if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
+                    {
+                        Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
+                        Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight; // Меняем спрайт
+                        Broken = true;
+                    }
+                    else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
+                    {
+                        Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                        Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
+                        Broken = true;
+                    }
+                    break;
+                case 3:
+                    int ChanceForDestroy3x = Random.Range(1,81);
+                    if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
+                    {
+                        Children[0].GetComponent<ChildPlatform>().isBroke = true;
+                        Children[0].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
+                        Broken = true;
+                    }
+                    else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
+                    {
+                        Children[1].GetComponent<ChildPlatform>().isBroke = true;
+                        Children[1].GetComponent<SpriteRenderer>().sprite = BrokeMiddle;
+                        Broken = true;
+                    }
+                    else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
+                    {
+                        Children[2].GetComponent<ChildPlatform>().isBroke = true;
+                        Children[2].GetComponent<SpriteRenderer>().sprite = BrokeRight;
+                        Broken = true;
+                    }
+                    break;
                 }
-                else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
-                {
-                    Children[1].GetComponent<ChildPlatform>().isBroke = true;
-                    Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
-                }
-                break;
-            case 3:
-                int ChanceForDestroy3x = Random.Range(1,81);
-                if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
-                {
-                    Children[0].GetComponent<ChildPlatform>().isBroke = true;
-                    Children[0].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
-                }
-                else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
-                {
-                    Children[1].GetComponent<ChildPlatform>().isBroke = true;
-                    Children[1].GetComponent<SpriteRenderer>().sprite = BrokeMiddle;
-                }
-                else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
-                {
-                    Children[2].GetComponent<ChildPlatform>().isBroke = true;
-                    Children[2].GetComponent<SpriteRenderer>().sprite = BrokeRight;
-                }
-                break;
-        }
+            }
         
         //Будет ли платформа двигаться влево-вправо
         int ChanceForMove = Random.Range(1,21);
@@ -107,23 +116,5 @@ public class Platform : MonoBehaviour
         //Постоянно изменяемые координаты платформы
         x = this.transform.position.x;
         y = this.transform.position.y;
-    }
-
-    // спавн бонуса на платформе
-    public void SpawnBonus(GameObject Bonus)
-    {
-        float offset = 0f;
-        if(Bonus.tag == "JumpSub")  // смещение бонуса "Батут"
-        {
-            offset = 0.181f;
-        }else{offset = 0.488f;}
-
-        float x1 = StartPoint.position.x;
-        float x2 = EndPoint.position.x;
-        float xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
-        
-        Vector3 curPlace = new Vector3(xSpawn, this.transform.position.y + offset, -1); // место где создается бонус
-        curBonus = Instantiate(Bonus, curPlace, Quaternion.identity); // создание бонуса
-        curBonus.transform.SetParent(this.transform); // присвоение бонуса родительскому элементу
     }
 }
