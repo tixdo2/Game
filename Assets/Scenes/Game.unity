@@ -1726,11 +1726,11 @@ MonoBehaviour:
   - tag: 3xPlatform
     prefab: {fileID: 3218659552156727817, guid: 51eec02b700a59b4480d3674ac3a7e8b,
       type: 3}
-    size: 15
+    size: 16
   - tag: Healing
     prefab: {fileID: 1403946858822345697, guid: 98b3de37f2cc83848b3fa5feaef12973,
       type: 3}
-    size: 8
+    size: 10
   - tag: Poison
     prefab: {fileID: 3441212497165428565, guid: 3fc88e218776dcc4790580d343ab0a51,
       type: 3}

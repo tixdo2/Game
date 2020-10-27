@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectsPooler : MonoBehaviour
-{
-    // Пул
+// Пул
     [System.Serializable]
     public class Pool
     {
@@ -12,11 +10,15 @@ public class ObjectsPooler : MonoBehaviour
         public GameObject prefab;
         public int size;
     }
+    
+public class ObjectsPooler : MonoBehaviour
+{
+    
 
     public List<Pool> pools; // список пулов
     public Dictionary<string, Queue<GameObject>> poolDictionary; // словарь с обьектами пула
 
-    void Start()
+    void Awake()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 

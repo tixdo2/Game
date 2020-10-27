@@ -34,7 +34,6 @@ public class PlatformController : MonoBehaviour
         //Генерация 9 платформ для старта 
         for(int i = 0;i<12;i++)
             SpawnPlat();
-        //y-=1.83f; // погрешность при спавнах
     }
   
     // Метод для контроля генерацит платформ
