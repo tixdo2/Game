@@ -8,11 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public float verticalImpulse;
     public LayerMask whatIsGround;
     public bool isGrounded=true;
+    public float speedX;
+
 
     private float moveInput;
     private bool facingRight = true;
 
-    float speedX;
+    
     int playerObject,collideObject;
     Animator anim;
     Rigidbody2D rb;
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Start()
     {
+        horizontalSpeed=0f;
         rb=GetComponent<Rigidbody2D>();   
         anim = GetComponent<Animator>();
         playerObject=LayerMask.NameToLayer("Player");
@@ -41,8 +44,7 @@ public class PlayerMovement : MonoBehaviour
         //прыжок
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)                                              
         {
-            rb.velocity = Vector2.up * verticalImpulse;
-            anim.SetTrigger("Jump");
+           OnClickJump();
         }
 
         if (rb.velocity.y>0)
@@ -76,80 +78,26 @@ public class PlayerMovement : MonoBehaviour
     }
     
     void FixedUpdate()
-    {
-        /*
-        #if UNITY_IOS||UNITY_ANDROID
-            if (Input.touchCount>0)
-            {
-                PlayerTouch=Input.GetTouch(0);
-                if (PlayerTouch.phase==TouchPhase.Moved)
-                {
-                    Vector2 positionChange=PlayerTouch.deltaPosition;
-                    positionChange.y=-positionChange.y;
-                    moveDirection=positionChange.normalized;
-                }
-            }
-        #endif
-        this.transform.position+=(Vector3)moveDirection*-10f*Time.deltaTime;
-        
-
-
-
-        // Track a single touch as a direction control.
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            // Handle finger movements based on touch phase.
-            switch (touch.phase)
-            {
-                // Record initial touch position.
-                case TouchPhase.Began:
-                    startPos = touch.position;
-                    directionChosen = false;
-                    break;
-
-                // Determine direction by comparing the current touch position with the initial one.
-                case TouchPhase.Moved:
-                    direction = touch.position - startPos;
-                    break;
-
-                // Report that a direction has been chosen when the finger is lifted.
-                case TouchPhase.Ended:
-                    directionChosen = true;
-                    break;
-            }
-        }
-
-        if (directionChosen)
-        {
-            // Something that uses the chosen direction...
-            //direction=0;
-        }
-
-        rb.velocity = new Vector2(moveInput * horizontalSpeed, rb.velocity.y);
-
-        */
-
-
-        //Хотьба
+    {   //Хотьба
         moveInput = Input.GetAxis("Horizontal");   
         anim.SetFloat("Speed", Mathf.Abs(moveInput));  
         anim.SetBool("Ground", isGrounded);      
                                                           
-        rb.velocity = new Vector2(moveInput * horizontalSpeed, rb.velocity.y);
+        //rb.velocity = new Vector2(moveInput * speedX, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
 
+        
         if (Input.GetAxis("Horizontal") > 0 && !facingRight)
           Flip();
         else if (Input.GetAxis("Horizontal") < 0 && facingRight)
           Flip();
+        
         
     }
 
     void Flip()
     {
         facingRight = !facingRight;
-        
         Vector3 Scaler = transform.localScale;
         Scaler.x*=-1;
         transform.localScale=Scaler;
@@ -184,6 +132,45 @@ public class PlayerMovement : MonoBehaviour
         {
             this.transform.SetParent(null);
         }   
+    }
+
+    public void OnClickLeft()
+    {
+        anim.SetBool("Run",true);
+        if (facingRight) Flip();
+        if (horizontalSpeed>=0)
+        {
+            horizontalSpeed=-speedX;
+        }
+    }
+    public void OnClickRight()
+    {
+        anim.SetBool("Run",true);
+        if (!facingRight) Flip();
+        if (horizontalSpeed<=0)
+        {
+            horizontalSpeed=speedX;
+        }
+    }
+
+    public void UpClick()
+    {
+        anim.SetBool("Run",false);
+        horizontalSpeed=0f;
+
+    }
+
+    public void OnClickJump()
+    {
+        if (isGrounded)                                              
+        {
+         rb.velocity = Vector2.up * verticalImpulse;
+            anim.SetTrigger("Jump");
+        }
+    }
+    public void OnClickAttack()
+    {
+       
     }
 
 }
