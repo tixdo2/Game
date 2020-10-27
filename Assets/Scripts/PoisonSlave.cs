@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PoisonSlave : MonoBehaviour
 {
+    
     public float Count = 20;
     void Start()
     {
@@ -22,7 +23,7 @@ public class PoisonSlave : MonoBehaviour
     void Action(GameObject Player)
     {
         Player.GetComponent<PlayerController>().Damage(Count);
-        Destroy(this.gameObject);
+        gameObject.SetActive(false);
     }
 
     void Update()

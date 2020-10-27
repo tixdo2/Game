@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealingSlave : MonoBehaviour
 {
+    
     public float Count = 20;
     void Start()
     {
@@ -22,7 +23,7 @@ public class HealingSlave : MonoBehaviour
     void Action(GameObject Player)
     {
         Player.GetComponent<PlayerController>().Healing(Count);
-        Destroy(this.gameObject);
+        gameObject.SetActive(false);
     }
 
     void Update()

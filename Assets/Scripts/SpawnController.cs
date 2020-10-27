@@ -9,31 +9,52 @@ public class SpawnController : MonoBehaviour
     public GameObject Healing;
     public GameObject Poison;
     public GameObject JumpSub;
-    private GameObject Item;
+    private string Item;
+
+    public ObjectsPooler objPool;
 
     void Start()
     {
-        
+
     } 
-    public void SpawnBonus(GameObject platform)
+
+    public void RandomBonus(GameObject platform)
     {
-        int ItemToStawn = Random.Range(1, 31); // случайный выбор бонуса
+        if(platform.GetComponent<Platform>().curBonus == false)
+        {
+            int ItemToStawn = Random.Range(1, 31); // случайный выбор бонуса
 
-            if (ItemToStawn <= 10)
-                Item = Healing;
-            else if(ItemToStawn > 10 && ItemToStawn <= 20)
-                Item = Poison;
-            else if(ItemToStawn > 20 && ItemToStawn <= 30)
-                Item = JumpSub;
+                if (ItemToStawn <= 10)
+                    Item = "Healing";
+                else if(ItemToStawn > 10 && ItemToStawn <= 20)
+                    Item = "Poison";
+                else if(ItemToStawn > 20 && ItemToStawn <= 30)
+                    Item = "Sub";
 
-        int RandomBonusSpawn = Random.Range(1, 51); // случайное создание бонуса
-        
-            if (RandomBonusSpawn < 10)
-                platform.GetComponent<Platform>().SpawnBonus(Item);
+            int RandomBonusSpawn = Random.Range(1, 51); // случайное создание бонуса
+            
+                if (RandomBonusSpawn < 15)
+                    SpawnBonus(Item, platform);
+        }
     }
 
-    void Update()
+    // спавн бонуса на платформе
+    public void SpawnBonus(string Item, GameObject platform)
     {
+        float offset = 0f;
+        if(Item == "Sub")  // смещение бонуса "Батут"
+        {
+            offset = 0.181f;
+        }else{offset = 0.488f;}
 
+        platform.GetComponent<Platform>().curBonus = true;
+        float x1 = platform.GetComponent<Platform>().StartPoint.position.x;
+        float x2 = platform.GetComponent<Platform>().EndPoint.position.x;
+        float xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
+        
+        Vector3 curPlace = new Vector3(xSpawn, platform.transform.position.y + offset, 0); // место где создается бонус
+        GameObject Bonus = objPool.SpawnFromPool(Item, curPlace, Quaternion.identity);
+        Bonus.transform.SetParent(platform.transform);
+        
     }
 }
