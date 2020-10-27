@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+
 public class GameManager : MonoBehaviour
 {
     public GameObject playerGO;
 
     public Sprite skin;
+    
     public int skinIndex;
 
     public TextMeshProUGUI ScoreTMP, ScoreDiedTMP;
@@ -15,7 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject conteinerGame, conteinerMenu, conteinerDead;
 
     public Animator AnimatorPause,AnimatorDead;
-    
+
     private PlayerController PC;
 
     private Vector3 maxPosition;
@@ -91,6 +93,7 @@ public class GameManager : MonoBehaviour
 
     }
     
+    
     public void PauseMenu()
     {
 
@@ -123,8 +126,11 @@ public class GameManager : MonoBehaviour
         Debug.Log("restarted");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
-        
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
     
     

@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         //телепорт из-за границ экрана
+        /*
         pos.y=transform.position.y;
         if (transform.position.x>=4.26f)
             {
@@ -74,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
                 pos.x=4f;
                 transform.position=pos;
             };  
+            */
         
     }
     
@@ -123,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
     {                                           
         if (collision.gameObject.tag=="1"|| collision.gameObject.tag == "2"|| collision.gameObject.tag == "3") 
         {
-            this.transform.SetParent(collision.transform);
+            this.transform.SetParent(collision.transform.parent);
         }   
     }
     private void OnCollisionExit2D(Collision2D collision)
