@@ -20,4 +20,13 @@ public class ChildPlatform : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         gameObject.SetActive(false);
     }
+
+    // Вынос игрока из дочерних объектов
+    private void OnCollisionExit2D(Collision2D collision)
+    {                                           
+        if (collision.gameObject.tag=="Player") 
+        {
+            collision.transform.SetParent(null);
+        }   
+    }
 }
