@@ -40,11 +40,11 @@ public class ObjectsPooler : MonoBehaviour
 
     public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
-        if (!poolDictionary.ContainsKey(tag))
-        {
-            Debug.LogWarning("Pool with tag " + tag + " doesn't exist.");
-            return null;
-        }
+        // if (!poolDictionary.ContainsKey(tag))
+        // {
+        //     Debug.LogWarning("Pool with tag " + tag + " doesn't exist.");
+        //     //return null;
+        // }
         GameObject objectToSPawn = poolDictionary[tag].Dequeue();
 
         objectToSPawn.SetActive(true);

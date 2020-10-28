@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerInfo PI;
     public HealthBar HB;
+    public GameManager GM;
 
     private bool _bonuseffect;
 
@@ -19,7 +20,10 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(DamageWait(Count));
     }
 
-
+    public void GetXpFromDiplom(int CountXP)
+    {
+        PI.Score += CountXP;
+    }
 
     //Изменения спрайта скина
     public void ChangeSkin(Sprite newSkin)

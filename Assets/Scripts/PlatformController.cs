@@ -40,12 +40,12 @@ public class PlatformController : MonoBehaviour
     public void SpawnPlat()
     {
         // Шанс генерации определенных платформ
-        int RandomValue = Random.Range(1, 51);
-        if (RandomValue < 25)
+        int RandomValue = Random.Range(1, 101);
+        if (RandomValue <= 25)
             type = 1;
-        else if(RandomValue >= 25 && RandomValue < 45) 
+        else if(RandomValue > 25 && RandomValue <= 75) 
             type = 2;
-        else if(RandomValue >= 45 && RandomValue < 50) 
+        else if(RandomValue > 75 && RandomValue <= 100) 
             type = 3;
         
         // Генерация платформ в зависимости от выше рандомно-выбранного типа выше
@@ -58,13 +58,13 @@ public class PlatformController : MonoBehaviour
                 Platforms.Add(go1); // Добавление платформы в список платформ
                 break;
             case 2:
-                x = Random.Range(-2.79f, 0.31f);
+                x = Random.Range(-3.6f, 3.6f);
                 y += 2.7f;
                 GameObject go2 = objPool.SpawnFromPool("2xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity);
                 Platforms.Add(go2);
                 break;
             case 3:
-                x = -2.440343f;
+                x = Random.Range(-3.6f, 3.6f);
                 y += 2.7f;
                 GameObject go3 = objPool.SpawnFromPool("3xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity);
                 Platforms.Add(go3);
@@ -76,7 +76,7 @@ public class PlatformController : MonoBehaviour
     void Update()
     {
         // спавн новой платформы при удалении первой платформы
-        if(Platforms[0].transform.position.y < Player.transform.position.y - 6)
+        if(Platforms[0] != null && Platforms[0].transform.position.y < Player.transform.position.y - 6)
         {
             Platforms[0].SetActive(false);
             foreach (Transform child in Platforms[0].transform)

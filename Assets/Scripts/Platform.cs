@@ -53,7 +53,7 @@ public class Platform : MonoBehaviour, IPooledInterface
             switch(size)
             {
                 case 2:
-                    int ChanceForDestroy2x = Random.Range(1,61); // Весы
+                    int ChanceForDestroy2x = Random.Range(1, 101); // Весы
                     if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
@@ -68,7 +68,7 @@ public class Platform : MonoBehaviour, IPooledInterface
                     }
                     break;
                 case 3:
-                    int ChanceForDestroy3x = Random.Range(1,81);
+                    int ChanceForDestroy3x = Random.Range(1,101);
                     if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true;
@@ -92,10 +92,10 @@ public class Platform : MonoBehaviour, IPooledInterface
             }
         
         //Будет ли платформа двигаться влево-вправо
-        int ChanceForMove = Random.Range(1,21);
+        int ChanceForMove = Random.Range(1,101);
         if(size == 1)
         {
-            if(ChanceForMove >=12 && ChanceForMove < 21)
+            if(ChanceForMove >=1 && ChanceForMove < 21)
                 MoveControl = true;
         }
     }

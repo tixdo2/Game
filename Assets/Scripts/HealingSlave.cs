@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class HealingSlave : MonoBehaviour
 {
-    
     public float Count = 20;
-    void Start()
-    {
-        
-    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,17 +12,11 @@ public class HealingSlave : MonoBehaviour
         {
             Action(other.gameObject);
         }
-
     }
-    
+
     void Action(GameObject Player)
     {
         Player.GetComponent<PlayerController>().Healing(Count);
         gameObject.SetActive(false);
-    }
-
-    void Update()
-    {
-        
     }
 }

@@ -66,10 +66,15 @@ public class GameManager : MonoBehaviour
                 maxPosition.y = PC.transform.position.y;
             }
 
-            ScoreTMP.SetText(maxScore.ToString());
             
             
+            
+            if(PC.PI.Score < maxScore)
+            {
+                PC.PI.Score = maxScore;
+            }
 
+            ScoreTMP.SetText(PC.PI.Score.ToString());
         }
         else
         {
