@@ -4,49 +4,42 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float horizontalSpeed;
-    public float verticalImpulse;
-    public LayerMask whatIsGround;
-    public bool isGrounded=true;
+    private float horizontalSpeed;
     public float speedX;
+    public float verticalImpulse;
+    
+    public bool isGrounded=true;
 
+    public enum ControlOfCharacter
+    {
+        Keyboard = 0,
+        Sensor=1
+    }
+    public ControlOfCharacter Control=ControlOfCharacter.Keyboard; 
 
     private float moveInput;
     private bool facingRight = true;
+    private bool JumpBDown=false;
 
-    
     int playerObject,collideObject;
     Animator anim;
     Rigidbody2D rb;
-    Touch PlayerTouch;
-    Vector2 moveDirection=Vector2.zero;
     Vector3 pos;
-    
-    public Vector2 startPos;
-    public Vector2 direction;
-    public bool directionChosen;
 
     
     
     void Start()
     {
-        horizontalSpeed=0f;
+        //horizontalSpeed=0f;
         rb=GetComponent<Rigidbody2D>();   
         anim = GetComponent<Animator>();
         playerObject=LayerMask.NameToLayer("Player");
         collideObject=LayerMask.NameToLayer("Platform");
-        //pos = transform.position;
-        //PlayerTouch=Input.GetTouch(0);
     }
 
     void Update()
     {
-        //прыжок
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)                                              
-        {
-           OnClickJump();
-        }
-
+        
         if (rb.velocity.y>0)
         {
             Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
@@ -63,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         //телепорт из-за границ экрана
+        /*
         pos.y=transform.position.y;
         if (transform.position.x>=4.26f)
             {
@@ -73,20 +67,47 @@ public class PlayerMovement : MonoBehaviour
             {
                 pos.x=4f;
                 transform.position=pos;
-            };  
+            }; 
+        */ 
         
     }
     
     void FixedUpdate()
-    {   //Хотьба
-        moveInput = Input.GetAxis("Horizontal");   
-        anim.SetFloat("Speed", Mathf.Abs(moveInput));  
+    {   
         anim.SetBool("Ground", isGrounded);      
-                                                          
-        //rb.velocity = new Vector2(moveInput * speedX, rb.velocity.y);
-        rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
 
-        
+        if (Control==ControlOfCharacter.Keyboard) //Управление через клавиатуру
+        {
+            //Хотьба
+            rb.velocity = new Vector2(moveInput * speedX, rb.velocity.y);
+            moveInput = Input.GetAxis("Horizontal");
+            anim.SetFloat("Speed", Mathf.Abs(moveInput)); 
+            anim.SetBool("Run",true);
+
+            //прыжок
+            if (Input.GetKey(KeyCode.Space) && isGrounded)                                              
+            {
+                rb.velocity = Vector2.up * verticalImpulse;
+                anim.SetTrigger("Jump");
+            }
+
+        }        
+        else //Управление через сенсор
+        {
+            //Хотьба
+            rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
+            anim.SetFloat("Speed", 0.002f); 
+
+            //Прыжок
+            if (isGrounded&&JumpBDown)                                              
+            {
+                rb.velocity = Vector2.up * verticalImpulse;
+                anim.SetTrigger("Jump");
+            }
+        }                                           
+
+
+        //Разворот
         if (Input.GetAxis("Horizontal") > 0 && !facingRight)
           Flip();
         else if (Input.GetAxis("Horizontal") < 0 && facingRight)
@@ -101,34 +122,36 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x*=-1;
         transform.localScale=Scaler;
-        
-        //transform.Rotate(0f,180f,0f);
     }
 
 
     void OnTriggerStay2D(Collider2D col)
-    {                                                           //если в тригере что то есть и у обьекта тег платформы
-        if (col.tag == "1"||col.tag == "2"||col.tag == "3") 
-        isGrounded = true;                                      //то включаем переменную "на земле"
+    {         
+        col.gameObject.TryGetComponent<ChildPlatform>(out var a);         //если в тригере что то есть и у обьекта тег платформы
+        if (a) 
+        isGrounded = true;                                                      //то включаем переменную "на земле"
     }
      void OnTriggerExit2D(Collider2D col)
-     {                                                          //если из триггера что то вышло и у обьекта тег платформы
-        if (col.tag == "1"||col.tag == "2"||col.tag == "3") 
-        isGrounded = false;                                     //то вЫключаем переменную "на земле"
+     {   
+        col.gameObject.TryGetComponent<ChildPlatform>(out var a);        //если из триггера что то вышло и у обьекта тег платформы
+        if (a) 
+        isGrounded = false;                                                     //то вЫключаем переменную "на земле"
     }
 
 
     
     private void OnCollisionEnter2D(Collision2D collision)
-    {                                           
-        if (collision.gameObject.tag=="1"|| collision.gameObject.tag == "2"|| collision.gameObject.tag == "3") 
+    {      
+        collision.gameObject.TryGetComponent<ChildPlatform>(out var a);                                  
+        if (a) 
         {
             this.transform.SetParent(collision.transform);
         }   
     }
     private void OnCollisionExit2D(Collision2D collision)
-    {                                           
-        if (collision.gameObject.tag=="1") 
+    {    
+        collision.gameObject.TryGetComponent<ChildPlatform>(out var a);                                   
+        if (a) 
         {
             this.transform.SetParent(null);
         }   
@@ -156,21 +179,22 @@ public class PlayerMovement : MonoBehaviour
     public void UpClick()
     {
         anim.SetBool("Run",false);
+        anim.SetFloat("Speed", 0f); 
         horizontalSpeed=0f;
-
+        JumpBDown=false;
     }
 
     public void OnClickJump()
     {
-        if (isGrounded)                                              
-        {
-         rb.velocity = Vector2.up * verticalImpulse;
-            anim.SetTrigger("Jump");
-        }
+        JumpBDown=true;
     }
     public void OnClickAttack()
     {
        
     }
 
+    public void knockback()
+    {
+        rb.velocity = Vector2.right*1000f;
+    }
 }
