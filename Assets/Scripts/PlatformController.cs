@@ -70,7 +70,11 @@ public class PlatformController : MonoBehaviour
                 Platforms.Add(go3);
                 break;
         }
-        spwn.RandomBonus(Platforms[Platforms.Count-1]);
+
+        if(!Platforms[Platforms.Count-1].GetComponent<Platform>().MoveControl)
+        {
+            spwn.RandomBonus(Platforms[Platforms.Count-1]);
+        }
     }
 
     void Update()

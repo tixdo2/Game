@@ -60,22 +60,17 @@ public class SpawnController : MonoBehaviour
         float x2 = platform.GetComponent<Platform>().EndPoint.position.x;
         float xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
         
-        Vector3 curPlace = new Vector3(xSpawn, platform.transform.position.y + offset, 0); // место где создается бонус
+        Vector3 curPlace = new Vector3(xSpawn, platform.transform.position.y + offset, -1); // место где создается бонус
         GameObject Bonus = objPool.SpawnFromPool(Item, curPlace, Quaternion.identity); 
         bonus.Add(Bonus);
 
-        if(platform.GetComponent<Platform>().MoveControl)
-        {
-            Bonus.transform.SetParent(platform.transform);
-        }
-        
     }
 
     void Update()
     {
         if(bonus.Count() > 0)
         {
-            if(bonus[0].transform.position.y < Player.transform.position.y - 5.7f)
+            if(bonus[0].transform.position.y < Player.transform.position.y - 5.5f)
             {
                 bonus[0].SetActive(false);
                 bonus.Remove(bonus[0]);
