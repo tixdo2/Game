@@ -6,9 +6,6 @@ using System.Linq;
 public class SpawnController : MonoBehaviour
 {
     // Префабы бонусов
-    public GameObject Healing;
-    public GameObject Poison;
-    public GameObject JumpSub;
     private string Item;
 
     public GameObject Player;
@@ -25,7 +22,7 @@ public class SpawnController : MonoBehaviour
     {
         if(platform.GetComponent<Platform>().curBonus == false)
         {
-            int ItemToStawn = Random.Range(1, 101); // случайный выбор бонуса
+            int ItemToStawn = Random.Range(1, 111); // случайный выбор бонуса
 
                 if (ItemToStawn <= 20)
                     Item = "Healing";
@@ -37,7 +34,10 @@ public class SpawnController : MonoBehaviour
                 {     
                         if(platform.GetComponent<Platform>().size == 2 || platform.GetComponent<Platform>().size == 2)
                             Item = "Diplom"; 
-                }else return;
+                }
+                else if(ItemToStawn > 65 && ItemToStawn <= 75)
+                    Item = "Chest";
+                else return;
                         
             int RandomBonusSpawn = Random.Range(1, 51); // случайное создание бонуса
             
@@ -50,10 +50,13 @@ public class SpawnController : MonoBehaviour
     public void SpawnBonus(string Item, GameObject platform)
     {
         float offset = 0f;
-        if(Item == "Sub")  // смещение бонуса "Батут"
-        {
+        if(Item == "Sub")  // смещение бонуса 
             offset = 0.1f;
-        }else if(Item == "Diplom") {offset = 0.56f;} else{offset = 0.488f;}
+        else if(Item == "Diplom") 
+            offset = 0.56f;
+        else if(Item == "Chest") 
+            offset = 0.4f;  
+        else offset = 0.488f;
 
         platform.GetComponent<Platform>().curBonus = true;
         float x1 = platform.GetComponent<Platform>().StartPoint.position.x;

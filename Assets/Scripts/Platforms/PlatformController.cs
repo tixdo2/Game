@@ -9,7 +9,7 @@ public class PlatformController : MonoBehaviour
     public List<GameObject> Platforms; // Список с платформами на сцене
     public GameObject Player;
 
-    private float offset = 10; // смещение первой платформы при старте
+    private float offset = 17; // смещение первой платформы при старте
 
     //Локальные данные для генерации обькта в нужных координатах
     private float x = -2.577f;
