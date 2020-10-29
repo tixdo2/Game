@@ -25,9 +25,9 @@ public class Customizer : MonoBehaviour
 
         skinIndex = GM.skinIndex;
 
-        skins.Add(Resources.Load<Sprite>("Sprites/Customized/Skins/Marlow"));
-        skins.Add(Resources.Load<Sprite>("Sprites/Customized/Skins/MarlowFriend"));
-        skins.Add(Resources.Load<Sprite>("Sprites/Customized/Skins/Marlow3"));
+        skins.Add(Resources.Load<Sprite>("Skins/Marlow"));
+        skins.Add(Resources.Load<Sprite>("Skins/MarlowFriend"));
+        skins.Add(Resources.Load<Sprite>("Skins/Marlow3"));
 
         skinsCount = skins.Count;
 
