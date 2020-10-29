@@ -2582,7 +2582,7 @@ PrefabInstance:
     - target: {fileID: 128202312280170339, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1473200329701898355, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
@@ -2677,7 +2677,12 @@ PrefabInstance:
     - target: {fileID: 6475784408955117258, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
       propertyPath: horizontalSpeed
-      value: 6
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475784408955117258, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
+        type: 3}
+      propertyPath: Control
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8554922664388572608, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
@@ -2771,18 +2776,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1516668975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 357928000}
-        m_MethodName: OnClickJump
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1516668975
 MonoBehaviour:
   m_ObjectHideFlags: 0
