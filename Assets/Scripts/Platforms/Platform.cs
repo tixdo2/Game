@@ -96,14 +96,17 @@ public class Platform : MonoBehaviour, IPooledInterface
                 {
                     if(child.GetComponent<SpriteRenderer>().sprite == BrokeRight)
                     {
+                        child.GetComponent<ChildPlatform>().isBroke = false;
                         child.GetComponent<SpriteRenderer>().sprite = Right;
                     }
                     else if(child.GetComponent<SpriteRenderer>().sprite == BrokeMiddle)
                     {
+                        child.GetComponent<ChildPlatform>().isBroke = false;
                         child.GetComponent<SpriteRenderer>().sprite = Middle;
                     }
                     else if(child.GetComponent<SpriteRenderer>().sprite == BrokeLeft)
                     {
+                        child.GetComponent<ChildPlatform>().isBroke = false;
                         child.GetComponent<SpriteRenderer>().sprite = Left;
                     }
                     break;

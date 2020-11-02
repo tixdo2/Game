@@ -146,7 +146,7 @@ SpriteRenderer:
   m_SortingLayerID: -354277503
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 980cc2a5a9c8d5a40a3d04f449abe7ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fddc67bacf2a34a43963fd620dfea2fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -186,7 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 50
+  Coins: 0
   Score: 0
+  BonusScore: 0
   skin: {fileID: 21300000, guid: fddc67bacf2a34a43963fd620dfea2fc, type: 3}
   skinRender: {fileID: 128202312280170339}
 --- !u!50 &4359658965355088516
@@ -227,7 +229,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64444447, y: 1}
+    oldSize: {x: 1.1111112, y: 1.1111112}
     newSize: {x: 1.1111112, y: 1.1111112}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -287,7 +289,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64444447, y: 1}
+    oldSize: {x: 1.1111112, y: 1.1111112}
     newSize: {x: 1.1111112, y: 1.1111112}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
