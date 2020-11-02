@@ -49,16 +49,20 @@ public class GameManager : MonoBehaviour
     {
         if(PC.PI.isAlive)
         {
+
+            if (PC.PI.Score <= 0)
+            {
+                PC.PI.Score = 0;
+                ScoreTMP.SetText("0");
+            }
             
-            if (score <= 0) ScoreTMP.SetText("0");
-            
-            score = Mathf.FloorToInt(PC.transform.position.y - startPostionY);
+            PC.PI.Score += Mathf.FloorToInt(PC.transform.position.y - startPostionY)- PC.PI.Score;
             
             
-            if (maxScore < score)
+            if (maxScore < PC.PI.Score)
             {
                 
-                maxScore = score;
+                maxScore = PC.PI.Score;
             }
 
             if (maxPosition.y <  PC.transform.position.y)
@@ -74,6 +78,7 @@ public class GameManager : MonoBehaviour
                 PC.PI.Score = maxScore;
             }
 
+            PC.PI.Score += PC.PI.BonusScore;
             ScoreTMP.SetText(PC.PI.Score.ToString());
         }
         else
