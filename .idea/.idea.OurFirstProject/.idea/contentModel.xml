@@ -11,13 +11,18 @@
           <e p="_README.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="AbstractMobs.cs" t="Include" />
           <e p="Bonus" t="Include">
+            <e p="Coin.cs" t="Include" />
+            <e p="CoinChest.cs" t="Include" />
+            <e p="Diploma.cs" t="Include" />
             <e p="HealingSlave.cs" t="Include" />
             <e p="PoisonSlave.cs" t="Include" />
             <e p="SpawnController.cs" t="Include" />
             <e p="Subwoofer.cs" t="Include" />
           </e>
+          <e p="EnemyPatrol.cs" t="Include" />
+          <e p="EnemyRecorder.cs" t="Include" />
+          <e p="EnemyRino.cs" t="Include" />
           <e p="Game" t="Include">
             <e p="CameraController.cs" t="Include" />
             <e p="Customizer.cs" t="Include" />
@@ -39,7 +44,6 @@
             <e p="PlayerInfo.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
-          <e p="Player.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

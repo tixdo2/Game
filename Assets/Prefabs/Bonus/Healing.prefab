@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4879026785164501047}
   - component: {fileID: 494766076754085807}
   - component: {fileID: -317719146893364131}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Healing
   m_TagString: Healing
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1603479896178794546}
   - component: {fileID: 4486305547359179466}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

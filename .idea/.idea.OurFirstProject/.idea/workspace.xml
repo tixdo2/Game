@@ -5,18 +5,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Coin/Coin-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/UI/ButtonMenu-1 — копия.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/UI/ButtonMenu-1 — копия.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/UI/ButtonMenu-2 — копия (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/UI/ButtonMenu-2 — копия (2).png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Coin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Healing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Healing.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Note.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Note.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Poison.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Poison.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +25,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.3.1/Runtime/2D/Light2D.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" />
       </list>
     </option>
   </component>
@@ -83,7 +90,9 @@
       <updated>1603816519488</updated>
       <workItem from="1603816536272" duration="1775000" />
       <workItem from="1603822897143" duration="3486000" />
-      <workItem from="1604001271907" duration="1311000" />
+      <workItem from="1604001271907" duration="2949000" />
+      <workItem from="1604267161288" duration="3000" />
+      <workItem from="1604274312446" duration="4061000" />
     </task>
     <servers />
   </component>
@@ -100,5 +109,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1603820489736" />
+    <state x="92" y="92" width="1736" height="866" key="VCS.FileHistoryDialog" timestamp="1604279386766">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="VCS.FileHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1604279386766" />
   </component>
 </project>

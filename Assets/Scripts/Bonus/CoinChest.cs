@@ -12,6 +12,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
 
     public void OnObjectSpawn()
     {
+        Debug.Log(1);
         ObjectsPooler objPool = transform.parent.GetComponent<ObjectsPooler>();
 
         Coins = new List<GameObject>();
@@ -35,7 +36,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             Coins.Add(coin);
         }
     } 
-
+    /*
     public void OnTriggerStay2D(Collider2D other)
     {
         if(other.tag == "Player")
@@ -43,11 +44,13 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             other.gameObject.GetComponent<PlayerMovement>().isGrounded = true;
         }
     }
+    */
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player" && !other.isTrigger && !isCoinDrop)
         {
+            
             Player = other.gameObject;
             isCoinDrop = true;
             StartCoroutine(CoinDrop());
@@ -56,6 +59,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
 
     private IEnumerator CoinDrop() 
     {
+        Debug.Log(1);
         foreach (GameObject drop in Coins)
         {
             int RandomWay = Random.Range(1,11);

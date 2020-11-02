@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     
     public int skinIndex;
 
-    public TextMeshProUGUI ScoreTMP, ScoreDiedTMP;
+    public TextMeshProUGUI ScoreTMP, ScoreDiedTMP, CoinsTMP;
 
     public GameObject conteinerGame, conteinerMenu, conteinerDead;
 
@@ -24,9 +24,8 @@ public class GameManager : MonoBehaviour
 
     private float startPostionY;
 
-    private int score, maxScore = 0;
-
-
+    private int maxScore = 0;
+    
     private bool isPause=false;
 
     private float timer;
@@ -55,31 +54,21 @@ public class GameManager : MonoBehaviour
                 PC.PI.Score = 0;
                 ScoreTMP.SetText("0");
             }
+
             
-            PC.PI.Score += Mathf.FloorToInt(PC.transform.position.y - startPostionY)- PC.PI.Score;
-            
-            
-            if (maxScore < PC.PI.Score)
-            {
-                
-                maxScore = PC.PI.Score;
-            }
 
             if (maxPosition.y <  PC.transform.position.y)
             {
+
                 maxPosition.y = PC.transform.position.y;
             }
-
             
+            PC.PI.Score = Mathf.FloorToInt(maxPosition.y - startPostionY);
             
-            
-            if(PC.PI.Score < maxScore)
-            {
-                PC.PI.Score = maxScore;
-            }
-
             PC.PI.Score += PC.PI.BonusScore;
+            
             ScoreTMP.SetText(PC.PI.Score.ToString());
+            CoinsTMP.SetText(PC.PI.Coins.ToString());
         }
         else
         {
@@ -96,9 +85,8 @@ public class GameManager : MonoBehaviour
     {
 
         conteinerDead.SetActive(true);
-        ScoreDiedTMP.SetText(maxScore.ToString());
+        ScoreDiedTMP.SetText(PC.PI.Score.ToString());
         Time.timeScale = 0;
-        PC.PI.Score = score;
 
     }
     
