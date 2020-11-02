@@ -1757,6 +1757,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Subwoofer-0
       objectReference: {fileID: 0}
+    - target: {fileID: 6082107908503250290, guid: 427521689e679b844ad87c28e0373fed,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8326592626747715293, guid: 427521689e679b844ad87c28e0373fed,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -80,7 +80,7 @@ public class PlatformController : MonoBehaviour
     void Update()
     {
         // спавн новой платформы при удалении первой платформы
-        if(Platforms[0] != null && Platforms[0].transform.position.y < Player.transform.position.y - 6)
+        if(Platforms[0] != null && Platforms[0].transform.position.y < Player.transform.position.y - 8.5f)
         {
             Platforms[0].SetActive(false);
             foreach (Transform child in Platforms[0].transform)

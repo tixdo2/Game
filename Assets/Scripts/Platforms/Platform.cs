@@ -61,13 +61,13 @@ public class Platform : MonoBehaviour, IPooledInterface
             {
                 case 2:
                     int ChanceForDestroy2x = Random.Range(1, 101); // Весы
-                    if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
+                    if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 21)
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
                         _animator.SetBool("StayBrokeLeft", true); // Меняем спрайт
                         Broken = true;
                     }
-                    else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
+                    else if(ChanceForDestroy2x >=21 && ChanceForDestroy2x < 41)
                     {
                         Children[1].GetComponent<ChildPlatform>().isBroke = true;
                         _animator.SetBool("StayBrokeRight", true); // Меняем спрайт
@@ -77,19 +77,19 @@ public class Platform : MonoBehaviour, IPooledInterface
                     break;
                 case 3:
                     int ChanceForDestroy3x = Random.Range(1,101);
-                    if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
+                    if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 21)
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true;
                         _animator.SetBool("StayBrokeLeft", true);
                         Broken = true;
                     }
-                    else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
+                    else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 41)
                     {
                         Children[1].GetComponent<ChildPlatform>().isBroke = true;
                         _animator.SetBool("StayBrokeMiddle", true);
                         Broken = true;
                     }
-                    else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
+                    else if(ChanceForDestroy3x >=41 && ChanceForDestroy3x < 61)
                     {
                         Children[2].GetComponent<ChildPlatform>().isBroke = true;
                         _animator.SetBool("StayBrokeMiddle", true);
