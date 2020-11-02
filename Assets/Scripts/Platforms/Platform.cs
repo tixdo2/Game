@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Platform : MonoBehaviour, IPooledInterface
 {
@@ -22,6 +24,10 @@ public class Platform : MonoBehaviour, IPooledInterface
     public Sprite Left, Middle, Right;
 
     public Transform StartPoint, EndPoint; // Промежуток в котором создаются обьекты
+
+    public Animator _animator;
+
+
 
     public void OnObjectSpawn()
     {
@@ -58,13 +64,14 @@ public class Platform : MonoBehaviour, IPooledInterface
                     if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
-                        Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight; // Меняем спрайт
+                        _animator.SetBool("StayBrokeLeft", true); // Меняем спрайт
                         Broken = true;
                     }
                     else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
                     {
                         Children[1].GetComponent<ChildPlatform>().isBroke = true;
-                        Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
+                        _animator.SetBool("StayBrokeRight", true); // Меняем спрайт
+                        //Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
                         Broken = true;
                     }
                     break;
@@ -73,19 +80,19 @@ public class Platform : MonoBehaviour, IPooledInterface
                     if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true;
-                        Children[0].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
+                        _animator.SetBool("StayBrokeLeft", true);
                         Broken = true;
                     }
                     else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
                     {
                         Children[1].GetComponent<ChildPlatform>().isBroke = true;
-                        Children[1].GetComponent<SpriteRenderer>().sprite = BrokeMiddle;
+                        _animator.SetBool("StayBrokeMiddle", true);
                         Broken = true;
                     }
                     else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
                     {
                         Children[2].GetComponent<ChildPlatform>().isBroke = true;
-                        Children[2].GetComponent<SpriteRenderer>().sprite = BrokeRight;
+                        _animator.SetBool("StayBrokeMiddle", true);
                         Broken = true;
                     }
                     break;
@@ -97,17 +104,22 @@ public class Platform : MonoBehaviour, IPooledInterface
                     if(child.GetComponent<SpriteRenderer>().sprite == BrokeRight)
                     {
                         child.GetComponent<ChildPlatform>().isBroke = false;
-                        child.GetComponent<SpriteRenderer>().sprite = Right;
+                        _animator.SetBool("StayBrokeRight", false); // Меняем спрайт
+                        _animator.SetBool("NoBroke", true); // Меняем спрайт
+                        GetComponent<SpriteRenderer>().sprite = Right;
                     }
                     else if(child.GetComponent<SpriteRenderer>().sprite == BrokeMiddle)
                     {
                         child.GetComponent<ChildPlatform>().isBroke = false;
-                        child.GetComponent<SpriteRenderer>().sprite = Middle;
+                        _animator.SetBool("StayBrokeRight", false); // Меняем спрайт
+                        _animator.SetBool("NoBroke", true);
                     }
                     else if(child.GetComponent<SpriteRenderer>().sprite == BrokeLeft)
                     {
                         child.GetComponent<ChildPlatform>().isBroke = false;
-                        child.GetComponent<SpriteRenderer>().sprite = Left;
+                        _animator.SetBool("StayBrokeLeft", false); // Меняем спрайт
+                        _animator.SetBool("NoBroke", true); // Меняем спрайт
+                        //child.GetComponent<SpriteRenderer>().sprite = Left;
                     }
                     break;
                 }

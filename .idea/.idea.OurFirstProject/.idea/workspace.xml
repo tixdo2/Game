@@ -2,20 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06108718-f80a-48bc-b21f-048ce73f904a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Coin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Healing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Healing.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Note.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Note.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Poison.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Poison.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingSlave/Sandwich.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingSlave/Sandwich.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/PlatformLeftBroke.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/PlatformLeftBroke.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/PlatformMiddleBroke.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/PlatformMiddleBroke.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/PlatformRightBroke.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/PlatformRightBroke.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/Global Volume Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/ChildPlatform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/ChildPlatform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Diploma.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Diploma.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +46,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Platforms/ChildPlatform.cs" />
       </list>
     </option>
   </component>
@@ -92,7 +102,7 @@
       <workItem from="1603822897143" duration="3486000" />
       <workItem from="1604001271907" duration="2949000" />
       <workItem from="1604267161288" duration="3000" />
-      <workItem from="1604274312446" duration="4061000" />
+      <workItem from="1604274312446" duration="13351000" />
     </task>
     <servers />
   </component>

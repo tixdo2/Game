@@ -33,10 +33,12 @@ public class Coin : MonoBehaviour
         if (_rigidbody2D.velocity.y!=0)
         {
             Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
+            Physics2D.IgnoreLayerCollision(collideObject, collideObject, true);
         }
         else 
         {
             Physics2D.IgnoreLayerCollision(playerObject, collideObject, false);
+            Physics2D.IgnoreLayerCollision(collideObject, collideObject, false);
         }
     }
 }

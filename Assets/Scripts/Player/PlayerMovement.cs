@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true;
     private bool JumpBDown=false;
 
-    int playerObject,collideObject;
+    private int _playerObject,_collideObject, _bonusObject;
     Animator anim;
     Rigidbody2D rb;
     Vector3 pos;
@@ -33,8 +33,9 @@ public class PlayerMovement : MonoBehaviour
         //horizontalSpeed=0f;
         rb=GetComponent<Rigidbody2D>();   
         anim = GetComponent<Animator>();
-        playerObject=LayerMask.NameToLayer("Player");
-        collideObject=LayerMask.NameToLayer("Platform");
+        _playerObject=LayerMask.NameToLayer("Player");
+        _collideObject=LayerMask.NameToLayer("Platform");
+        _bonusObject=LayerMask.NameToLayer("Bonus");
     }
 
     void Update()
@@ -42,11 +43,13 @@ public class PlayerMovement : MonoBehaviour
         
         if (rb.velocity.y>0)
         {
-            Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
+            Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, true);
+            //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, true);
         }
         else 
         {
-            Physics2D.IgnoreLayerCollision(playerObject, collideObject, false);
+            Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, false);
+            //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
         }
 
         //атака
@@ -182,13 +185,18 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("Run",false);
         anim.SetFloat("Speed", 0f); 
         horizontalSpeed=0f;
+    }
+    public void UpClickJump()
+    {
         JumpBDown=false;
     }
+    
 
     public void OnClickJump()
     {
         JumpBDown=true;
     }
+    
     public void OnClickAttack()
     {
        
