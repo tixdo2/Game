@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7473398191925114485}
   - component: {fileID: 7516688818715749526}
   - component: {fileID: 6485791582210780057}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Poison
   m_TagString: Poison
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6116856571411872398}
   - component: {fileID: 4850706159862839152}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
