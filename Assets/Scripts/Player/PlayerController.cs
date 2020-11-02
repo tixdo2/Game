@@ -25,6 +25,11 @@ public class PlayerController : MonoBehaviour
         PI.Score += CountXP;
     }
 
+    public void GetCoin()
+    {
+        PI.Coins +=1;
+    }
+
     //Изменения спрайта скина
     public void ChangeSkin(Sprite newSkin)
     {

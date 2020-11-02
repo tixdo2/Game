@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerInfo : MonoBehaviour
 {
     public float HP;
-    public int Score;    
+    public int Score;
+    public int Coins;   
     public bool isAlive {get {return HP>0f;}}
     public Sprite skin;
     public SpriteRenderer skinRender;

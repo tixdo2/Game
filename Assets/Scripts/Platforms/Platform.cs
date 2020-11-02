@@ -19,6 +19,7 @@ public class Platform : MonoBehaviour, IPooledInterface
     public bool curBonus = false; // текущий бонус на платформе
 
     public Sprite BrokeLeft, BrokeMiddle, BrokeRight; // спрайты поломаных частей платформы
+    public Sprite Left, Middle, Right;
 
     public Transform StartPoint, EndPoint; // Промежуток в котором создаются обьекты
 
@@ -86,6 +87,24 @@ public class Platform : MonoBehaviour, IPooledInterface
                         Children[2].GetComponent<ChildPlatform>().isBroke = true;
                         Children[2].GetComponent<SpriteRenderer>().sprite = BrokeRight;
                         Broken = true;
+                    }
+                    break;
+                }
+            }else if(Broken)
+            {
+                foreach (Transform child in transform)
+                {
+                    if(child.GetComponent<SpriteRenderer>().sprite == BrokeRight)
+                    {
+                        child.GetComponent<SpriteRenderer>().sprite = Right;
+                    }
+                    else if(child.GetComponent<SpriteRenderer>().sprite == BrokeMiddle)
+                    {
+                        child.GetComponent<SpriteRenderer>().sprite = Middle;
+                    }
+                    else if(child.GetComponent<SpriteRenderer>().sprite == BrokeLeft)
+                    {
+                        child.GetComponent<SpriteRenderer>().sprite = Left;
                     }
                     break;
                 }

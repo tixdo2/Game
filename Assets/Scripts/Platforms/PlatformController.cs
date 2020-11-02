@@ -41,9 +41,9 @@ public class PlatformController : MonoBehaviour
     {
         // Шанс генерации определенных платформ
         int RandomValue = Random.Range(1, 101);
-        if (RandomValue <= 25)
+        if (RandomValue <= 35)
             type = 1;
-        else if(RandomValue > 25 && RandomValue <= 75) 
+        else if(RandomValue > 35 && RandomValue <= 75) 
             type = 2;
         else if(RandomValue > 75 && RandomValue <= 100) 
             type = 3;
@@ -58,13 +58,13 @@ public class PlatformController : MonoBehaviour
                 Platforms.Add(go1); // Добавление платформы в список платформ
                 break;
             case 2:
-                x = Random.Range(-3.6f, 3.6f);
+                x = Random.Range(-3f, 3f);
                 y += 2.7f;
                 GameObject go2 = objPool.SpawnFromPool("2xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity);
                 Platforms.Add(go2);
                 break;
             case 3:
-                x = Random.Range(-3.6f, 3.6f);
+                x = Random.Range(-3f, 3f);
                 y += 2.7f;
                 GameObject go3 = objPool.SpawnFromPool("3xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity);
                 Platforms.Add(go3);

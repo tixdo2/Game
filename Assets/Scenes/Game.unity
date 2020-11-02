@@ -828,9 +828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e0c165d162a8349953e57fe7308167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Healing: {fileID: 1403946858822345697, guid: 98b3de37f2cc83848b3fa5feaef12973, type: 3}
-  Poison: {fileID: 3441212497165428565, guid: 3fc88e218776dcc4790580d343ab0a51, type: 3}
-  JumpSub: {fileID: 1467916204106960815, guid: 427521689e679b844ad87c28e0373fed, type: 3}
   Player: {fileID: 357927993}
   bonus: []
   objPool: {fileID: 1440295330}
@@ -2520,14 +2517,14 @@ MonoBehaviour:
   - tag: 1xPlatform
     prefab: {fileID: 7569335860570375610, guid: fbb1ce3468c600444a1467ac19952212,
       type: 3}
-    size: 10
+    size: 13
   - tag: 2xPlatform
     prefab: {fileID: 150457252013194123, guid: f5018b4000def694b868c27a09bafbe9, type: 3}
-    size: 10
+    size: 13
   - tag: 3xPlatform
     prefab: {fileID: 3218659552156727817, guid: 51eec02b700a59b4480d3674ac3a7e8b,
       type: 3}
-    size: 10
+    size: 13
   - tag: Healing
     prefab: {fileID: 1403946858822345697, guid: 98b3de37f2cc83848b3fa5feaef12973,
       type: 3}
@@ -2548,6 +2545,10 @@ MonoBehaviour:
     prefab: {fileID: 8899676611390029979, guid: 2c82aa750950a0f4db4c1637656397ee,
       type: 3}
     size: 5
+  - tag: Coin
+    prefab: {fileID: 8732851097209753614, guid: 1c4dac9f542f6a6418fa62d4b4a3db4c,
+      type: 3}
+    size: 15
 --- !u!4 &1440295331
 Transform:
   m_ObjectHideFlags: 0
@@ -2582,7 +2583,7 @@ PrefabInstance:
     - target: {fileID: 128202312280170339, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1473200329701898355, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
@@ -2598,6 +2599,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359658965355088516, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5349440198118953001, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
@@ -2617,7 +2623,7 @@ PrefabInstance:
     - target: {fileID: 6164237697130229888, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.49
+      value: 1.487
       objectReference: {fileID: 0}
     - target: {fileID: 6164237697130229888, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
@@ -2708,6 +2714,7 @@ GameObject:
   - component: {fileID: 1516668976}
   - component: {fileID: 1516668975}
   - component: {fileID: 1516668974}
+  - component: {fileID: 1516668977}
   m_Layer: 0
   m_Name: Jump
   m_TagString: Untagged
@@ -2814,6 +2821,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516668972}
   m_CullTransparentMesh: 0
+--- !u!114 &1516668977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516668972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 357928000}
+          m_MethodName: OnClickJump
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 357928000}
+          m_MethodName: UpClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1523007494
 GameObject:
   m_ObjectHideFlags: 0

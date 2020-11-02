@@ -237,5 +237,8 @@ MonoBehaviour:
   BrokeLeft: {fileID: 21300000, guid: e19cfa7e57745db45bde58c21d88caa2, type: 3}
   BrokeMiddle: {fileID: 21300000, guid: 8e1f9b35bdfe7fc4bb7f81f0c62754b5, type: 3}
   BrokeRight: {fileID: 21300000, guid: d8e55065416b0ea4883b2fff792911ea, type: 3}
+  Left: {fileID: 21300000, guid: 92c6875cfbf9d7547a9027c7cb699202, type: 3}
+  Middle: {fileID: 21300000, guid: f7e5b0e1f5c61324982d491d2314035a, type: 3}
+  Right: {fileID: 21300000, guid: 21232706fe725f541a5e3bff18b4f13e, type: 3}
   StartPoint: {fileID: 763311237773199366}
   EndPoint: {fileID: 8833485838543959805}
