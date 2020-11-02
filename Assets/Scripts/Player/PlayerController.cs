@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public void GetXpFromDiplom(int CountXP)
     {
-        PI.Score += CountXP;
+        PI.BonusScore += CountXP;
     }
 
     public void GetCoin()
