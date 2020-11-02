@@ -12,13 +12,13 @@ public class CoinChest : MonoBehaviour, IPooledInterface
 
     public void OnObjectSpawn()
     {
-        Debug.Log(1);
+        Debug.Log("Chest");
         ObjectsPooler objPool = transform.parent.GetComponent<ObjectsPooler>();
 
         Coins = new List<GameObject>();
 
         int RandomXP = Random.Range(1, 101);
-
+        Debug.Log(RandomXP);
         if (RandomXP >= 1 && RandomXP <= 5)
             CountCoins = 6;
         else if(RandomXP > 10 && RandomXP <= 35)

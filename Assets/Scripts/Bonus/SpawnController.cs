@@ -22,26 +22,26 @@ public class SpawnController : MonoBehaviour
     {
         if(platform.GetComponent<Platform>().curBonus == false)
         {
-            int ItemToStawn = Random.Range(1, 106); // случайный выбор бонуса
+            int ItemToStawn = Random.Range(1, 101); // случайный выбор бонуса
 
                 if (ItemToStawn <= 10)
                     Item = "Healing";
-                else if(ItemToStawn > 10 && ItemToStawn <= 60)
+                else if(ItemToStawn > 10 && ItemToStawn <= 65)
                     Item = "Poison";
-                else if(ItemToStawn > 60 && ItemToStawn <= 80)
+                else if(ItemToStawn > 65 && ItemToStawn <= 80)
                     Item = "Sub";
                 else if(ItemToStawn > 80 && ItemToStawn <= 90)
                 {     
                         if(platform.GetComponent<Platform>().size == 2 || platform.GetComponent<Platform>().size == 3)
                             Item = "Diplom"; 
                 }
-                else if(ItemToStawn > 90 && ItemToStawn <= 95)
+                else if(ItemToStawn > 90 && ItemToStawn <= 100)
                     Item = "Chest";
                 else return;
                         
-            int RandomBonusSpawn = Random.Range(1, 51); // случайное создание бонуса
+            int RandomBonusSpawn = Random.Range(1, 101); // случайное создание бонуса
             
-                if (RandomBonusSpawn < 15)
+                if (RandomBonusSpawn < 30)
                     SpawnBonus(Item, platform);
         }
     }
@@ -81,7 +81,7 @@ public class SpawnController : MonoBehaviour
     {
         if(bonus.Count > 0)
         {
-            if(bonus[0].transform.position.y < Player.transform.position.y - 5.5f)
+            if(bonus[0].transform.position.y < Player.transform.position.y - 8f)
             {
                 bonus[0].SetActive(false);
                 bonus.Remove(bonus[0]);

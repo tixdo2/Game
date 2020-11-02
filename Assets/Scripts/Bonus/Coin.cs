@@ -29,7 +29,6 @@ public class Coin : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(_rigidbody2D.velocity.y);
         if (_rigidbody2D.velocity.y!=0)
         {
             Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
