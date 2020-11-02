@@ -7,9 +7,9 @@ public class ChildPlatform : MonoBehaviour
     public bool isBroke = false; // Переменная которая отвечает за сломанную платформу
     public int child;
     public int size;
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.tag == "Player" && isBroke)
+        if(other.gameObject.tag == "Player" && isBroke)
         {
             StartCoroutine(Wait());
         }

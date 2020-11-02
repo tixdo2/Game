@@ -9,6 +9,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
     private float x,y;
     private bool isCoinDrop = false;
     private GameObject Player;
+    private int playerObject, collideObject;
 
     public void OnObjectSpawn()
     {
@@ -16,16 +17,18 @@ public class CoinChest : MonoBehaviour, IPooledInterface
         ObjectsPooler objPool = transform.parent.GetComponent<ObjectsPooler>();
 
         Coins = new List<GameObject>();
+        playerObject=LayerMask.NameToLayer("Player");
+        collideObject=LayerMask.NameToLayer("Bonus");
 
         int RandomXP = Random.Range(1, 101);
-        Debug.Log(RandomXP);
-        if (RandomXP >= 1 && RandomXP <= 5)
+        
+        if (RandomXP >= 1 && RandomXP <= 10)
             CountCoins = 6;
         else if(RandomXP > 10 && RandomXP <= 35)
             CountCoins = 4;
         else if(RandomXP > 35 && RandomXP <= 100)
             CountCoins = 2;
-
+        
         x = transform.position.x;
         y = transform.position.y;
 
@@ -48,7 +51,8 @@ public class CoinChest : MonoBehaviour, IPooledInterface
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player" && !other.isTrigger && !isCoinDrop)
+        // && !other.isTrigger
+        if(other.tag == "Player" && !isCoinDrop)
         {
             
             Player = other.gameObject;
@@ -70,6 +74,8 @@ public class CoinChest : MonoBehaviour, IPooledInterface
                 drop.GetComponent<Rigidbody2D>().AddForce((transform.up - transform.right) *2, ForceMode2D.Impulse);
             yield return new WaitForSeconds(0.5f);
         }
+
+        //Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
         StopCoroutines();
     }
 
@@ -85,6 +91,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
                     {
                         Coins[i].SetActive(false);
                         Coins.Remove(Coins[0]);
+                        //Physics2D.IgnoreLayerCollision(playerObject, collideObject, false);
                     }
                 }
             }
