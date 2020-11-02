@@ -20,6 +20,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
         playerObject=LayerMask.NameToLayer("Player");
         collideObject=LayerMask.NameToLayer("Bonus");
 
+
         int RandomXP = Random.Range(1, 101);
         
         if (RandomXP >= 1 && RandomXP <= 10)
@@ -39,20 +40,10 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             Coins.Add(coin);
         }
     } 
-    /*
-    public void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.tag == "Player")
-        {
-            other.gameObject.GetComponent<PlayerMovement>().isGrounded = true;
-        }
-    }
-    */
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        // && !other.isTrigger
-        if(other.tag == "Player" && !isCoinDrop)
+        if(other.tag == "Player" && !other.isTrigger && !isCoinDrop)
         {
             
             Player = other.gameObject;
@@ -63,7 +54,6 @@ public class CoinChest : MonoBehaviour, IPooledInterface
 
     private IEnumerator CoinDrop() 
     {
-        Debug.Log(1);
         foreach (GameObject drop in Coins)
         {
             int RandomWay = Random.Range(1,11);
@@ -74,8 +64,6 @@ public class CoinChest : MonoBehaviour, IPooledInterface
                 drop.GetComponent<Rigidbody2D>().AddForce((transform.up - transform.right) *2, ForceMode2D.Impulse);
             yield return new WaitForSeconds(0.5f);
         }
-
-        //Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
         StopCoroutines();
     }
 
@@ -87,11 +75,10 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             {
                 for(int i = 0; i<Coins.Count; i++)
                 {
-                    if(Coins[i].transform.position.y < Player.transform.position.y - 5.5f)
+                    if(Coins[i].transform.position.y < Player.transform.position.y - 10f)
                     {
                         Coins[i].SetActive(false);
-                        Coins.Remove(Coins[0]);
-                        //Physics2D.IgnoreLayerCollision(playerObject, collideObject, false);
+                        Coins.Remove(Coins[i]);
                     }
                 }
             }

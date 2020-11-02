@@ -83,6 +83,7 @@ public class PlatformController : MonoBehaviour
         if(Platforms[0] != null && Platforms[0].transform.position.y < Player.transform.position.y - 8.5f)
         {
             Platforms[0].SetActive(false);
+            Platforms[0].GetComponent<Platform>().curBonus = false;
             foreach (Transform child in Platforms[0].transform)
             {
                 child.gameObject.SetActive(true);
