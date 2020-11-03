@@ -49,6 +49,8 @@ public class ChildPlatform : MonoBehaviour
                     anim.SetBool("IsBrokeRight",true);
                     break;
             }
+
+        isBroke = false;
     }
         //gameObject.SetActive(false);
     

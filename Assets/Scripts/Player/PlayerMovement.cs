@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, false);
             //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
         }
+        Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject,  false);
 
         //атака
         if (Input.GetKey(KeyCode.J))                                              

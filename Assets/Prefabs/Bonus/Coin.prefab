@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4983691611934431461}
   - component: {fileID: 3764594769834062166}
-  - component: {fileID: -2504357655211647848}
   - component: {fileID: 4818740964837582448}
+  - component: {fileID: -2504357655211647848}
   - component: {fileID: 5309311545621104240}
   - component: {fileID: 2983510655797774778}
   - component: {fileID: 40320018214458198}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2014588553
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 946e82516e09d1842904543bd72ef1eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -86,6 +86,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &4818740964837582448
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732851097209753614}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &-2504357655211647848
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112,27 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.30877843, y: 0.43134734}
   m_EdgeRadius: 0
---- !u!50 &4818740964837582448
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8732851097209753614}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &5309311545621104240
 BoxCollider2D:
   m_ObjectHideFlags: 0

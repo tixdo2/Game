@@ -3077,27 +3077,27 @@ MonoBehaviour:
   - tag: Healing
     prefab: {fileID: 1403946858822345697, guid: 98b3de37f2cc83848b3fa5feaef12973,
       type: 3}
-    size: 5
+    size: 15
   - tag: Poison
     prefab: {fileID: 3441212497165428565, guid: 3fc88e218776dcc4790580d343ab0a51,
       type: 3}
-    size: 5
+    size: 15
   - tag: Sub
     prefab: {fileID: 1467916204106960815, guid: 427521689e679b844ad87c28e0373fed,
       type: 3}
-    size: 5
+    size: 15
   - tag: Diplom
     prefab: {fileID: 1343145184466104757, guid: 85474ca597d71b04c9ba439f6f2385e5,
       type: 3}
-    size: 5
+    size: 15
   - tag: Chest
     prefab: {fileID: 8899676611390029979, guid: 2c82aa750950a0f4db4c1637656397ee,
       type: 3}
-    size: 5
+    size: 15
   - tag: Coin
     prefab: {fileID: 8732851097209753614, guid: 1c4dac9f542f6a6418fa62d4b4a3db4c,
       type: 3}
-    size: 15
+    size: 30
 --- !u!4 &1440295331
 Transform:
   m_ObjectHideFlags: 0

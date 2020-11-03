@@ -41,7 +41,7 @@ public class SpawnController : MonoBehaviour
                         
             int RandomBonusSpawn = Random.Range(1, 101); // случайное создание бонуса
             
-                if (RandomBonusSpawn < 30)
+                if (RandomBonusSpawn < 60)
                     SpawnBonus(Item, platform);
         }
     }
