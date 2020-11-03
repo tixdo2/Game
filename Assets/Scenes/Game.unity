@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0}
   m_SizeDelta: {x: 0.00024414062, y: 0.00024414062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &95273225
@@ -1232,6 +1232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 357927993}
   bonus: []
+  mobs: []
   objPool: {fileID: 1440295330}
 --- !u!114 &519420035
 MonoBehaviour:
@@ -1445,7 +1446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0.0000076294}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0.0000076294}
   m_SizeDelta: {x: 0.00024414062, y: 1032.8242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &641314792
@@ -2715,7 +2716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0.028564453}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0.028808594}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1271094916
@@ -2956,7 +2957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0052490234, y: 0.014404297}
+  m_AnchoredPosition: {x: 0.005126953, y: 0.014160156}
   m_SizeDelta: {x: 0.0107421875, y: -0.028564453}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1311002359
@@ -3098,6 +3099,10 @@ MonoBehaviour:
     prefab: {fileID: 8732851097209753614, guid: 1c4dac9f542f6a6418fa62d4b4a3db4c,
       type: 3}
     size: 30
+  - tag: Recorder
+    prefab: {fileID: 5062476441638420570, guid: 4582ebff627f4dd46801b6e8026966b7,
+      type: 3}
+    size: 15
 --- !u!4 &1440295331
 Transform:
   m_ObjectHideFlags: 0
@@ -3354,6 +3359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475784408955117258, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
+        type: 3}
+      propertyPath: Control
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8554922664388572608, guid: 6cd3278ecd5b1fc4d8e20e0bb1372ddc,
         type: 3}
@@ -4960,7 +4970,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -733455789
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c6ee7b7286d12f94e8d1e04d9ec824f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

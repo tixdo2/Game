@@ -19,6 +19,7 @@ public class Platform : MonoBehaviour, IPooledInterface
     private Vector3 movement = Vector3.left; // скорость движения влево-вправо 1х Платформы
 
     public bool curBonus = false; // текущий бонус на платформе
+    public bool curMobs = false;
 
     public Sprite BrokeLeft, BrokeMiddle, BrokeRight; // спрайты поломаных частей платформы
     public Sprite Left, Middle, Right;

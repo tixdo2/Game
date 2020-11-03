@@ -36,6 +36,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             coin.SetActive(false);
             Coins.Add(coin);
         }
+        
         isCoinDrop = false;
     } 
 
@@ -47,7 +48,6 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             Player = other.gameObject;
             isCoinDrop = true;
             Physics2D.IgnoreCollision(Player.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
-
             StartCoroutine(CoinDrop());
         }
     }
@@ -64,11 +64,10 @@ public class CoinChest : MonoBehaviour, IPooledInterface
                 drop.GetComponent<Rigidbody2D>().AddForce((transform.up + transform.right) *2, ForceMode2D.Impulse);
             else if(RandomWay >5 && RandomWay <=10)
                 drop.GetComponent<Rigidbody2D>().AddForce((transform.up - transform.right) *2, ForceMode2D.Impulse);
-               
-
             yield return new WaitForSeconds(0.5f);
         }
         StopCoroutines();
+        
     }
 
     void Update()
