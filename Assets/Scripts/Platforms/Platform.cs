@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Platform : MonoBehaviour, IPooledInterface
 {
@@ -19,8 +21,13 @@ public class Platform : MonoBehaviour, IPooledInterface
     public bool curBonus = false; // текущий бонус на платформе
 
     public Sprite BrokeLeft, BrokeMiddle, BrokeRight; // спрайты поломаных частей платформы
+    public Sprite Left, Middle, Right;
 
     public Transform StartPoint, EndPoint; // Промежуток в котором создаются обьекты
+
+    public Animator _animator;
+
+
 
     public void OnObjectSpawn()
     {
@@ -54,42 +61,94 @@ public class Platform : MonoBehaviour, IPooledInterface
             {
                 case 2:
                     int ChanceForDestroy2x = Random.Range(1, 101); // Весы
-                    if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 11)
+                    if(ChanceForDestroy2x >=1 && ChanceForDestroy2x < 21)
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
-                        Children[0].GetComponent<SpriteRenderer>().sprite = BrokeRight; // Меняем спрайт
-                        Broken = true;
+                        _animator.SetBool("StayBrokeLeft", true); // Меняем спрайт
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                     }
-                    else if(ChanceForDestroy2x >=11 && ChanceForDestroy2x < 21)
+                    else if(ChanceForDestroy2x >=21 && ChanceForDestroy2x < 41)
                     {
                         Children[1].GetComponent<ChildPlatform>().isBroke = true;
-                        Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
-                        Broken = true;
+                        _animator.SetBool("StayBrokeRight", true); // Меняем спрайт
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
+                        //Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
                     }
                     break;
                 case 3:
                     int ChanceForDestroy3x = Random.Range(1,101);
-                    if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 11)
+                    if(ChanceForDestroy3x >=1 && ChanceForDestroy3x < 21)
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true;
-                        Children[0].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
-                        Broken = true;
+                        _animator.SetBool("StayBrokeLeft", true);
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                     }
-                    else if(ChanceForDestroy3x >=11 && ChanceForDestroy3x < 21)
+                    else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 41)
                     {
                         Children[1].GetComponent<ChildPlatform>().isBroke = true;
-                        Children[1].GetComponent<SpriteRenderer>().sprite = BrokeMiddle;
-                        Broken = true;
+                        _animator.SetBool("StayBrokeMiddle", true);
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                     }
-                    else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 31)
+                    else if(ChanceForDestroy3x >=41 && ChanceForDestroy3x < 61)
                     {
                         Children[2].GetComponent<ChildPlatform>().isBroke = true;
-                        Children[2].GetComponent<SpriteRenderer>().sprite = BrokeRight;
-                        Broken = true;
+                        _animator.SetBool("StayBrokeRight", true);
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                     }
+                    
                     break;
                 }
-            }
+                Broken = true;
+                
+        }
+        else if(Broken)
+        {
+                
+                foreach (Transform child in transform)
+                {
+                    if (!child.CompareTag("Point"))
+                    {
+                        child.GetComponent<ChildPlatform>().isBroke = false;
+                    }
+                   
+
+                    /*
+                    if(child.GetComponent<SpriteRenderer>().sprite == BrokeLeft)
+                    {
+                        child.GetComponent<ChildPlatform>().isBroke = false;
+                        _animator.SetBool("StayBrokeLeft", false); // Меняем спрайт
+                        //_animator.SetBool("NoBroke", true); // Меняем спрайт
+                        // Меняем спрайт
+                    }
+                    else if(child.GetComponent<SpriteRenderer>().sprite == BrokeMiddle)
+                    {
+                        child.GetComponent<ChildPlatform>().isBroke = false;
+                        _animator.SetBool("StayBrokeMiddle", false); // Меняем спрайт
+                       // _animator.SetBool("NoBroke", true);
+                    }
+                    else if(child.GetComponent<SpriteRenderer>().sprite == BrokeRight)
+                    {
+                        child.GetComponent<ChildPlatform>().isBroke = false;
+                        _animator.SetBool("StayBrokeRight", false); // Меняем спрайт
+                       // _animator.SetBool("NoBroke", true); 
+                    }
+                    */
+
+                    
+                    //break;
+
+
+                }
+                if(!CompareTag("1"))
+                {
+                    _animator = GetComponent<Animator>();
+                    _animator.SetBool("StayBrokeLeft", false); // Меняем спрайт
+                    _animator.SetBool("StayBrokeMiddle", false); // Меняем спрайт
+                    _animator.SetBool("StayBrokeRight", false); // Меняем спрайт
+                    _animator.SetBool("NoBroke", true);
+                }
+                Broken = false;
+        }
         
         //Будет ли платформа двигаться влево-вправо
         int ChanceForMove = Random.Range(1,101);

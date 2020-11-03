@@ -6,9 +6,6 @@ using System.Linq;
 public class SpawnController : MonoBehaviour
 {
     // Префабы бонусов
-    public GameObject Healing;
-    public GameObject Poison;
-    public GameObject JumpSub;
     private string Item;
 
     public GameObject Player;
@@ -27,21 +24,24 @@ public class SpawnController : MonoBehaviour
         {
             int ItemToStawn = Random.Range(1, 101); // случайный выбор бонуса
 
-                if (ItemToStawn <= 20)
+                if (ItemToStawn <= 10)
                     Item = "Healing";
-                else if(ItemToStawn > 20 && ItemToStawn <= 40)
+                else if(ItemToStawn > 10 && ItemToStawn <= 65)
                     Item = "Poison";
-                else if(ItemToStawn > 40 && ItemToStawn <= 55)
+                else if(ItemToStawn > 65 && ItemToStawn <= 80)
                     Item = "Sub";
-                else if(ItemToStawn > 55 && ItemToStawn <= 65)
+                else if(ItemToStawn > 80 && ItemToStawn <= 90)
                 {     
-                        if(platform.GetComponent<Platform>().size == 2 || platform.GetComponent<Platform>().size == 2)
+                        if(platform.GetComponent<Platform>().size == 2 || platform.GetComponent<Platform>().size == 3)
                             Item = "Diplom"; 
-                }else return;
+                }
+                else if(ItemToStawn > 90 && ItemToStawn <= 100)
+                    Item = "Chest";
+                else return;
                         
-            int RandomBonusSpawn = Random.Range(1, 51); // случайное создание бонуса
+            int RandomBonusSpawn = Random.Range(1, 101); // случайное создание бонуса
             
-                if (RandomBonusSpawn < 15)
+                if (RandomBonusSpawn < 60)
                     SpawnBonus(Item, platform);
         }
     }
@@ -49,16 +49,27 @@ public class SpawnController : MonoBehaviour
     // спавн бонуса на платформе
     public void SpawnBonus(string Item, GameObject platform)
     {
+        float xSpawn = 0f;
         float offset = 0f;
-        if(Item == "Sub")  // смещение бонуса "Батут"
-        {
+        if(Item == "Sub")  // смещение бонуса 
             offset = 0.1f;
-        }else if(Item == "Diplom") {offset = 0.56f;} else{offset = 0.488f;}
+        else if(Item == "Diplom") 
+            offset = 0.56f;
+        else if(Item == "Chest") 
+            offset = 0.4f;  
+        else offset = 0.488f;
 
         platform.GetComponent<Platform>().curBonus = true;
         float x1 = platform.GetComponent<Platform>().StartPoint.position.x;
         float x2 = platform.GetComponent<Platform>().EndPoint.position.x;
-        float xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
+        if(Item == "Chest")
+        {
+            xSpawn = (x1+x2)/2;
+        }
+        else
+        {
+            xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
+        } 
         
         Vector3 curPlace = new Vector3(xSpawn, platform.transform.position.y + offset, -1); // место где создается бонус
         GameObject Bonus = objPool.SpawnFromPool(Item, curPlace, Quaternion.identity); 
@@ -68,9 +79,9 @@ public class SpawnController : MonoBehaviour
 
     void Update()
     {
-        if(bonus.Count() > 0)
+        if(bonus.Count > 0)
         {
-            if(bonus[0].transform.position.y < Player.transform.position.y - 5.5f)
+            if(bonus[0].transform.position.y < Player.transform.position.y - 8f)
             {
                 bonus[0].SetActive(false);
                 bonus.Remove(bonus[0]);

@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 763311237773199366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: StartPoint
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,9 +39,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8833485838543959805}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EndPoint
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4217474173390192637}
   - component: {fileID: 5448713972521346450}
   - component: {fileID: 987369558662644881}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Platform
   m_TagString: 1
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,8 +129,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1042577487
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 630214e2f8ea54e4caa5de2a647e97da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -182,6 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroke: 0
+  child: 0
+  size: 0
 --- !u!1 &7569335860570375610
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5335970860881073630}
   - component: {fileID: 1962655811}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: SinglePlatform
   m_TagString: 1
   m_Icon: {fileID: 0}
@@ -237,5 +239,9 @@ MonoBehaviour:
   BrokeLeft: {fileID: 21300000, guid: e19cfa7e57745db45bde58c21d88caa2, type: 3}
   BrokeMiddle: {fileID: 21300000, guid: 8e1f9b35bdfe7fc4bb7f81f0c62754b5, type: 3}
   BrokeRight: {fileID: 21300000, guid: d8e55065416b0ea4883b2fff792911ea, type: 3}
+  Left: {fileID: 21300000, guid: 92c6875cfbf9d7547a9027c7cb699202, type: 3}
+  Middle: {fileID: 21300000, guid: f7e5b0e1f5c61324982d491d2314035a, type: 3}
+  Right: {fileID: 21300000, guid: 21232706fe725f541a5e3bff18b4f13e, type: 3}
   StartPoint: {fileID: 763311237773199366}
   EndPoint: {fileID: 8833485838543959805}
+  _animator: {fileID: 0}
