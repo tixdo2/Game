@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Coin : MonoBehaviour, IPooledInterface
 {
+    
     private Rigidbody2D _rigidbody2D;
-    private int playerObject, collideObject;
+    
+    private int _playerObject, _collideObject;
 
-    private void Start()
+    public void OnObjectSpawn()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        playerObject=LayerMask.NameToLayer("Player");
-        collideObject=LayerMask.NameToLayer("Bonus");
+        _playerObject=LayerMask.NameToLayer("Player");
+        _collideObject=LayerMask.NameToLayer("Bonus");
+        
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,13 +34,13 @@ public class Coin : MonoBehaviour
     {
         if (_rigidbody2D.velocity.y!=0)
         {
-            Physics2D.IgnoreLayerCollision(playerObject, collideObject, true);
-            Physics2D.IgnoreLayerCollision(collideObject, collideObject, true);
+            Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, true);
+            Physics2D.IgnoreLayerCollision(_collideObject, _collideObject, true);
         }
         else 
         {
-            Physics2D.IgnoreLayerCollision(playerObject, collideObject, false);
-            Physics2D.IgnoreLayerCollision(collideObject, collideObject, false);
+            Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, false);
+            Physics2D.IgnoreLayerCollision(_collideObject, _collideObject, false);
         }
     }
 }

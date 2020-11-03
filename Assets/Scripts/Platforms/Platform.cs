@@ -65,14 +65,14 @@ public class Platform : MonoBehaviour, IPooledInterface
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true; // Делаем переменную в дочернем элементе активной
                         _animator.SetBool("StayBrokeLeft", true); // Меняем спрайт
-                        Broken = true;
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                     }
                     else if(ChanceForDestroy2x >=21 && ChanceForDestroy2x < 41)
                     {
                         Children[1].GetComponent<ChildPlatform>().isBroke = true;
                         _animator.SetBool("StayBrokeRight", true); // Меняем спрайт
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                         //Children[1].GetComponent<SpriteRenderer>().sprite = BrokeLeft;
-                        Broken = true;
                     }
                     break;
                 case 3:
@@ -81,30 +81,39 @@ public class Platform : MonoBehaviour, IPooledInterface
                     {
                         Children[0].GetComponent<ChildPlatform>().isBroke = true;
                         _animator.SetBool("StayBrokeLeft", true);
-                        Broken = true;
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                     }
                     else if(ChanceForDestroy3x >=21 && ChanceForDestroy3x < 41)
                     {
                         Children[1].GetComponent<ChildPlatform>().isBroke = true;
                         _animator.SetBool("StayBrokeMiddle", true);
-                        Broken = true;
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                     }
                     else if(ChanceForDestroy3x >=41 && ChanceForDestroy3x < 61)
                     {
                         Children[2].GetComponent<ChildPlatform>().isBroke = true;
                         _animator.SetBool("StayBrokeRight", true);
-                        Broken = true;
+                        _animator.SetBool("NoBroke", false); // Меняем спрайт
                     }
+                    
                     break;
                 }
-            }else if(Broken)
-            {
+                Broken = true;
+                
+        }
+        else if(Broken)
+        {
                 
                 foreach (Transform child in transform)
                 {
-                    
+                    if (!child.CompareTag("Point"))
+                    {
+                        child.GetComponent<ChildPlatform>().isBroke = false;
+                    }
+                   
+
+                    /*
                     if(child.GetComponent<SpriteRenderer>().sprite == BrokeLeft)
-                    
                     {
                         child.GetComponent<ChildPlatform>().isBroke = false;
                         _animator.SetBool("StayBrokeLeft", false); // Меняем спрайт
@@ -123,10 +132,23 @@ public class Platform : MonoBehaviour, IPooledInterface
                         _animator.SetBool("StayBrokeRight", false); // Меняем спрайт
                        // _animator.SetBool("NoBroke", true); 
                     }
+                    */
+
                     
-                    break;
+                    //break;
+
+
                 }
-            }
+                if(!CompareTag("1"))
+                {
+                    _animator = GetComponent<Animator>();
+                    _animator.SetBool("StayBrokeLeft", false); // Меняем спрайт
+                    _animator.SetBool("StayBrokeMiddle", false); // Меняем спрайт
+                    _animator.SetBool("StayBrokeRight", false); // Меняем спрайт
+                    _animator.SetBool("NoBroke", true);
+                }
+                Broken = false;
+        }
         
         //Будет ли платформа двигаться влево-вправо
         int ChanceForMove = Random.Range(1,101);

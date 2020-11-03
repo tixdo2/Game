@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3176079811400403383}
   - component: {fileID: 8491462228883983062}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: -2032619087761995735}
   - component: {fileID: 1216005318596044452}
   - component: {fileID: -1076932085417210683}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Diploma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1042577487
+  m_SortingLayerID: 2014588553
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 18b9057639ce67949bf337de0e7ef5fe, type: 3}

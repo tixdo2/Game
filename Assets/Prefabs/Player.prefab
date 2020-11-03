@@ -78,13 +78,13 @@ GameObject:
   m_Component:
   - component: {fileID: 6164237697130229888}
   - component: {fileID: 128202312280170339}
-  - component: {fileID: 6475784408955117258}
-  - component: {fileID: 5563853473336783105}
   - component: {fileID: 4359658965355088516}
   - component: {fileID: 5349440198118953001}
+  - component: {fileID: 1473200329701898355}
   - component: {fileID: 8154937419214310664}
   - component: {fileID: 8554922664388572608}
-  - component: {fileID: 1473200329701898355}
+  - component: {fileID: 5563853473336783105}
+  - component: {fileID: 6475784408955117258}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -144,9 +144,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -354277503
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 980cc2a5a9c8d5a40a3d04f449abe7ad, type: 3}
+  m_SortingLayer: 4
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: fddc67bacf2a34a43963fd620dfea2fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,40 +157,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6475784408955117258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475318586345905090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ef3c768525c8444b41932d06d6a3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedX: 6
-  verticalImpulse: 9
-  isGrounded: 1
-  Control: 0
---- !u!114 &5563853473336783105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475318586345905090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a41039ee8c1e7a543a4875662f68bdb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
-  Coins: 0
-  Score: 0
-  BonusScore: 0
-  skin: {fileID: 21300000, guid: fddc67bacf2a34a43963fd620dfea2fc, type: 3}
-  skinRender: {fileID: 128202312280170339}
 --- !u!50 &4359658965355088516
 Rigidbody2D:
   serializedVersion: 4
@@ -229,7 +195,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64444447, y: 1}
+    oldSize: {x: 1.1111112, y: 1.1111112}
     newSize: {x: 0.64444447, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -237,6 +203,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.29, y: 0.93}
+  m_EdgeRadius: 0
+--- !u!61 &1473200329701898355
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475318586345905090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.049999997, y: -0.49494195}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1111112, y: 1.1111112}
+    newSize: {x: 0.64444447, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.29, y: 0.058225155}
   m_EdgeRadius: 0
 --- !u!95 &8154937419214310664
 Animator:
@@ -272,29 +264,37 @@ MonoBehaviour:
   PI: {fileID: 5563853473336783105}
   HB: {fileID: 0}
   GM: {fileID: 0}
---- !u!61 &1473200329701898355
-BoxCollider2D:
+--- !u!114 &5563853473336783105
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1475318586345905090}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.049999997, y: -0.49494195}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64444447, y: 1}
-    newSize: {x: 0.64444447, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.29, y: 0.058225155}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41039ee8c1e7a543a4875662f68bdb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
+  Coins: 0
+  Score: 0
+  BonusScore: 0
+  skin: {fileID: 21300000, guid: fddc67bacf2a34a43963fd620dfea2fc, type: 3}
+  skinRender: {fileID: 128202312280170339}
+--- !u!114 &6475784408955117258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475318586345905090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ef3c768525c8444b41932d06d6a3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedX: 6
+  verticalImpulse: 9
+  isGrounded: 1
+  Control: 0

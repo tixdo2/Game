@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5784301700467600955}
   - component: {fileID: 4719166326758496830}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 7939487146307972888}
   - component: {fileID: 6082107908503250290}
   - component: {fileID: 7107220068400502077}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Subwoofer
   m_TagString: JumpSub
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2014588553
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 30753d85c023dc14c9f3fd9ad28798ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

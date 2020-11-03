@@ -40,17 +40,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
-        if (rb.velocity.y>0)
+        Debug.Log(rb.velocity.y);
+        if (rb.velocity.y>0f)
         {
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, true);
-            //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, true);
+            Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, true);
         }
         else 
         {
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, false);
-            //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
+            Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
         }
+        //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject,  false);
 
         //атака
         if (Input.GetKey(KeyCode.J))                                              

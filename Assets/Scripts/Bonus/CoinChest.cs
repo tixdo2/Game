@@ -17,9 +17,6 @@ public class CoinChest : MonoBehaviour, IPooledInterface
         ObjectsPooler objPool = transform.parent.GetComponent<ObjectsPooler>();
 
         Coins = new List<GameObject>();
-        playerObject=LayerMask.NameToLayer("Player");
-        collideObject=LayerMask.NameToLayer("Bonus");
-
 
         int RandomXP = Random.Range(1, 101);
         
@@ -39,6 +36,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             coin.SetActive(false);
             Coins.Add(coin);
         }
+        isCoinDrop = false;
     } 
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -48,12 +46,16 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             
             Player = other.gameObject;
             isCoinDrop = true;
+            Physics2D.IgnoreCollision(Player.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
+
             StartCoroutine(CoinDrop());
         }
     }
 
     private IEnumerator CoinDrop() 
     {
+        
+
         foreach (GameObject drop in Coins)
         {
             int RandomWay = Random.Range(1,11);
@@ -62,6 +64,8 @@ public class CoinChest : MonoBehaviour, IPooledInterface
                 drop.GetComponent<Rigidbody2D>().AddForce((transform.up + transform.right) *2, ForceMode2D.Impulse);
             else if(RandomWay >5 && RandomWay <=10)
                 drop.GetComponent<Rigidbody2D>().AddForce((transform.up - transform.right) *2, ForceMode2D.Impulse);
+               
+
             yield return new WaitForSeconds(0.5f);
         }
         StopCoroutines();
@@ -69,16 +73,17 @@ public class CoinChest : MonoBehaviour, IPooledInterface
 
     void Update()
     {
+        
         if(Player != null)
         {
             if(Coins.Count > 0)
             {
                 for(int i = 0; i<Coins.Count; i++)
                 {
-                    if(Coins[i].transform.position.y < Player.transform.position.y - 10f)
+                    if(Coins[0].transform.position.y < Player.transform.position.y - 10f)
                     {
-                        Coins[i].SetActive(false);
-                        Coins.Remove(Coins[i]);
+                        Coins[0].SetActive(false);
+                        Coins.Remove(Coins[0]);
                     }
                 }
             }
