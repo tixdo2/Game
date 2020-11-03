@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         _playerObject=LayerMask.NameToLayer("Player");
         _collideObject=LayerMask.NameToLayer("Platform");
-        _bonusObject=LayerMask.NameToLayer("Bonus");
     }
 
     void Update()
@@ -51,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, false);
             //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
         }
+        
         Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject,  false);
 
         //атака

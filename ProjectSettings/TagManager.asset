@@ -12,6 +12,7 @@ TagManager:
   - Healing
   - Poison
   - destroy
+  - Point
   layers:
   - Default
   - TransparentFX
@@ -52,14 +53,14 @@ TagManager:
   - name: BackGround
     uniqueID: 2174000721
     locked: 0
-  - name: Player
-    uniqueID: 3940689793
-    locked: 0
   - name: Platforms
     uniqueID: 3252389809
     locked: 0
   - name: Bonus
     uniqueID: 2014588553
+    locked: 0
+  - name: Player
+    uniqueID: 3940689793
     locked: 0
   - name: Canvas
     uniqueID: 3561511507

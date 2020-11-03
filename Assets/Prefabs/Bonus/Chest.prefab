@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3773204560150724530}
   - component: {fileID: 3150895133802423374}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4957322846207912712}
   - component: {fileID: 6942744452649538131}
   - component: {fileID: -2841969317261170225}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2014588553
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5af991f3321f5084caa91489e3569243, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
