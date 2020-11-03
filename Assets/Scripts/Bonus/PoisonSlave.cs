@@ -8,10 +8,10 @@ public class PoisonSlave : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("[eqweqwe]");
+        
         if(other.tag == "Player" && !other.isTrigger)
         {
-            //Debug.Log("HILOCHKA");
+           
             Action(other.gameObject);
         }
     }

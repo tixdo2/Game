@@ -74,6 +74,7 @@ public class PlatformController : MonoBehaviour
         if(!Platforms[Platforms.Count-1].GetComponent<Platform>().MoveControl)
         {
             spwn.RandomBonus(Platforms[Platforms.Count-1]);
+            spwn.RandomMobs(Platforms[Platforms.Count-1]);
         }
     }
 
