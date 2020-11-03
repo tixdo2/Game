@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalSpeed;
     public float speedX;
     public float verticalImpulse;
+    public float thrust;
     
     public bool isGrounded=true;
 
@@ -196,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void knockback()
     {
-        rb.velocity = Vector2.right*1000f;
+        //rb.velocity = Vector2.right*1000f;
+        rb.AddForce(transform.right*thrust, ForceMode2D.Impulse);
     }
 }
