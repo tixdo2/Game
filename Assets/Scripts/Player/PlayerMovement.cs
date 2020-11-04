@@ -56,12 +56,6 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
         }
         //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject,  false);
-
-        //атака
-        if (Input.GetKey(KeyCode.J))                                              
-        {
-            anim.SetBool("Attack",Input.GetKeyDown(KeyCode.J));
-        }
         
         //телепорт из-за границ экрана
         /*
@@ -133,21 +127,57 @@ public class PlayerMovement : MonoBehaviour
             joystik.SetActive(true);
 
            //Хотьба
-           if (JoystikControl.Horizontal>0.1f)
+           /*
+           if (JoystikControl.Horizontal>0.1f&&JoystikControl.Horizontal<0.5)
            {
                OnClickRight();
                anim.SetFloat("Speed", 0.002f);
+               rb.velocity = new Vector2(horizontalSpeed/2, rb.velocity.y); 
            }
-           else if (JoystikControl.Horizontal<-0.1f)
+           else if (JoystikControl.Horizontal>=0.5f)
+           {
+                OnClickRight();    
+                anim.SetFloat("Speed", 0.002f); 
+                rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
+           }
+           else if (JoystikControl.Horizontal<-0.1f&&JoystikControl.Horizontal>-0.5f)
            {
                 OnClickLeft();    
+                anim.SetFloat("Speed", 0.002f); 
+                rb.velocity = new Vector2(horizontalSpeed/2, rb.velocity.y); 
+           }
+           else if (JoystikControl.Horizontal<=-0.5f)
+           {
+                OnClickLeft();    
+                anim.SetFloat("Speed", 0.002f); 
+                rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
+           }
+           else
+           {
+                UpClick();
+           }
+
+           */
+            rb.velocity = new Vector2(JoystikControl.Horizontal*7, rb.velocity.y); 
+            if (JoystikControl.Horizontal>0.01f)
+           {
+               anim.SetBool("Run",true);
+               if (!facingRight) Flip();
+               anim.SetFloat("Speed", 0.002f);
+           }
+           else if (JoystikControl.Horizontal<-0.01f)
+           {
+                anim.SetBool("Run",true);
+                if (facingRight) Flip();    
                 anim.SetFloat("Speed", 0.002f); 
            }
            else
            {
                 UpClick();
            }
-            rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y); 
+
+
+
 
             //Прыжок
             if (isGrounded&&JumpBDown)                                              
@@ -231,6 +261,7 @@ public class PlayerMovement : MonoBehaviour
     public void UpClick()
     {
         anim.SetBool("Run",false);
+        anim.SetBool("Attack",false);
         anim.SetFloat("Speed", 0f); 
         horizontalSpeed=0f;
     }
@@ -247,7 +278,8 @@ public class PlayerMovement : MonoBehaviour
     
     public void OnClickAttack()
     {
-       
+       //атака
+        anim.SetBool("Attack",true);
     }
 
     public void knockback()
