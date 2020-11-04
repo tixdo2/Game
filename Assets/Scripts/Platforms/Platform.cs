@@ -159,22 +159,21 @@ public class Platform : MonoBehaviour, IPooledInterface
                 MoveControl = true;
         }
     }
-    void FixedUpdate()
-    {
-        // Движение 1х платформы влево-вправо
-        if(size==1 && MoveControl)
-        {
-            if (this.transform.position.x > 2.55f)
-                movement = Vector3.left * 0.05f;
-            else if (this.transform.position.x < -2.55f)
-                movement = Vector3.right * 0.05f;
-            this.transform.Translate(movement);
-        }
-    }
+   
     void Update ()
     {
         //Постоянно изменяемые координаты платформы
         x = this.transform.position.x;
         y = this.transform.position.y;
+
+        // Движение 1х платформы влево-вправо
+        if(size==1 && MoveControl)
+        {
+            if (this.transform.position.x > 2.55f)
+                movement = Vector3.left * 0.01f;
+            else if (this.transform.position.x < -2.55f)
+                movement = Vector3.right * 0.01f;
+            this.transform.Translate(movement);
+        }
     }
 }

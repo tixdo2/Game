@@ -65,6 +65,9 @@ TagManager:
   - name: Player
     uniqueID: 3940689793
     locked: 0
+  - name: Spikes
+    uniqueID: 2386539861
+    locked: 0
   - name: Canvas
     uniqueID: 3561511507
     locked: 0

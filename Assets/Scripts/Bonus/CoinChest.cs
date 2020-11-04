@@ -70,7 +70,16 @@ public class CoinChest : MonoBehaviour, IPooledInterface
         
     }
 
-    
+     void Update()
+        {
+            if(!isCoinDrop)
+            {
+                foreach(GameObject drop in Coins)
+                {
+                    drop.transform.position = transform.position;
+                }
+            }
+        }
 
     private void StopCoroutines()
     {
