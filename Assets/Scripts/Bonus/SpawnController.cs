@@ -130,7 +130,7 @@ public class SpawnController : MonoBehaviour
                 bonus[0].TryGetComponent<CoinChest>(out var coinchest); 
                 if(coinchest&&coinchest.isCoinDrop)
                 {
-                    foreach(GameObject drop in coinchest.Coins)
+                    foreach(GameObject drop in coinchest.Coins.ToList())
                     {
                         
                         drop.SetActive(false);
@@ -145,7 +145,10 @@ public class SpawnController : MonoBehaviour
 
         if(mobs.Count > 0)
         {
-            Physics2D.IgnoreCollision(Player.GetComponent<Collider2D>(), mobs[0].GetComponent<Collider2D>(), true);
+            foreach(GameObject mob in mobs)
+                {
+                    Physics2D.IgnoreCollision(Player.GetComponent<Collider2D>(), mob.GetComponent<Collider2D>(), true);    
+                }
             if(mobs[0].transform.position.y < Player.transform.position.y - 8f)
             {
                 mobs[0].SetActive(false);
