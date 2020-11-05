@@ -23,10 +23,10 @@ TagManager:
   - 
   - 
   - Player
+  - Bonus
   - Platform
   - Canvas
-  - Bonus
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -58,6 +58,9 @@ TagManager:
     locked: 0
   - name: Bonus
     uniqueID: 2014588553
+    locked: 0
+  - name: Enemy
+    uniqueID: 1101391333
     locked: 0
   - name: Player
     uniqueID: 3940689793

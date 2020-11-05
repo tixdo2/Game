@@ -19,6 +19,7 @@ public class Platform : MonoBehaviour, IPooledInterface
     private Vector3 movement = Vector3.left; // скорость движения влево-вправо 1х Платформы
 
     public bool curBonus = false; // текущий бонус на платформе
+    public bool curMobs = false;
 
     public Sprite BrokeLeft, BrokeMiddle, BrokeRight; // спрайты поломаных частей платформы
     public Sprite Left, Middle, Right;
@@ -117,22 +118,20 @@ public class Platform : MonoBehaviour, IPooledInterface
                     {
                         child.GetComponent<ChildPlatform>().isBroke = false;
                         _animator.SetBool("StayBrokeLeft", false); // Меняем спрайт
-                        _animator.SetBool("NoBroke", true); // Меняем спрайт
+                        //_animator.SetBool("NoBroke", true); // Меняем спрайт
                         // Меняем спрайт
-                        //GetComponent<SpriteRenderer>().sprite = Right;
                     }
                     else if(child.GetComponent<SpriteRenderer>().sprite == BrokeMiddle)
                     {
                         child.GetComponent<ChildPlatform>().isBroke = false;
                         _animator.SetBool("StayBrokeMiddle", false); // Меняем спрайт
-                        _animator.SetBool("NoBroke", true);
+                       // _animator.SetBool("NoBroke", true);
                     }
                     else if(child.GetComponent<SpriteRenderer>().sprite == BrokeRight)
                     {
                         child.GetComponent<ChildPlatform>().isBroke = false;
                         _animator.SetBool("StayBrokeRight", false); // Меняем спрайт
-                        _animator.SetBool("NoBroke", true); 
-                        //child.GetComponent<SpriteRenderer>().sprite = Left;
+                       // _animator.SetBool("NoBroke", true); 
                     }
                     */
 

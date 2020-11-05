@@ -10,8 +10,8 @@ public class PlayerInfo : MonoBehaviour
     public int Score = 0;
     public int BonusScore = 0;
     public bool isAlive {get {return HP>0f;}}
-    public Sprite skin;
-    public SpriteRenderer skinRender;
+    //public Sprite skin;
+    //public SpriteRenderer skinRender;
 
     
 
@@ -20,7 +20,7 @@ public class PlayerInfo : MonoBehaviour
     //Загрузка спрайтов
     void Awake()
     {
-        skinRender.sprite = skin;
+        //skinRender.sprite = skin;
 
     }
 

@@ -1,16 +1,280 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="06108718-f80a-48bc-b21f-048ce73f904a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Documentaion.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Documentaion.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/Example Scene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/Example Scene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/Ground.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/Ground.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickSetterExample.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickSetterExample.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/Player.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/Player.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs/Dynamic Joystick.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs/Dynamic Joystick.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs/Fixed Joystick.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs/Fixed Joystick.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs/Floating Joystick.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs/Floating Joystick.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs/Variable Joystick.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Prefabs/Variable Joystick.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Plain_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Ridged_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Outline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Outline.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Outline_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Outline_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Plain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Plain.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Plain_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Plain_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Ridged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Ridged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Handles/Handle_Ridged_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Outline_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Plain_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Horizontal Backgrounds/Horizontal_Ridged_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Outline_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Plain_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/Vertical Backgrounds/Vertical_Ridged_Arrows.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyRecorder.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyRecorder.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Players.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Blue.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Blue.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Friend.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Friend.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Chest.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Chest.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/ChestOpen.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/ChestOpen.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/EnemyRecorder.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/EnemyRecorder.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Blue.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Blue.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Fall.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Fall.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Jump.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Jump.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Run.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Run.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Attack.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Attack.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Fall.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Fall.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Idle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Idle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Jump.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Jump.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/MarlowFriend.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/MarlowFriend.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Run.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Run.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/RecorderIdle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/RecorderIdle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/SoundWave.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/SoundWave.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Way1.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Way1.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Way2.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Way2.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/Chest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/Chest.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/ChestEmission.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/ChestEmission.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Attack_f/MarlowAttack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Attack_f/MarlowAttack.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Attack_f/MarlowAttackEmission.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Attack_f/MarlowAttackEmission.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/MarlowBlueEmissionSheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/MarlowBlueSheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/MarlowBlueSheet.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/MarlowBlueSheet.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/MarlowBlueSheet.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendEmissionSheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendSheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendSheet.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendSheet.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendSheet.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayerEmission.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayerEmission.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Movement_Test/Global Volume Profile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Movement_Test/Global Volume Profile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Mobs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Mobs/EnemyRecorder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/Bonus.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/MarlowBlue.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/MarlowBlue.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/MarlowFriend.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Shader/MarlowFriend.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Coin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Healing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Healing.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Note.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Note.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Poison.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Poison.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/SinglePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/SinglePlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/DoublePlatforms/DoublePlatform.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/DoublePlatforms/DoublePlatform.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/TriplePlatforms/BrokedMiddle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/TriplePlatforms/BrokedMiddle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/TriplePlatforms/BrokedRight.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/TriplePlatforms/BrokedRight.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/TriplePlatforms/TriplePlatform.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/TriplePlatforms/TriplePlatform.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/Chest.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/Chest.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline_Arrows.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/MarlowBlueEmissionSheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendEmissionSheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds/AllAxis_Outline.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/IdleFriend_f/MarlowIdle-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendRun_f/MarlowFriendRun-8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Sprites/All Axis Backgrounds.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowRainbow/Idle3_f/Marlow3Idle-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/Idle3_f/Marlow3Idle-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/RecordPlayer-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/Wave-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/Wave-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/Wave-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/Wave-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/Wave-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/Wave-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/Wave-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Mobs/PlayerRecord_f/Wave-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/MarlowAttack.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/MarlowAttack.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/MarlowFriendIdle.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/MarlowFriendIdle.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/MarlowFriendRun.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/MarlowFriendRun.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/MarlowJump.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/MarlowJump.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/PSD/RecordPlayer.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/PSD/RecordPlayer.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Movement_Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/PoisonSlave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/PoisonSlave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/SpawnController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/Subwoofer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/Subwoofer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyRecorder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyRecorder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mobs/EnemyRecorder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Chest.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Bonus/Chest.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Chest.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Bonus/Chest.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Diploma.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Bonus/Diploma.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Diploma.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Bonus/Diploma.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Notes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Bonus/Notes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Notes.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Bonus/Notes.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,10 +293,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Diploma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/HealingSlave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/PoisonSlave.cs" />
@@ -44,6 +304,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" />
       </list>
     </option>
   </component>
@@ -62,7 +327,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -99,6 +364,10 @@
       <workItem from="1604267161288" duration="3000" />
       <workItem from="1604274312446" duration="17529000" />
       <workItem from="1604360842730" duration="6870000" />
+      <workItem from="1604595925942" duration="753000" />
+      <workItem from="1604596855912" duration="230000" />
+      <workItem from="1604597139350" duration="500000" />
+      <workItem from="1604597794216" duration="4424000" />
     </task>
     <servers />
   </component>
@@ -111,9 +380,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="170" key="SettingsEditor" timestamp="1603820489736">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="233" y="138" key="SettingsEditor" timestamp="1604597330733">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="233" y="138" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604597330733" />
     <state x="461" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1603820489736" />
     <state x="92" y="92" width="1736" height="866" key="VCS.FileHistoryDialog" timestamp="1604279386766">
       <screen x="0" y="0" width="1920" height="1050" />

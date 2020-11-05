@@ -8,8 +8,10 @@ public class PoisonSlave : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
+        
         if(other.tag == "Player" && !other.isTrigger)
         {
+           
             Action(other.gameObject);
         }
     }

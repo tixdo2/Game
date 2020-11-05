@@ -7,7 +7,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
     public int CountCoins;
     public List<GameObject> Coins;
     private float x,y;
-    private bool isCoinDrop = false;
+    public bool isCoinDrop = false;
     private GameObject Player;
     private int playerObject, collideObject;
 
@@ -36,34 +36,24 @@ public class CoinChest : MonoBehaviour, IPooledInterface
             coin.SetActive(false);
             Coins.Add(coin);
         }
+        
+        isCoinDrop = false;
     } 
-    /*
-    public void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.tag == "Player")
-        {
-            other.gameObject.GetComponent<PlayerMovement>().isGrounded = true;
-        }
-    }
-    */
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        // && !other.isTrigger
-        if(other.tag == "Player" && !isCoinDrop)
+        if(other.tag == "Player" && !other.isTrigger && !isCoinDrop)
         {
             
             Player = other.gameObject;
             isCoinDrop = true;
             Physics2D.IgnoreCollision(Player.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
-
             StartCoroutine(CoinDrop());
         }
     }
 
     private IEnumerator CoinDrop() 
     {
-        Debug.Log(1);
         
 
         foreach (GameObject drop in Coins)
@@ -74,35 +64,13 @@ public class CoinChest : MonoBehaviour, IPooledInterface
                 drop.GetComponent<Rigidbody2D>().AddForce((transform.up + transform.right) *2, ForceMode2D.Impulse);
             else if(RandomWay >5 && RandomWay <=10)
                 drop.GetComponent<Rigidbody2D>().AddForce((transform.up - transform.right) *2, ForceMode2D.Impulse);
-               
-
             yield return new WaitForSeconds(0.5f);
         }
-        
-        
-
         StopCoroutines();
+        
     }
 
-    void Update()
-    {
-        
-        if(Player != null)
-        {
-            if(Coins.Count > 0)
-            {
-                for(int i = 0; i<Coins.Count; i++)
-                {
-                    if(Coins[i].transform.position.y < Player.transform.position.y - 5.5f)
-                    {
-                        Coins[i].SetActive(false);
-                        Coins.Remove(Coins[0]);
-                        //Physics2D.IgnoreLayerCollision(playerObject, collideObject, false);
-                    }
-                }
-            }
-        }
-    }
+    
 
     private void StopCoroutines()
     {

@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\38095\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\38095\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_OurFirstProject.338342198.00" t="ExcludeRecursive" />
+    <e p="C:\Users\tixdo\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\tixdo\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_OurFirstProject.338342198.00" t="ExcludeRecursive" />
     <e p="D:\Documents\Projects\Game\OurFirstProject" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Joystick Pack" t="Include">
+          <e p="Examples" t="Include">
+            <e p="JoystickPlayerExample.cs" t="Include" />
+            <e p="JoystickSetterExample.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Base" t="Include">
+              <e p="Joystick.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="DynamicJoystickEditor.cs" t="Include" />
+              <e p="FloatingJoystickEditor.cs" t="Include" />
+              <e p="JoystickEditor.cs" t="Include" />
+              <e p="VariableJoystickEditor.cs" t="Include" />
+            </e>
+            <e p="Joysticks" t="Include">
+              <e p="DynamicJoystick.cs" t="Include" />
+              <e p="FixedJoystick.cs" t="Include" />
+              <e p="FloatingJoystick.cs" t="Include" />
+              <e p="VariableJoystick.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="ObjectPooler.cs" t="Include" />
         <e p="Pixel Font - Tripfive" t="Include">
           <e p="_README.txt" t="Include" />
@@ -21,7 +45,6 @@
             <e p="Subwoofer.cs" t="Include" />
           </e>
           <e p="EnemyPatrol.cs" t="Include" />
-          <e p="EnemyRecorder.cs" t="Include" />
           <e p="EnemyRino.cs" t="Include" />
           <e p="Game" t="Include">
             <e p="CameraController.cs" t="Include" />
@@ -30,6 +53,9 @@
             <e p="HealthBar.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
             <e p="SceneAnimation.cs" t="Include" />
+          </e>
+          <e p="Mobs" t="Include">
+            <e p="EnemyRecorder.cs" t="Include" />
           </e>
           <e p="Platforms" t="Include">
             <e p="ChildPlatform.cs" t="Include" />

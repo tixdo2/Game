@@ -33,8 +33,8 @@ public class PlayerController : MonoBehaviour
     //Изменения спрайта скина
     public void ChangeSkin(Sprite newSkin)
     {
-        PI.skin = newSkin;
-        PI.skinRender.sprite = PI.skin;
+        //PI.skin = newSkin;
+        //PI.skinRender.sprite = PI.skin;
     }
 
     private IEnumerator HealingWait(float Count) 

@@ -23,7 +23,7 @@ public class Customizer : MonoBehaviour
         
         skins = new List<Sprite>();
 
-        skinIndex = GM.skinIndex;
+        skinIndex = PlayerPrefs.GetInt("skinIndex");
 
         skins.Add(Resources.Load<Sprite>("Skins/Marlow"));
         skins.Add(Resources.Load<Sprite>("Skins/MarlowFriend"));
@@ -48,7 +48,7 @@ public class Customizer : MonoBehaviour
     public void Next()
     {
 
-        Debug.Log(1);
+        //Debug.Log(1);
         if(skinIndex < skinsCount-1)
         {
             skinIndex++;
@@ -67,7 +67,7 @@ public class Customizer : MonoBehaviour
 
     public void Prev()
     {
-        Debug.Log(0);
+        //Debug.Log(0);
 
         if(skinIndex == 0) 
         {

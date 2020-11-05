@@ -6,76 +6,123 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject playerGO;
+    public List<GameObject> Skins;
 
-    public Sprite skin;
+    public List<GameObject> Controllers;
     
+    public Sprite skin;
+
     public int skinIndex;
 
     public TextMeshProUGUI ScoreTMP, ScoreDiedTMP, CoinsTMP;
 
     public GameObject conteinerGame, conteinerMenu, conteinerDead;
+    
+    public HealthBar HealthBar;
 
     public Animator AnimatorPause,AnimatorDead;
 
-    private PlayerController PC;
+    private PlayerController _pc;
 
-    private Vector3 maxPosition;
+    private GameObject _playerGO;
 
-    private float startPostionY;
+    private Vector3 _maxPosition;
 
-    private int maxScore = 0;
+    private float _startPostionY;
     
-    private bool isPause=false;
+    private bool _isPause=false;
 
-    private float timer;
+    private float _timer;
+    
+    private int _coins;
+
+    private int _skinIndex = 0; // = PlayerPrefs.GetInt("skinIndex");
 
 
 
     void Awake()
     {
         Time.timeScale = 1f;
-        PC = playerGO.GetComponent<PlayerController>();
-
-        startPostionY = PC.transform.position.y;
-        maxPosition = PC.transform.position;
-        PC.ChangeSkin(PlayerCustomizer.skin);
+        
+        Init();
     }
 
+    void Init()
+    {
+       
+        _skinIndex = PlayerPrefs.GetInt("skinIndex");
+        Debug.Log("skinIndex "+_skinIndex);
+        var position= new Vector3(0.8f, -5.663f, 0);
+        
+        _playerGO = Instantiate(Skins[_skinIndex], position, Quaternion.identity);
+        _pc = _playerGO.GetComponent<PlayerController>();
+        
+        InitUI();
+        InitContollers();
+        
+        
+        _startPostionY = _pc.transform.position.y;
+        _maxPosition = _pc.transform.position;
+        //_pc.ChangeSkin(PlayerCustomizer.skin);
+    }
+
+    void InitUI()
+    {
+        PlayerMovement playerMovement = _pc.GetComponent<PlayerMovement>();
+        playerMovement.Button_l = Controllers[0];
+        playerMovement.Button_R = Controllers[1];
+        playerMovement.Button_J = Controllers[2];
+        playerMovement.Button_A = Controllers[3];
+        playerMovement.joystik = Controllers[4];
+    }
+
+    void InitContollers()
+    {
+        SpawnController spawnController = GetComponent<SpawnController>();
+        spawnController.Player = _playerGO;
+
+        _pc.HB = HealthBar;
+
+        PlatformController platformController = GetComponent<PlatformController>();
+        platformController.Player = _playerGO;
+
+        CameraController cameraController = GetComponent<CameraController>();
+        cameraController.player = _playerGO.transform;
+    }
     
 
     void Update()
     {
-        if(PC.PI.isAlive)
+        if(_pc.PI.isAlive)
         {
 
-            if (PC.PI.Score <= 0)
+            if (_pc.PI.Score <= 0)
             {
-                PC.PI.Score = 0;
+                _pc.PI.Score = 0;
                 ScoreTMP.SetText("0");
             }
 
             
 
-            if (maxPosition.y <  PC.transform.position.y)
+            if (_maxPosition.y <  _pc.transform.position.y)
             {
 
-                maxPosition.y = PC.transform.position.y;
+                _maxPosition.y = _pc.transform.position.y;
             }
             
-            PC.PI.Score = Mathf.FloorToInt(maxPosition.y - startPostionY);
+            _pc.PI.Score = Mathf.FloorToInt(_maxPosition.y - _startPostionY);
             
-            PC.PI.Score += PC.PI.BonusScore;
+            _pc.PI.Score += _pc.PI.BonusScore;
             
-            ScoreTMP.SetText(PC.PI.Score.ToString());
-            CoinsTMP.SetText(PC.PI.Coins.ToString());
+            ScoreTMP.SetText(_pc.PI.Score.ToString());
+            CoinsTMP.SetText(_pc.PI.Coins.ToString());
         }
         else
         {
             DeadMenu();
         }
 
-        if ((maxPosition.y > (PC.transform.position.y + 20))) DeadMenu();
+        if ((_maxPosition.y > (_pc.transform.position.y + 20))) DeadMenu();
 
 
 
@@ -83,26 +130,45 @@ public class GameManager : MonoBehaviour
 
     void DeadMenu()
     {
-
+        
+        
         conteinerDead.SetActive(true);
-        ScoreDiedTMP.SetText(PC.PI.Score.ToString());
+        
+        
         Time.timeScale = 0;
 
+    }
+
+    void SetScore()
+    {
+        int maxScore = PlayerPrefs.GetInt("MaxScore");
+
+        if(maxScore< _pc.PI.Score)
+            PlayerPrefs.SetInt("MaxScore", _pc.PI.Score);
+        ScoreDiedTMP.SetText(_pc.PI.Score.ToString());
+    }
+
+    void SetCoins()
+    {
+        //Debug.Log(PlayerPrefs.GetInt("Coins"));
+        int coins = PlayerPrefs.GetInt("Coins") + _pc.PI.Coins;
+        
+        PlayerPrefs.SetInt("Coins", coins);
     }
     
     
     public void PauseMenu()
     {
 
-        Debug.Log(isPause);
+        Debug.Log(_isPause);
 
-        if(isPause)
+        if(_isPause)
         {
             conteinerGame.SetActive(true);
             conteinerMenu.SetActive(false);
             //AnimatorPause.SetBool("IsPaused", false);
-            timer = 1f;
-            isPause=false;
+            _timer = 1f;
+            _isPause=false;
         }
         else 
         {
@@ -110,11 +176,11 @@ public class GameManager : MonoBehaviour
             conteinerMenu.SetActive(true);
             //AnimatorPause.SetBool("IsPaused", true);
 
-            timer = 0;
-            isPause=true;
+            _timer = 0;
+            _isPause=true;
         }
 
-        Time.timeScale = timer;
+        Time.timeScale = _timer;
 
     }
 
@@ -127,6 +193,8 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        SetScore();
+        SetCoins();
         SceneManager.LoadScene(0);
     }
     

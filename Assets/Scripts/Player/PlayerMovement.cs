@@ -7,13 +7,17 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalSpeed;
     public float speedX;
     public float verticalImpulse;
+    public float thrust;
+    public GameObject Button_l,Button_R,Button_J,Button_A,joystik;
+    private VariableJoystick JoystikControl;
     
     public bool isGrounded=true;
 
     public enum ControlOfCharacter
     {
         Keyboard = 0,
-        Sensor=1
+        Sensor1=1,
+        Sensor2=2
     }
     public ControlOfCharacter Control=ControlOfCharacter.Keyboard; 
 
@@ -33,22 +37,22 @@ public class PlayerMovement : MonoBehaviour
         //horizontalSpeed=0f;
         rb=GetComponent<Rigidbody2D>();   
         anim = GetComponent<Animator>();
+        JoystikControl=joystik.gameObject.GetComponent<VariableJoystick>();
         _playerObject=LayerMask.NameToLayer("Player");
         _collideObject=LayerMask.NameToLayer("Platform");
     }
 
     void Update()
     {
-        
-        if (rb.velocity.y>0)
+        if (rb.velocity.y>0f)
         {
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, true);
-            //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, true);
+            Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, true);
         }
         else 
         {
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, false);
-            //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
+            Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
         }
         
         Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject,  false);
@@ -83,13 +87,18 @@ public class PlayerMovement : MonoBehaviour
 
         if (Control==ControlOfCharacter.Keyboard) //Управление через клавиатуру
         {
+            Button_l.SetActive(false);
+            Button_R.SetActive(false);
+            Button_J.SetActive(false);
+            Button_A.SetActive(false);
+            joystik.SetActive(false);
             //Хотьба
             rb.velocity = new Vector2(moveInput * speedX, rb.velocity.y);
             moveInput = Input.GetAxis("Horizontal");
             anim.SetFloat("Speed", Mathf.Abs(moveInput)); 
             anim.SetBool("Run",true);
 
-            //прыжок
+            //Прыжок
             if (Input.GetKey(KeyCode.Space) && isGrounded)                                              
             {
                 rb.velocity = Vector2.up * verticalImpulse;
@@ -97,8 +106,13 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }        
-        else //Управление через сенсор
+        else if (Control==ControlOfCharacter.Sensor1) //Управление кнопками
         {
+            Button_l.SetActive(true);
+            Button_R.SetActive(true);
+            Button_J.SetActive(true);
+            Button_A.SetActive(true);
+            joystik.SetActive(false);
             //Хотьба
             rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
             anim.SetFloat("Speed", 0.002f); 
@@ -109,7 +123,40 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = Vector2.up * verticalImpulse;
                 anim.SetTrigger("Jump");
             }
-        }                                           
+        }        
+        else //Управление сенсором
+        {
+            Button_l.SetActive(false);
+            Button_R.SetActive(false);
+            Button_J.SetActive(true);
+            Button_A.SetActive(true);
+            joystik.SetActive(true);
+
+           //Хотьба
+           if (JoystikControl.Horizontal>0.1f)
+           {
+               OnClickRight();
+               anim.SetFloat("Speed", 0.002f);
+           }
+           else if (JoystikControl.Horizontal<-0.1f)
+           {
+                OnClickLeft();    
+                anim.SetFloat("Speed", 0.002f); 
+           }
+           else
+           {
+                UpClick();
+           }
+            rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y); 
+
+            //Прыжок
+            if (isGrounded&&JumpBDown)                                              
+            {
+                rb.velocity = Vector2.up * verticalImpulse;
+                anim.SetTrigger("Jump");
+            }
+
+        }                                   
 
 
         //Разворот
@@ -205,6 +252,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void knockback()
     {
-        rb.velocity = Vector2.right*1000f;
+        //rb.velocity = Vector2.right*1000f;
+        rb.AddForce(transform.right*thrust, ForceMode2D.Impulse);
     }
 }
