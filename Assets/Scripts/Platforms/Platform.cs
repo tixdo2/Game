@@ -16,7 +16,7 @@ public class Platform : MonoBehaviour, IPooledInterface
 
     public List<GameObject> Children = new List<GameObject>(); // список дочерних элементов у каждой платформы
 
-    private Vector3 movement = Vector3.left; // скорость движения влево-вправо 1х Платформы
+    private Vector3 movement = Vector3.left * 3f; // скорость движения влево-вправо 1х Платформы
 
     public bool curBonus = false; // текущий бонус на платформе
     public bool curMobs = false;
@@ -162,19 +162,22 @@ public class Platform : MonoBehaviour, IPooledInterface
     void FixedUpdate()
     {
         // Движение 1х платформы влево-вправо
-        if(size==1 && MoveControl)
-        {
-            if (this.transform.position.x > 2.55f)
-                movement = Vector3.left * 0.05f;
-            else if (this.transform.position.x < -2.55f)
-                movement = Vector3.right * 0.05f;
-            this.transform.Translate(movement);
-        }
+        
     }
+   
     void Update ()
     {
         //Постоянно изменяемые координаты платформы
         x = this.transform.position.x;
         y = this.transform.position.y;
+
+        if(size==1 && MoveControl)
+        {
+            if (this.transform.position.x > 2.55f)
+                movement = Vector3.left * 3f;
+            else if (this.transform.position.x < -2.55f)
+                movement = Vector3.right * 3f;
+            this.transform.Translate(movement * Time.deltaTime);
+        }
     }
 }

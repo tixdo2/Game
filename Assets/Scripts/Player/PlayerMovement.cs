@@ -92,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
             Button_J.SetActive(false);
             Button_A.SetActive(false);
             joystik.SetActive(false);
+            
             //Хотьба
             rb.velocity = new Vector2(moveInput * speedX, rb.velocity.y);
             moveInput = Input.GetAxis("Horizontal");

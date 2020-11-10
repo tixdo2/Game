@@ -53,6 +53,7 @@
             <e p="HealthBar.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
             <e p="SceneAnimation.cs" t="Include" />
+            <e p="Skin.cs" t="Include" />
           </e>
           <e p="Mobs" t="Include">
             <e p="EnemyRecorder.cs" t="Include" />

@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
 
     public Animator AnimatorPause,AnimatorDead;
 
+    [SerializeField]
+    private Wallet _wallet;
+    
     private PlayerController _pc;
 
     private GameObject _playerGO;

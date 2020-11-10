@@ -245,3 +245,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountCoins: 0
   Coins: []
+  isCoinDrop: 0

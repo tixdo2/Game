@@ -5,19 +5,20 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Game
-{
     public class Customizer : MonoBehaviour
     {
         [FormerlySerializedAs("CoinsText")] public TextMeshProUGUI coinsTMP;
         [FormerlySerializedAs("List Skins")] 
-        public List<Skin> skins;
+        [SerializeField] private List<Skin> skins = new List<Skin>();
+        [SerializeField] private List<Wallet> wallet = new List<Wallet>();
         [FormerlySerializedAs("BuyButton")] 
         public GameObject buttonCost;
+        
+        [FormerlySerializedAs("BuyMenu")] public Transform buyMenu;
         public Skin ActiveSkin => skins[skinIndex];
 
-        [FormerlySerializedAs("Wallet")] [SerializeField]
-        private Wallet _wallet;
+        //[FormerlySerializedAs("Wallet")] [SerializeField]
+        //private Wallet _wallet;
         [FormerlySerializedAs("SkinIndex")] [SerializeField]
         private int skinIndex = 0;
 
@@ -32,6 +33,8 @@ namespace Game
 
         private void Awake()
         {
+            
+            Debug.Log(skins[0]);
             InitSkins();
             ChangeCoinsUI();
         }
@@ -52,6 +55,7 @@ namespace Game
             }
             Destroy(_go);
             _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+            _go.transform.SetParent(buyMenu);
             ChangeButton();
         }
 
@@ -71,6 +75,7 @@ namespace Game
             
             Destroy(_go);
             _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+            _go.transform.SetParent(buyMenu);
             ChangeButton();
 
         }
@@ -90,17 +95,17 @@ namespace Game
             {
                 case Currency.Coins:
                 
-                    if (ActiveSkin.cost <= _wallet.GetCoins())
+                    if (ActiveSkin.cost <= wallet[0].GetCoins())
                     {
-                        _wallet.SubCoins(ActiveSkin.cost);
+                        wallet[0].SubCoins(ActiveSkin.cost);
                     }
                     break;
             
                 case Currency.Diamonds:
                 
-                    if (ActiveSkin.cost <= _wallet.GetDiamonds())
+                    if (ActiveSkin.cost <= wallet[0].GetDiamonds())
                     {
-                        _wallet.SubDiamods(ActiveSkin.cost);
+                        wallet[0].SubDiamods(ActiveSkin.cost);
                     }
 
                     break;
@@ -116,9 +121,10 @@ namespace Game
             skinIndex = PlayerPrefs.GetInt("skinIndex");
             if (!ActiveSkin.isBuying) skinIndex = 0;
             _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+            _go.transform.SetParent(buyMenu);
         }
 
-        private void ChangeCoinsUI() => coinsTMP.SetText(_wallet.GetCoins().ToString());
+        private void ChangeCoinsUI() => coinsTMP.SetText(wallet[0].GetCoins().ToString());
         
         private void ChangeButton()
         {
@@ -160,4 +166,3 @@ namespace Game
         [FormerlySerializedAs("Cost")] public int cost;
         //public int Index;
     }
-}

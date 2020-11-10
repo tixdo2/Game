@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Friend
+  m_Name: Griend
   m_EditorClassIdentifier: Assembly-CSharp:Game:Skin
   currency: 0
-  prefab: {fileID: 1475318586345905090, guid: f00baf5c994c17e4abc474d9c0402563, type: 3}
-  isBuying: 1
-  cost: 100
+  prefab: {fileID: 0}
+  isBuying: 0
+  cost: 0
