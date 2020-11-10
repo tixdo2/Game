@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: WalletData
   m_EditorClassIdentifier: Assembly-CSharp:Game:Wallet
-  coins: 0
+  coins: 49500
   diamonds: 0
