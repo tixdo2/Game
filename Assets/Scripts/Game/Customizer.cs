@@ -1,101 +1,163 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class Customizer : MonoBehaviour
+namespace Game
 {
-    public PlayerController PC;
-
-    public GameManager GM;
-
-    public Image skinsR;
-
-
-    public int skinsCount;
-
-    List<Sprite> skins;
-
-    public int skinIndex = 0;
-
-    void Awake()
+    public class Customizer : MonoBehaviour
     {
+        [FormerlySerializedAs("CoinsText")] public TextMeshProUGUI coinsTMP;
+        [FormerlySerializedAs("List Skins")] 
+        public List<Skin> skins;
+        [FormerlySerializedAs("BuyButton")] 
+        public GameObject buttonCost;
+        public Skin ActiveSkin => skins[skinIndex];
+
+        [FormerlySerializedAs("Wallet")] [SerializeField]
+        private Wallet _wallet;
+        [FormerlySerializedAs("SkinIndex")] [SerializeField]
+        private int skinIndex = 0;
+
+        //[FormerlySerializedAs("SkinIndex")] [SerializeField]
+        //private bool testMode;
+
+        private int SkinsCount => skins.Count;
+        private GameObject MainPrefab => ActiveSkin.prefab;
+        private GameObject _go;
         
-        skins = new List<Sprite>();
+        
 
-        skinIndex = PlayerPrefs.GetInt("skinIndex");
-
-        skins.Add(Resources.Load<Sprite>("Skins/Marlow"));
-        skins.Add(Resources.Load<Sprite>("Skins/MarlowFriend"));
-        skins.Add(Resources.Load<Sprite>("Skins/Marlow3"));
-
-        skinsCount = skins.Count;
-
-        if(PlayerPrefs.GetInt("skinIndex") == null)
+        private void Awake()
         {
-            PlayerCustomizer.skin = skins[0];
-            skinsR.sprite = skins[0];
+            InitSkins();
+            ChangeCoinsUI();
         }
-        else
+
+        
+        public void Next()
+        {
+            if(skinIndex < SkinsCount)
+            {
+                skinIndex++;
+                //return;
+            }
+
+            if(skinIndex == SkinsCount)
+            {
+                skinIndex = 0;
+                //return;
+            }
+            Destroy(_go);
+            _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+            ChangeButton();
+        }
+
+        public void Prev()
+        {
+            if(skinIndex == 0) 
+            {
+                skinIndex = SkinsCount;
+                //return;
+            }
+        
+            if(skinIndex > 0)
+            {
+                skinIndex--;
+                //return;
+            }   
+            
+            Destroy(_go);
+            _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+            ChangeButton();
+
+        }
+
+        public void Accept()
+        {
+            PlayerPrefs.SetInt("skinIndex", skinIndex);
+            PlayerPrefs.Save();
+        }
+        
+        public void BuySkin()
+        {
+            if(ActiveSkin.isBuying)
+                return;
+        
+            switch (ActiveSkin.currency)
+            {
+                case Currency.Coins:
+                
+                    if (ActiveSkin.cost <= _wallet.GetCoins())
+                    {
+                        _wallet.SubCoins(ActiveSkin.cost);
+                    }
+                    break;
+            
+                case Currency.Diamonds:
+                
+                    if (ActiveSkin.cost <= _wallet.GetDiamonds())
+                    {
+                        _wallet.SubDiamods(ActiveSkin.cost);
+                    }
+
+                    break;
+            }
+            
+            ActiveSkin.isBuying = true;
+            ChangeCoinsUI();
+            ChangeButton();
+        }
+        
+        private void InitSkins()
         {
             skinIndex = PlayerPrefs.GetInt("skinIndex");
-
-            PlayerCustomizer.skin = skins[skinIndex];
-            skinsR.sprite = skins[skinIndex];
-        }
-    }
-
-    public void Next()
-    {
-
-        //Debug.Log(1);
-        if(skinIndex < skinsCount-1)
-        {
-            skinIndex++;
-            skinsR.sprite = skins[skinIndex];
-            return;
-
+            if (!ActiveSkin.isBuying) skinIndex = 0;
+            _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
         }
 
-        if(skinIndex == skinsCount-1)
-        {
-            skinIndex = 0;
-            skinsR.sprite = skins[skinIndex];
-            return;
-        }
-    }
-
-    public void Prev()
-    {
-        //Debug.Log(0);
-
-        if(skinIndex == 0) 
-        {
-            skinIndex = skinsCount-1;
-            skinsR.sprite = skins[skinIndex];
-            return;
-        }
+        private void ChangeCoinsUI() => coinsTMP.SetText(_wallet.GetCoins().ToString());
         
-        if(skinIndex >= 0)
+        private void ChangeButton()
         {
-            skinIndex--;
-            skinsR.sprite = skins[skinIndex];
-            return;
-        }            
+            buttonCost.SetActive(!ActiveSkin.isBuying);
+            buttonCost.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText(ActiveSkin.cost.ToString());
+        }
     }
 
-    public void Accept()
+
+    [CreateAssetMenu(fileName = "WalletData", menuName = "Customizer/Wallet")]
+    public class Wallet: ScriptableObject
     {
-        ChangeSkin();
-        PlayerPrefs.Save();
+        [SerializeField]
+        private int coins;
+        [SerializeField]
+        private int diamonds;
+
+        public int GetCoins() => coins;
+        public int GetDiamonds() => diamonds;
+        public void AddCoins(int value) => coins += value;
+        public void SubCoins(int value) => coins -= value;
+        public void AddDiamods(int value) => diamonds += value;
+        public void SubDiamods(int value) => diamonds -= value;
     }
-
-    void ChangeSkin()
-    {
-        PlayerCustomizer.skin = skins[skinIndex];
-        PlayerPrefs.SetInt("skinIndex", skinIndex);
-    }
-
-
     
+    public enum Currency
+    {
+        Coins,
+        Diamonds
+    }
+
+    [CreateAssetMenu(fileName = "SkinData", menuName = "Customizer/Skin")]
+    public class Skin: ScriptableObject
+    {
+
+        public Currency currency;
+        [FormerlySerializedAs("Prefab")] public GameObject prefab;
+        [FormerlySerializedAs("IsBuying")] public bool isBuying;
+        [FormerlySerializedAs("Cost")] public int cost;
+        //public int Index;
+    }
 }
