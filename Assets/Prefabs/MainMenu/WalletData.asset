@@ -11,6 +11,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: WalletData
-  m_EditorClassIdentifier: Assembly-CSharp:Game:Wallet
+  m_EditorClassIdentifier: Assembly-CSharp::Wallet
   coins: 0
   diamonds: 0

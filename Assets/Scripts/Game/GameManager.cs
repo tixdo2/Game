@@ -153,10 +153,12 @@ public class GameManager : MonoBehaviour
 
     void SetCoins()
     {
-        //Debug.Log(PlayerPrefs.GetInt("Coins"));
-        int coins = PlayerPrefs.GetInt("Coins") + _pc.PI.Coins;
+
+        _wallet.AddCoins(_pc.PI.Coins);
+        // Debug.Log(PlayerPrefs.GetInt("Coins"));
+        // int coins = PlayerPrefs.GetInt("Coins") + _pc.PI.Coins;
         
-        PlayerPrefs.SetInt("Coins", coins);
+        // PlayerPrefs.SetInt("Coins", coins);
     }
     
     
