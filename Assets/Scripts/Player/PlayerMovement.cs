@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -34,6 +35,17 @@ public class PlayerMovement : MonoBehaviour
     
     void Start()
     {
+        EventTrigger trigger= Button_J.GetComponent<EventTrigger>();
+        
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener((data) => { OnPointerDownDelegate((PointerEventData) data); });
+        
+        EventTrigger.Entry entry1 = new EventTrigger.Entry();
+        entry1.eventID = EventTriggerType.PointerExit;
+        entry1.callback.AddListener((data) => { OnPointerExitDelegate((PointerEventData) data); });
+        trigger.triggers.Add(entry);
+        trigger.triggers.Add(entry1);
         //horizontalSpeed=0f;
         rb=GetComponent<Rigidbody2D>();   
         anim = GetComponent<Animator>();
@@ -134,29 +146,28 @@ public class PlayerMovement : MonoBehaviour
             joystik.SetActive(true);
 
            //Хотьба
-           if (JoystikControl.Horizontal>0.1f)
+           rb.velocity = new Vector2(JoystikControl.Horizontal*7, rb.velocity.y); 
+           if (JoystikControl.Horizontal>0.01f)
            {
-               OnClickRight();
+               anim.SetBool("Run",true);
+               if (!facingRight) Flip();
                anim.SetFloat("Speed", 0.002f);
            }
-           else if (JoystikControl.Horizontal<-0.1f)
+           else if (JoystikControl.Horizontal<-0.01f)
            {
-                OnClickLeft();    
-                anim.SetFloat("Speed", 0.002f); 
+               anim.SetBool("Run",true);
+               if (facingRight) Flip();    
+               anim.SetFloat("Speed", 0.002f); 
            }
            else
            {
-                UpClick();
+               UpClick();
            }
-            rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y); 
-
-            //Прыжок
-            if (isGrounded&&JumpBDown)                                              
-            {
-                rb.velocity = Vector2.up * verticalImpulse;
-                anim.SetTrigger("Jump");
-            }
-
+           if (isGrounded&&JumpBDown)                                              
+           {
+               rb.velocity = Vector2.up * verticalImpulse;
+               anim.SetTrigger("Jump");
+           }
         }                                   
 
 
@@ -235,13 +246,13 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Speed", 0f); 
         horizontalSpeed=0f;
     }
-    public void UpClickJump()
+    public void OnPointerExitDelegate(PointerEventData data)
     {
         JumpBDown=false;
     }
     
 
-    public void OnClickJump()
+    public void OnPointerDownDelegate(PointerEventData data)
     {
         JumpBDown=true;
     }

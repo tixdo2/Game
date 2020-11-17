@@ -35,6 +35,10 @@
           <e p="_README.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Achievements" t="Include">
+            <e p="Achievements.cs" t="Include" />
+            <e p="Test 1.cs" t="Include" />
+          </e>
           <e p="Bonus" t="Include">
             <e p="Coin.cs" t="Include" />
             <e p="CoinChest.cs" t="Include" />
@@ -54,6 +58,7 @@
             <e p="MainMenu.cs" t="Include" />
             <e p="SceneAnimation.cs" t="Include" />
             <e p="Skin.cs" t="Include" />
+            <e p="Wallet.cs" t="Include" />
           </e>
           <e p="Mobs" t="Include">
             <e p="EnemyRecorder.cs" t="Include" />
