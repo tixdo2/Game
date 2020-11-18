@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Blue
   m_EditorClassIdentifier: Assembly-CSharp:Game:Skin
   currency: 0
-  prefab: {fileID: 0}
+  prefab: {fileID: 1475318586345905090, guid: 87ad0d2d963bf7a4f8aa34c9526e265a, type: 3}
   isBuying: 0
-  cost: 0
+  cost: 500

@@ -127,15 +127,12 @@ public class SpawnController : MonoBehaviour
             if(bonus[0].transform.position.y < Player.transform.position.y - 8f)
             {
                 bonus[0].SetActive(false);
-                bonus[0].TryGetComponent<CoinChest>(out var coinchest); 
+                bonus[0].TryGetComponent<CoinChest>(out var coinchest);
                 if(coinchest&&coinchest.isCoinDrop)
                 {
                     foreach(GameObject drop in coinchest.Coins)
                     {
-                        
                         drop.SetActive(false);
-                        coinchest.Coins.Remove(drop);
-                        
                     }
                 }
                 Physics2D.IgnoreCollision(Player.GetComponent<Collider2D>(), bonus[0].GetComponent<Collider2D>(), false);

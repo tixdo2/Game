@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public HealthBar HealthBar;
 
     public Animator AnimatorPause,AnimatorDead;
+    static public GameManager Instance;
 
     [SerializeField]
     private Wallet _wallet;
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Time.timeScale = 1f;
-        
+        Instance = this;
         Init();
     }
 
@@ -136,7 +137,7 @@ public class GameManager : MonoBehaviour
         
         
         conteinerDead.SetActive(true);
-        
+        SetScore();
         
         Time.timeScale = 0;
 
@@ -153,12 +154,11 @@ public class GameManager : MonoBehaviour
 
     void SetCoins()
     {
-
         _wallet.AddCoins(_pc.PI.Coins);
-        // Debug.Log(PlayerPrefs.GetInt("Coins"));
-        // int coins = PlayerPrefs.GetInt("Coins") + _pc.PI.Coins;
+        //Debug.Log(PlayerPrefs.GetInt("Coins"));
+        //int coins = PlayerPrefs.GetInt("Coins") + _pc.PI.Coins;
         
-        // PlayerPrefs.SetInt("Coins", coins);
+        //PlayerPrefs.SetInt("Coins", coins);
     }
     
     

@@ -20,7 +20,7 @@ using UnityEngine.UI;
         //[FormerlySerializedAs("Wallet")] [SerializeField]
         //private Wallet _wallet;
         [FormerlySerializedAs("SkinIndex")] [SerializeField]
-        private int skinIndex = 0;
+        public int skinIndex = 0;
 
         //[FormerlySerializedAs("SkinIndex")] [SerializeField]
         //private bool testMode;
@@ -33,8 +33,6 @@ using UnityEngine.UI;
 
         private void Awake()
         {
-            
-            Debug.Log(skins[0]);
             InitSkins();
             ChangeCoinsUI();
         }
@@ -94,10 +92,13 @@ using UnityEngine.UI;
             switch (ActiveSkin.currency)
             {
                 case Currency.Coins:
-                
+
                     if (ActiveSkin.cost <= wallet[0].GetCoins())
                     {
                         wallet[0].SubCoins(ActiveSkin.cost);
+                        ActiveSkin.isBuying = true;
+                        ChangeCoinsUI();
+                        ChangeButton();
                     }
                     break;
             
@@ -106,14 +107,14 @@ using UnityEngine.UI;
                     if (ActiveSkin.cost <= wallet[0].GetDiamonds())
                     {
                         wallet[0].SubDiamods(ActiveSkin.cost);
+                        ActiveSkin.isBuying = true;
+                        ChangeCoinsUI();
+                        ChangeButton();
                     }
-
                     break;
             }
             
-            ActiveSkin.isBuying = true;
-            ChangeCoinsUI();
-            ChangeButton();
+            
         }
         
         private void InitSkins()
@@ -134,21 +135,7 @@ using UnityEngine.UI;
     }
 
 
-    [CreateAssetMenu(fileName = "WalletData", menuName = "Customizer/Wallet")]
-    public class Wallet: ScriptableObject
-    {
-        [SerializeField]
-        private int coins;
-        [SerializeField]
-        private int diamonds;
-
-        public int GetCoins() => coins;
-        public int GetDiamonds() => diamonds;
-        public void AddCoins(int value) => coins += value;
-        public void SubCoins(int value) => coins -= value;
-        public void AddDiamods(int value) => diamonds += value;
-        public void SubDiamods(int value) => diamonds -= value;
-    }
+    
     
     public enum Currency
     {
@@ -156,13 +143,5 @@ using UnityEngine.UI;
         Diamonds
     }
 
-    [CreateAssetMenu(fileName = "SkinData", menuName = "Customizer/Skin")]
-    public class Skin: ScriptableObject
-    {
-
-        public Currency currency;
-        [FormerlySerializedAs("Prefab")] public GameObject prefab;
-        [FormerlySerializedAs("IsBuying")] public bool isBuying;
-        [FormerlySerializedAs("Cost")] public int cost;
-        //public int Index;
-    }
+    
+    

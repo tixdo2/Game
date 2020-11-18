@@ -3,57 +3,40 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="06108718-f80a-48bc-b21f-048ce73f904a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Diploma.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/Diploma.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/HealingParticle.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Material/HealingParticle.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Healing.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Healing.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/ParticelSubAnimation.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/ParticelSubAnimation.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/PlayerOrb.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/PlayerOrb.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Poison.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Poison.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Coin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Note.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Note.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Default.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Default.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Wallet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Wallet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/SinglePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/SinglePlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Fall.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Fall.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/Subwoofer-0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Subwoofer-0.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/Subwoofer_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Subwoofer_idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-0.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect-4.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Attack_f.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Attack_f.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Player.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/WalletData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/WalletData.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +48,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.3.1/Runtime/2D/Light2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Achievements/Test 1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -83,13 +68,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Wallet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievements.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Test 1.cs" />
       </list>
     </option>
   </component>
@@ -152,7 +140,10 @@
       <workItem from="1604662284927" duration="3216000" />
       <workItem from="1604923645899" duration="601000" />
       <workItem from="1604924389858" duration="9267000" />
-      <workItem from="1605016270755" duration="3312000" />
+      <workItem from="1605016270755" duration="6191000" />
+      <workItem from="1605025118489" duration="2514000" />
+      <workItem from="1605101834802" duration="59000" />
+      <workItem from="1605620763668" duration="2840000" />
     </task>
     <servers />
   </component>
@@ -161,6 +152,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

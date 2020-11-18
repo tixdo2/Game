@@ -20,8 +20,10 @@ namespace Game
 		public void Play()
 		{
 			//Debug.Log(_customizer.ActiveSkin.isBuying);
-			if (customizer.ActiveSkin.isBuying)
-				SceneManager.LoadScene(1);
+			if (!customizer.ActiveSkin.isBuying)
+				customizer.skinIndex = 0;
+			
+			SceneManager.LoadScene(1);
 			//StartCoroutine("Play");
 		}
 
