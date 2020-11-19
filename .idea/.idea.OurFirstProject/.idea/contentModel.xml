@@ -30,14 +30,17 @@
             </e>
           </e>
         </e>
+        <e p="JsonDotNet" t="Include">
+          <e p="link.xml" t="Include" />
+        </e>
         <e p="ObjectPooler.cs" t="Include" />
         <e p="Pixel Font - Tripfive" t="Include">
           <e p="_README.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="Achievements" t="Include">
+            <e p="Achievement.cs" t="Include" />
             <e p="Achievements.cs" t="Include" />
-            <e p="Test 1.cs" t="Include" />
           </e>
           <e p="Bonus" t="Include">
             <e p="Coin.cs" t="Include" />
@@ -51,12 +54,16 @@
           <e p="EnemyPatrol.cs" t="Include" />
           <e p="EnemyRino.cs" t="Include" />
           <e p="Game" t="Include">
+            <e p="AchievementMenuManager.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="Customizer.cs" t="Include" />
+            <e p="DataManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="HealthBar.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
+            <e p="SaveManager.cs" t="Include" />
             <e p="SceneAnimation.cs" t="Include" />
+            <e p="ScreenManager.cs" t="Include" />
             <e p="Skin.cs" t="Include" />
             <e p="Wallet.cs" t="Include" />
           </e>

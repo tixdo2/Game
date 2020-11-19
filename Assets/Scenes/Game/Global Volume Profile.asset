@@ -24,12 +24,12 @@ MonoBehaviour:
     min: 0
   scatter:
     m_OverrideState: 0
-    m_Value: 0.51
+    m_Value: 0.336
     min: 0
     max: 1
   clamp:
     m_OverrideState: 0
-    m_Value: 65518.37
+    m_Value: 65531.81
     min: 0
   tint:
     m_OverrideState: 1

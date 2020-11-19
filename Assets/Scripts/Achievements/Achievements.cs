@@ -7,16 +7,13 @@ using UnityEngine.Serialization;
 [Serializable]
 public abstract class Achievements : ScriptableObject
 {
-        public string name;
-        public int count;
-        public int done;
-        public Skin reward;
-        public bool isDone;
-        public AchievementsEvent Event;
-        public void Action()
-        {
-                
-        }
+        [SerializeField]public string name;
+        [SerializeField]public int count;
+        [SerializeField]public int done;
+        [SerializeField]public Skin reward;
+        [SerializeField]public bool isDone;
+        
+        public abstract void Action();
 }
 
 

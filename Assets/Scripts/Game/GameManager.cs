@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public int skinIndex;
 
-    public TextMeshProUGUI ScoreTMP, ScoreDiedTMP, CoinsTMP;
+    public TextMeshProUGUI ScoreTMP, ScoreDiedTMP, CoinsTMP,DeadCoinsTMP;
 
     public GameObject conteinerGame, conteinerMenu, conteinerDead;
     
@@ -25,6 +25,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private Wallet _wallet;
+
+    [SerializeField] 
+    private DataManager _dataManager;
+
+    [SerializeField]
+    private GameObject maxScore;
     
     private PlayerController _pc;
 
@@ -44,18 +50,16 @@ public class GameManager : MonoBehaviour
 
 
 
-    void Awake()
+    private void Start()
     {
         Time.timeScale = 1f;
         Instance = this;
         Init();
     }
 
-    void Init()
+    private void Init()
     {
-       
-        _skinIndex = PlayerPrefs.GetInt("skinIndex");
-        Debug.Log("skinIndex "+_skinIndex);
+        _skinIndex = _dataManager.SkinIndex;
         var position= new Vector3(0.8f, -5.663f, 0);
         
         _playerGO = Instantiate(Skins[_skinIndex], position, Quaternion.identity);
@@ -67,11 +71,11 @@ public class GameManager : MonoBehaviour
         
         _startPostionY = _pc.transform.position.y;
         _maxPosition = _pc.transform.position;
-        //_pc.ChangeSkin(PlayerCustomizer.skin);
     }
 
-    void InitUI()
+    private void InitUI()
     {
+        
         PlayerMovement playerMovement = _pc.GetComponent<PlayerMovement>();
         playerMovement.Button_l = Controllers[0];
         playerMovement.Button_R = Controllers[1];
@@ -80,7 +84,7 @@ public class GameManager : MonoBehaviour
         playerMovement.joystik = Controllers[4];
     }
 
-    void InitContollers()
+    private void InitContollers()
     {
         SpawnController spawnController = GetComponent<SpawnController>();
         spawnController.Player = _playerGO;
@@ -93,9 +97,9 @@ public class GameManager : MonoBehaviour
         CameraController cameraController = GetComponent<CameraController>();
         cameraController.player = _playerGO.transform;
     }
-    
 
-    void Update()
+
+    private void Update()
     {
         if(_pc.PI.isAlive)
         {
@@ -126,52 +130,52 @@ public class GameManager : MonoBehaviour
             DeadMenu();
         }
 
-        if ((_maxPosition.y > (_pc.transform.position.y + 20))) DeadMenu();
-
-
-
+        if ((_maxPosition.y > (_pc.transform.position.y + 20)))
+                DeadMenu();
+        
     }
 
-    void DeadMenu()
+    private void DeadMenu()
     {
-        
-        
         conteinerDead.SetActive(true);
-        SetScore();
-        
-        Time.timeScale = 0;
-
-    }
-
-    void SetScore()
-    {
-        int maxScore = PlayerPrefs.GetInt("MaxScore");
-
-        if(maxScore< _pc.PI.Score)
-            PlayerPrefs.SetInt("MaxScore", _pc.PI.Score);
         ScoreDiedTMP.SetText(_pc.PI.Score.ToString());
+        DeadCoinsTMP.SetText(_pc.PI.Coins.ToString());
+        
+        if (IsMaxScroe())
+            maxScore.SetActive(true);
+        else
+            maxScore.SetActive(false);
+        //SetScore();
+        Time.timeScale = 0;
     }
 
-    void SetCoins()
+    private bool IsMaxScroe()
+    {
+        return _pc.PI.Score > _dataManager.MaxScore;
+    }
+
+    private void SetScore()
+    {
+        Debug.Log(_dataManager.MaxScore);
+        int maxScore = _dataManager.MaxScore;
+
+        if (maxScore < _pc.PI.Score)
+            _dataManager.MaxScore = _pc.PI.Score;
+        
+    }
+
+    private void SetCoins()
     {
         _wallet.AddCoins(_pc.PI.Coins);
-        //Debug.Log(PlayerPrefs.GetInt("Coins"));
-        //int coins = PlayerPrefs.GetInt("Coins") + _pc.PI.Coins;
-        
-        //PlayerPrefs.SetInt("Coins", coins);
     }
-    
     
     public void PauseMenu()
     {
-
-        Debug.Log(_isPause);
-
         if(_isPause)
         {
             conteinerGame.SetActive(true);
             conteinerMenu.SetActive(false);
-            //AnimatorPause.SetBool("IsPaused", false);
+            
             _timer = 1f;
             _isPause=false;
         }
@@ -179,19 +183,19 @@ public class GameManager : MonoBehaviour
         {
             conteinerGame.SetActive(false);
             conteinerMenu.SetActive(true);
-            //AnimatorPause.SetBool("IsPaused", true);
 
             _timer = 0;
             _isPause=true;
         }
 
         Time.timeScale = _timer;
-
     }
 
     public void RestarGame()
     {
-        Debug.Log("restarted");
+        SetScore();
+        SetCoins();
+        _dataManager.SaveData();
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
@@ -200,9 +204,9 @@ public class GameManager : MonoBehaviour
     {
         SetScore();
         SetCoins();
+        
+        _dataManager.SaveData();
+
         SceneManager.LoadScene(0);
     }
-    
-    
-
 }

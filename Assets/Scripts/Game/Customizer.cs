@@ -9,8 +9,8 @@ using UnityEngine.UI;
     {
         [FormerlySerializedAs("CoinsText")] public TextMeshProUGUI coinsTMP;
         [FormerlySerializedAs("List Skins")] 
-        [SerializeField] private List<Skin> skins = new List<Skin>();
-        [SerializeField] private List<Wallet> wallet = new List<Wallet>();
+        public List<Skin> skins;
+        public Wallet wallet;
         [FormerlySerializedAs("BuyButton")] 
         public GameObject buttonCost;
         
@@ -28,10 +28,22 @@ using UnityEngine.UI;
         private int SkinsCount => skins.Count;
         private GameObject MainPrefab => ActiveSkin.prefab;
         private GameObject _go;
+        private DataManager _dataManager;
         
         
 
         private void Awake()
+        {
+            _dataManager = GetComponent<DataManager>();
+            skins = _dataManager.Skins;
+            wallet = _dataManager.Wallet[0];
+            skinIndex = _dataManager.SkinIndex;
+
+            //InitSkins();
+            //ChangeCoinsUI();
+        }
+
+        private void Start()
         {
             InitSkins();
             ChangeCoinsUI();
@@ -75,28 +87,26 @@ using UnityEngine.UI;
             _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
             _go.transform.SetParent(buyMenu);
             ChangeButton();
-
         }
 
         public void Accept()
         {
-            PlayerPrefs.SetInt("skinIndex", skinIndex);
-            PlayerPrefs.Save();
+            _dataManager.SkinIndex = skinIndex;
         }
         
         public void BuySkin()
         {
-            if(ActiveSkin.isBuying)
+            if(ActiveSkin.isUnlock)
                 return;
         
             switch (ActiveSkin.currency)
             {
                 case Currency.Coins:
 
-                    if (ActiveSkin.cost <= wallet[0].GetCoins())
+                    if (ActiveSkin.cost <= wallet.GetCoins())
                     {
-                        wallet[0].SubCoins(ActiveSkin.cost);
-                        ActiveSkin.isBuying = true;
+                        wallet.SubCoins(ActiveSkin.cost);
+                        ActiveSkin.isUnlock = true;
                         ChangeCoinsUI();
                         ChangeButton();
                     }
@@ -104,32 +114,38 @@ using UnityEngine.UI;
             
                 case Currency.Diamonds:
                 
-                    if (ActiveSkin.cost <= wallet[0].GetDiamonds())
+                    if (ActiveSkin.cost <= wallet.GetDiamonds())
                     {
-                        wallet[0].SubDiamods(ActiveSkin.cost);
-                        ActiveSkin.isBuying = true;
+                        wallet.SubDiamonds(ActiveSkin.cost);
+                        ActiveSkin.isUnlock = true;
                         ChangeCoinsUI();
                         ChangeButton();
                     }
                     break;
             }
-            
-            
+            _dataManager.SaveData();
         }
         
         private void InitSkins()
         {
-            skinIndex = PlayerPrefs.GetInt("skinIndex");
-            if (!ActiveSkin.isBuying) skinIndex = 0;
+            //Debug.Log(ActiveSkin);
+            skinIndex = _dataManager.SkinIndex;
+            if (!ActiveSkin.isUnlock) skinIndex = 0;
             _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
             _go.transform.SetParent(buyMenu);
         }
 
-        private void ChangeCoinsUI() => coinsTMP.SetText(wallet[0].GetCoins().ToString());
+        private void ChangeCoinsUI() => coinsTMP.SetText(wallet.GetCoins().ToString());
         
         private void ChangeButton()
         {
-            buttonCost.SetActive(!ActiveSkin.isBuying);
+            if (ActiveSkin.isAchievement || ActiveSkin.isUnlock)
+            {
+                buttonCost.SetActive(false);
+                return;
+            }
+            
+            buttonCost.SetActive(!ActiveSkin.isUnlock);
             buttonCost.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText(ActiveSkin.cost.ToString());
         }
     }

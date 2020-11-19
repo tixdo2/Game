@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -9,19 +10,17 @@ namespace Game
 	{
 		//public Animator Animator;
 		public GameObject BuyingMenu, ConteinerMenu;
+
+		public List<Achievements> Achievements;
 		[SerializeField] private Customizer customizer;
-		
-		private void Start()
-		{
-			//PlayerPrefs.SetInt("Coins", 0);
-			//CoinsTMP.SetText(PlayerPrefs.GetInt("Coins").ToString());
-		}
+		[SerializeField]private SaveManager _saveManager;
 
 		public void Play()
 		{
 			//Debug.Log(_customizer.ActiveSkin.isBuying);
-			if (!customizer.ActiveSkin.isBuying)
+			if (!customizer.ActiveSkin.isUnlock)
 				customizer.skinIndex = 0;
+			
 			
 			SceneManager.LoadScene(1);
 			//StartCoroutine("Play");
@@ -38,6 +37,18 @@ namespace Game
 			BuyingMenu.SetActive(false);
 			ConteinerMenu.SetActive(true);
 		}
+
+		public void OpenAchievementMenu()
+		{
+			
+		}
+
+		public void CloseAchievementMenu()
+		{
+			
+		}
+		
+		
 
 		private IEnumerator PlayC()
 		{   

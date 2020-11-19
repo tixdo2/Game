@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currency: 0
   prefab: {fileID: 1475318586345905090, guid: 498a0fa62ae68924c9a99bab3add0401, type: 3}
-  isBuying: 0
-  cost: 250
+  isUnlock: 1
+  isAchievement: 1
+  cost: 0

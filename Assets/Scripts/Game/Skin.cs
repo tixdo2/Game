@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-[Serializable]
 [CreateAssetMenu(fileName = "SkinData", menuName = "Customizer/Skin")]
+[Serializable]
 public class Skin: ScriptableObject
 {
-    public Currency currency;
-    public GameObject prefab;
-    public bool isBuying;
-    public int cost;
+    [SerializeField]public Currency currency;
+    [SerializeField]public GameObject prefab;
+    [SerializeField]public bool isUnlock;
+    [SerializeField]public bool isAchievement;
+    [SerializeField]public int cost;
 }
