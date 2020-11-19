@@ -29,6 +29,8 @@ public class Diploma : MonoBehaviour, IPooledInterface
 
     void Action(GameObject Player)
     {
+        ParticleSystem Particle = Player.transform.GetChild(4).GetComponent<ParticleSystem>();
+        Particle.Play();
         Player.GetComponent<PlayerController>().GetXpFromDiplom(CountXP);
         gameObject.SetActive(false);
     }

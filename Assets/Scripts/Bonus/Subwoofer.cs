@@ -16,6 +16,7 @@ public class Subwoofer : MonoBehaviour
     void Action(GameObject Player)
     {
         Player.GetComponent<Rigidbody2D>().AddForce(transform.up * 25, ForceMode2D.Impulse);
+        Player.GetComponent<PlayerMovement>().onSub = true;
         Player.transform.SetParent(null);
         Player.GetComponent<PlayerMovement>().isGrounded = false;
     }

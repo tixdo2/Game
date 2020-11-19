@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float thrust;
     public GameObject Button_l,Button_R,Button_J,Button_A,joystik;
     private VariableJoystick JoystikControl;
+
+    public bool onSub = false;
     
     public bool isGrounded=true;
 
@@ -26,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true;
     private bool JumpBDown=false;
 
-    private int _playerObject,_collideObject, _bonusObject;
+    private int _playerObject,_collideObject, _mobObject;
     Animator anim;
     Rigidbody2D rb;
     Vector3 pos;
@@ -52,22 +54,23 @@ public class PlayerMovement : MonoBehaviour
         JoystikControl=joystik.gameObject.GetComponent<VariableJoystick>();
         _playerObject=LayerMask.NameToLayer("Player");
         _collideObject=LayerMask.NameToLayer("Platform");
+        _mobObject=LayerMask.NameToLayer("Enemy");
     }
 
     void Update()
     {
+
+        Physics2D.IgnoreLayerCollision(_playerObject, _mobObject, true);
         if (rb.velocity.y>0f)
         {
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, true);
-            Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, true);
         }
         else 
         {
+            onSub = false;
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, false);
-            Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
         }
         
-        Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject,  false);
 
         //атака
         if (Input.GetKey(KeyCode.J))                                              
@@ -106,10 +109,17 @@ public class PlayerMovement : MonoBehaviour
             joystik.SetActive(false);
             
             //Хотьба
+            
             rb.velocity = new Vector2(moveInput * speedX, rb.velocity.y);
             moveInput = Input.GetAxis("Horizontal");
-            anim.SetFloat("Speed", Mathf.Abs(moveInput)); 
+            
+            anim.SetFloat("Speed", Mathf.Abs(moveInput));
             anim.SetBool("Run",true);
+            if(Mathf.Abs(moveInput)>0.001)
+            {
+                if(isGrounded) Run();
+            }
+            
 
             //Прыжок
             if (Input.GetKey(KeyCode.Space) && isGrounded)                                              
@@ -119,24 +129,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }        
-        else if (Control==ControlOfCharacter.Sensor1) //Управление кнопками
-        {
-            Button_l.SetActive(true);
-            Button_R.SetActive(true);
-            Button_J.SetActive(true);
-            Button_A.SetActive(true);
-            joystik.SetActive(false);
-            //Хотьба
-            rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
-            anim.SetFloat("Speed", 0.002f); 
-
-            //Прыжок
-            if (isGrounded&&JumpBDown)                                              
-            {
-                rb.velocity = Vector2.up * verticalImpulse;
-                anim.SetTrigger("Jump");
-            }
-        }        
+              
         else //Управление сенсором
         {
             Button_l.SetActive(false);
@@ -149,12 +142,14 @@ public class PlayerMovement : MonoBehaviour
            rb.velocity = new Vector2(JoystikControl.Horizontal*7, rb.velocity.y); 
            if (JoystikControl.Horizontal>0.01f)
            {
+               if(isGrounded) Run();
                anim.SetBool("Run",true);
                if (!facingRight) Flip();
                anim.SetFloat("Speed", 0.002f);
            }
            else if (JoystikControl.Horizontal<-0.01f)
            {
+               if(isGrounded) Run();
                anim.SetBool("Run",true);
                if (facingRight) Flip();    
                anim.SetFloat("Speed", 0.002f); 
@@ -266,5 +261,11 @@ public class PlayerMovement : MonoBehaviour
     {
         //rb.velocity = Vector2.right*1000f;
         rb.AddForce(transform.right*thrust, ForceMode2D.Impulse);
+    }
+
+    private void Run()
+    {
+        ParticleSystem Particle = transform.GetChild(3).GetComponent<ParticleSystem>();
+        Particle.Play();
     }
 }

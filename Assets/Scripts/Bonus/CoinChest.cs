@@ -53,7 +53,7 @@ public class CoinChest : MonoBehaviour, IPooledInterface
     private IEnumerator CoinDrop() 
     {
         GetComponent<Animator>().SetBool("isOpen", true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         foreach (GameObject drop in Coins)
         {
             int RandomWay = Random.Range(1,11);
