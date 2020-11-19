@@ -39,8 +39,8 @@ public class EnemyRecorder : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D col)
     {
-        
-        col.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * thrust;
+        if(!col.gameObject.GetComponent<PlayerMovement>().onSub)
+            col.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * thrust;
         //col.gameObject.GetComponent<PlayerMovement>().knockback();
         //col.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.up*force, ForceMode2D.Impulse);
     }

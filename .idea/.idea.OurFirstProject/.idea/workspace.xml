@@ -23,39 +23,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06108718-f80a-48bc-b21f-048ce73f904a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.collabignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Chest 1.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Chest 1.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/ChestAnimation.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/ChestAnimation.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/ChestAnimationClose.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/ChestAnimationClose.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/ChestAnimationOpen.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/ChestAnimationOpen.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Diploma/StarEffect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Diploma/StarEffect.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Diploma/StarMaterial.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Diploma/StarMaterial.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/HealingEffect.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/Healingl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/HealingEffect/Healingl.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/PoisonSlave/PoisonEffect.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/PoisonSlave/PoisonEffect.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/PoisonSlave/PoisonEffect.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/PoisonSlave/PoisonEffect.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/JumpTrail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/JumpTrail.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Materials/StarTrail.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Materials/StarTrail.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Materials/TrailJump.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Materials/TrailJump.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Materials/star.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Materials/star.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Star.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Star1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/Star1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/StarTrail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/StarTrail.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/psd/Scull.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Samples/Effects/psd/Scull.psd.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Mobs/Spikes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Mobs/Spikes.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Pixel Font - Tripfive/Fonts/19783 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Font - Tripfive/Fonts/19783 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blue.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blue.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Healing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Healing.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Default.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Chest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Diploma.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bonus/Subwoofer.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Default.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Friend.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Friend.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Player.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WalletData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WalletData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyRecorder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/EnemyRecorder.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Blue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Friend.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Friend.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes/DoubleSpikes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikes/DoubleSpikes.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes/SingleSpikes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikes/SingleSpikes.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes/TripleSpikes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikes/TripleSpikes.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/Chest.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/Chest.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/ChestEmission.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/Chest/ChestEmission.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/PoisonSlave/Vodka.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/PoisonSlave/Vodka.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Spikes/DoubleSpikes.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Spikes/DoubleSpikes.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Spikes/SingleSpikes.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Spikes/SingleSpikes.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Spikes/TripleSpikes.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Spikes/TripleSpikes.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/UI/WindowUI.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/UI/WindowUI.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/Global Volume Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievements.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievements/Test 1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievements/Test 1.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/CoinChest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/Diploma.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/Diploma.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/HealingSlave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/HealingSlave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/PoisonSlave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/PoisonSlave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/SpawnController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/Subwoofer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/Subwoofer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Wallet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shader/MarlowFriend.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/MarlowFriend.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mobs/EnemyRecorder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mobs/EnemyRecorder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/Bonus/Chest.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/Bonus/Chest.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +130,6 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Diploma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/PoisonSlave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Subwoofer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/SpawnController.cs" />
@@ -91,18 +142,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Test 1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/HealingSlave.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievements.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Wallet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/DataManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ScreenManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/SaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/HealingSlave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Diploma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" />
       </list>
     </option>
   </component>
@@ -170,7 +222,7 @@
       <workItem from="1605101834802" duration="59000" />
       <workItem from="1605620763668" duration="13239000" />
       <workItem from="1605731284595" duration="14194000" />
-      <workItem from="1605792819575" duration="11219000" />
+      <workItem from="1605792819575" duration="15806000" />
     </task>
     <servers />
   </component>

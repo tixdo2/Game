@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5062476440482059129}
   - component: {fileID: 5062476440482059134}
   - component: {fileID: 5062476440482059130}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Way1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 5062476441241777460}
   - component: {fileID: 5062476441241777457}
   - component: {fileID: 5062476441241777456}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Way2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 5062476441638420566}
   - component: {fileID: 2610557066420989621}
   - component: {fileID: 8608443141966080352}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnemyRecorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

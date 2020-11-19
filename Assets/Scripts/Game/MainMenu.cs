@@ -34,6 +34,7 @@ namespace Game
 
 		public void CloseBuyMenu()
 		{
+			customizer.Accept();
 			BuyingMenu.SetActive(false);
 			ConteinerMenu.SetActive(true);
 		}

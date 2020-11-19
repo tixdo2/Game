@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     private void InitUI()
     {
-        
+        maxScore.SetActive(false);
         PlayerMovement playerMovement = _pc.GetComponent<PlayerMovement>();
         playerMovement.Button_l = Controllers[0];
         playerMovement.Button_R = Controllers[1];
@@ -143,8 +143,8 @@ public class GameManager : MonoBehaviour
         
         if (IsMaxScroe())
             maxScore.SetActive(true);
-        else
-            maxScore.SetActive(false);
+        //else
+            //maxScore.SetActive(false);
         //SetScore();
         Time.timeScale = 0;
     }

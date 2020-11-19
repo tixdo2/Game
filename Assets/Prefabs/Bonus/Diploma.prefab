@@ -198,6 +198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CountXP: 0
+  _achievements:
+  - {fileID: 11400000, guid: 82f6b178000f9564b8a0a580209bee9d, type: 2}
 --- !u!50 &1216005318596044452
 Rigidbody2D:
   serializedVersion: 4
@@ -4974,7 +4976,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -354277503
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 2
   m_RenderMode: 1
   m_SortMode: 0

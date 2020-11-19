@@ -18,6 +18,8 @@ public class PoisonSlave : MonoBehaviour
 
     void Action(GameObject Player)
     {
+        ParticleSystem Particle = Player.transform.GetChild(2).GetComponent<ParticleSystem>();
+        Particle.Play();
         Player.GetComponent<PlayerController>().Damage(Count);
         gameObject.SetActive(false);
     }

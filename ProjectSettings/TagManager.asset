@@ -27,7 +27,7 @@ TagManager:
   - Platform
   - Canvas
   - Enemy
-  - 
+  - Spikes
   - 
   - 
   - 
@@ -61,6 +61,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1101391333
+    locked: 0
+  - name: Spikes
+    uniqueID: 606360791
     locked: 0
   - name: Player
     uniqueID: 3940689793

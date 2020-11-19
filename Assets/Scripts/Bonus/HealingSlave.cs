@@ -19,10 +19,17 @@ public class HealingSlave : MonoBehaviour
 
     private void Action(GameObject Player)
     {
-        _achievements[0].done++;
-        _achievements[0].Action();
+        ParticleSystem Particle = Player.transform.GetChild(1).GetComponent<ParticleSystem>();
+        Particle.Play();
+        AchievementAction();  
         Player.GetComponent<PlayerController>().Healing(Count);
         gameObject.SetActive(false);
+    }
+
+    private void AchievementAction()
+    {
+        _achievements[0].done++;
+        _achievements[0].Action();
     }
     
     

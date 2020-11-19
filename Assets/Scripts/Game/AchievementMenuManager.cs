@@ -30,6 +30,9 @@ public class AchievementMenuManager : MonoBehaviour
             go.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText(ach.name);
             go.transform.GetChild(1).GetComponent<TextMeshProUGUI>().SetText(ach.done.ToString());
             go.transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(ach.count.ToString());
+            
+            if(ach.isDone)
+                go.transform.GetChild(3).gameObject.SetActive(true);
         }
         
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -49,7 +50,12 @@ using UnityEngine.UI;
             ChangeCoinsUI();
         }
 
-        
+        private void Update()
+        {
+           
+        }
+
+
         public void Next()
         {
             if(skinIndex < SkinsCount)
@@ -85,6 +91,7 @@ using UnityEngine.UI;
             
             Destroy(_go);
             _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+
             _go.transform.SetParent(buyMenu);
             ChangeButton();
         }
@@ -92,6 +99,7 @@ using UnityEngine.UI;
         public void Accept()
         {
             _dataManager.SkinIndex = skinIndex;
+            _dataManager.SaveData();
         }
         
         public void BuySkin()
@@ -142,10 +150,20 @@ using UnityEngine.UI;
             if (ActiveSkin.isAchievement || ActiveSkin.isUnlock)
             {
                 buttonCost.SetActive(false);
+           
+            }
+
+            if (ActiveSkin.isAchievement && !ActiveSkin.isUnlock)
+            {
+                _go.GetComponent<SpriteRenderer>().color = Color.black;
+                //buttonCost.SetActive(true);
+                buttonCost.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText("Achievement skin");
                 return;
             }
+
             
             buttonCost.SetActive(!ActiveSkin.isUnlock);
+            
             buttonCost.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText(ActiveSkin.cost.ToString());
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Diploma : MonoBehaviour, IPooledInterface
 {
     public int CountXP;
+    [SerializeField] private List<Achievement> _achievements = new List<Achievement>();
 
     public void OnObjectSpawn()
     {
@@ -29,7 +30,16 @@ public class Diploma : MonoBehaviour, IPooledInterface
 
     void Action(GameObject Player)
     {
+        ParticleSystem Particle = Player.transform.GetChild(4).GetComponent<ParticleSystem>();
+        Particle.Play();
+        AchievementAction();
         Player.GetComponent<PlayerController>().GetXpFromDiplom(CountXP);
         gameObject.SetActive(false);
+    }
+    
+    private void AchievementAction()
+    {
+        _achievements[0].done++;
+        _achievements[0].Action();
     }
 }

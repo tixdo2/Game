@@ -8,10 +8,12 @@ public class SpawnController : MonoBehaviour
     // Префабы бонусов
     private string ItemBonus;
     private string ItemMobs;
+    private string ItemSpikes;
 
     public GameObject Player;
     public List<GameObject> bonus;
     public List<GameObject> mobs;
+    public List<GameObject> spikes;
 
     public ObjectsPooler objPool;
 
@@ -25,20 +27,20 @@ public class SpawnController : MonoBehaviour
     {
         if(platform.GetComponent<Platform>().curBonus == false)
         {
-            int ItemToStawn = Random.Range(1, 101); // случайный выбор бонуса
+            int ItemToSpawn = Random.Range(1, 101); // случайный выбор бонуса
 
-                if (ItemToStawn <= 20)
+                if (ItemToSpawn <= 20)
                     ItemBonus = "Healing";
-                else if(ItemToStawn > 20 && ItemToStawn <= 75)
+                else if(ItemToSpawn > 20 && ItemToSpawn <= 75)
                     ItemBonus = "Poison";
-                else if(ItemToStawn > 75 && ItemToStawn <= 85)
+                else if(ItemToSpawn > 75 && ItemToSpawn <= 85)
                     ItemBonus = "Sub";
-                else if(ItemToStawn > 85 && ItemToStawn <= 95)
+                else if(ItemToSpawn > 85 && ItemToSpawn <= 95)
                 {     
                         if(platform.GetComponent<Platform>().size == 2 || platform.GetComponent<Platform>().size == 3)
                             ItemBonus = "Diplom"; 
                 }
-                else if(ItemToStawn > 95 && ItemToStawn <= 100)
+                else if(ItemToSpawn > 95 && ItemToSpawn <= 100)
                     ItemBonus = "Chest";
                         
             int RandomBonusSpawn = Random.Range(1, 101); // случайное создание бонуса
@@ -50,22 +52,42 @@ public class SpawnController : MonoBehaviour
 
     public void RandomMobs(GameObject platform)
     {
-        if(platform.GetComponent<Platform>().curMobs == false)
+        if(!platform.GetComponent<Platform>().curMobs && !platform.GetComponent<Platform>().curSpikes)
         {
             if(platform.GetComponent<Platform>().size == 3)
             {
-            int ItemToStawn = Random.Range(1, 101); // случайный выбор моба
+            int ItemToSpawn = Random.Range(1, 101); // случайный выбор моба
 
-                if (ItemToStawn <= 100)
+                if (ItemToSpawn <= 100)
                 {
                     ItemMobs = "Recorder"; 
                 }
                         
-            int RandomBonusSpawn = Random.Range(1, 101); // случайное создание моба
+            int RandomMobsSpawn = Random.Range(1, 101); // случайное создание моба
             
-                if (RandomBonusSpawn <= 40)
+                if (RandomMobsSpawn <= 40)
                     SpawnMobs(ItemMobs, platform);
             }
+        }
+    }
+
+    public void RandomSpikes(GameObject platform)
+    {
+        if(!platform.GetComponent<Platform>().curMobs && !platform.GetComponent<Platform>().curBonus)
+        {
+            int ItemToSpawn = Random.Range(1, 101); // случайный выбор моба
+
+                if (ItemToSpawn <= 40)
+                    ItemSpikes = "1xSpikes";
+                else if(ItemToSpawn > 40 && ItemToSpawn <= 80)
+                    ItemSpikes = "2xSpikes";
+                else if(ItemToSpawn > 80 && ItemToSpawn <= 100)
+                    ItemSpikes = "3xSpikes";
+
+            int RandomSpikesSpawn = Random.Range(1, 101); // случайное создание моба
+            
+                if (RandomSpikesSpawn <= 40)
+                    SpawnSpikes(ItemSpikes, platform);
         }
     }
 
@@ -85,15 +107,8 @@ public class SpawnController : MonoBehaviour
         platform.GetComponent<Platform>().curBonus = true;
         float x1 = platform.GetComponent<Platform>().StartPoint.position.x;
         float x2 = platform.GetComponent<Platform>().EndPoint.position.x;
-        if(Item == "Chest")
-        {
-            xSpawn = (x1+x2)/2;
-        }
-        else
-        {
-            xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
-        } 
-        
+        xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
+    
         Vector3 curPlace = new Vector3(xSpawn, platform.transform.position.y + offset, -1); // место где создается бонус
         GameObject Bonus = objPool.SpawnFromPool(Item, curPlace, Quaternion.identity); 
         bonus.Add(Bonus);
@@ -114,9 +129,28 @@ public class SpawnController : MonoBehaviour
     
             xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
             
-            Vector3 curPlace = new Vector3(xSpawn, platform.transform.position.y+offset, -1); // место где создается бонус
+            Vector3 curPlace = new Vector3(xSpawn, platform.transform.position.y+offset, -1); // место где создается моб
             GameObject Mob = objPool.SpawnFromPool(Item, curPlace, Quaternion.identity); 
             mobs.Add(Mob);
+        }
+    }
+
+    public void SpawnSpikes(string Item, GameObject platform)
+    {
+        if(!platform.GetComponent<Platform>().curSpikes)
+        {
+            float offset = 0.4f;
+            float xSpawn = 0f;
+
+            platform.GetComponent<Platform>().curSpikes = true;
+            float x1 = platform.GetComponent<Platform>().StartPoint.position.x;
+            float x2 = platform.GetComponent<Platform>().EndPoint.position.x;
+    
+            xSpawn = Random.Range(x1, x2); // в случайной позиции на платформе
+            
+            Vector3 curPlace = new Vector3(xSpawn, platform.transform.position.y+offset, -1); // место где создается моб
+            GameObject Spike = objPool.SpawnFromPool(Item, curPlace, Quaternion.identity); 
+            spikes.Add(Spike);
         }
     }
 
@@ -127,15 +161,12 @@ public class SpawnController : MonoBehaviour
             if(bonus[0].transform.position.y < Player.transform.position.y - 8f)
             {
                 bonus[0].SetActive(false);
-                bonus[0].TryGetComponent<CoinChest>(out var coinchest); 
+                bonus[0].TryGetComponent<CoinChest>(out var coinchest);
                 if(coinchest&&coinchest.isCoinDrop)
                 {
                     foreach(GameObject drop in coinchest.Coins)
                     {
-                        
                         drop.SetActive(false);
-                        coinchest.Coins.Remove(drop);
-                        
                     }
                 }
                 Physics2D.IgnoreCollision(Player.GetComponent<Collider2D>(), bonus[0].GetComponent<Collider2D>(), false);
@@ -145,11 +176,19 @@ public class SpawnController : MonoBehaviour
 
         if(mobs.Count > 0)
         {
-            Physics2D.IgnoreCollision(Player.GetComponent<Collider2D>(), mobs[0].GetComponent<Collider2D>(), true);
             if(mobs[0].transform.position.y < Player.transform.position.y - 8f)
             {
                 mobs[0].SetActive(false);
                 mobs.Remove(mobs[0]);
+            }
+        }
+
+        if(spikes.Count > 0)
+        {
+            if(spikes[0].transform.position.y < Player.transform.position.y - 8f)
+            {
+                spikes[0].SetActive(false);
+                spikes.Remove(spikes[0]);
             }
         }
     }

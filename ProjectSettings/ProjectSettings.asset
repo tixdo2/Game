@@ -694,7 +694,8 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Collab: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -707,10 +708,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 704fd53d-99d2-4764-8152-a0e1ab0cb066
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Marlow's Way
+  organizationId: unitydevn
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

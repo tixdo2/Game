@@ -20,6 +20,7 @@ public class Platform : MonoBehaviour, IPooledInterface
 
     public bool curBonus = false; // текущий бонус на платформе
     public bool curMobs = false;
+    public bool curSpikes = false;
 
     public Sprite BrokeLeft, BrokeMiddle, BrokeRight; // спрайты поломаных частей платформы
     public Sprite Left, Middle, Right;

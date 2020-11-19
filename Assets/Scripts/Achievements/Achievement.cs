@@ -16,6 +16,7 @@ public class Achievement : Achievements
         //    Event = new AchievementsEvent();
         
         reward.isUnlock = true;
+        done = count;
         isDone = true;
     }
     

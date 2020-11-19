@@ -71,9 +71,10 @@ public class PlatformController : MonoBehaviour
                 break;
         }
 
-        if(!Platforms[Platforms.Count-1].GetComponent<Platform>().MoveControl)
+        if(!Platforms[Platforms.Count-1].GetComponent<Platform>().MoveControl && Platforms[0] != null)
         {
             spwn.RandomBonus(Platforms[Platforms.Count-1]);
+            spwn.RandomSpikes(Platforms[Platforms.Count-1]);
             spwn.RandomMobs(Platforms[Platforms.Count-1]);
         }
     }
@@ -85,6 +86,7 @@ public class PlatformController : MonoBehaviour
         {
             Platforms[0].SetActive(false);
             Platforms[0].GetComponent<Platform>().curBonus = false;
+            Platforms[0].GetComponent<Platform>().curMobs = false;
             foreach (Transform child in Platforms[0].transform)
             {
                 child.gameObject.SetActive(true);
