@@ -102,10 +102,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Control==ControlOfCharacter.Keyboard) //Управление через клавиатуру
         {
-            Button_l.SetActive(false);
-            Button_R.SetActive(false);
+            //Button_l.SetActive(false);
+            //Button_R.SetActive(false);
             Button_J.SetActive(false);
-            Button_A.SetActive(false);
+            //Button_A.SetActive(false);
             joystik.SetActive(false);
             
             //Хотьба
@@ -132,10 +132,10 @@ public class PlayerMovement : MonoBehaviour
               
         else //Управление сенсором
         {
-            Button_l.SetActive(false);
-            Button_R.SetActive(false);
+            //Button_l.SetActive(false);
+            //Button_R.SetActive(false);
             Button_J.SetActive(true);
-            Button_A.SetActive(true);
+            //Button_A.SetActive(true);
             joystik.SetActive(true);
 
            //Хотьба

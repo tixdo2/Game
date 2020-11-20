@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Debug = UnityEngine.Debug;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +16,7 @@ public class GameManager : MonoBehaviour
     public Sprite skin;
 
     public int skinIndex;
-
+    
     public TextMeshProUGUI ScoreTMP, ScoreDiedTMP, CoinsTMP,DeadCoinsTMP;
 
     public GameObject conteinerGame, conteinerMenu, conteinerDead;
@@ -46,19 +49,25 @@ public class GameManager : MonoBehaviour
     
     private int _coins;
 
-    private int _skinIndex = 0; // = PlayerPrefs.GetInt("skinIndex");
+    private int _skinIndex = 0;
 
-
-
+    private bool isDeadMenu; // = PlayerPrefs.GetInt("skinIndex");
+    
     private void Start()
     {
+        StopAllCoroutines();
         Time.timeScale = 1f;
-        Instance = this;
+        if(Instance == null)
+            Instance = this;
         Init();
+        DOTween.Init();
+        DOTween.SetTweensCapacity(2000, 100);
+        DOTween.defaultTimeScaleIndependent = true;
     }
 
     private void Init()
     {
+        
         _skinIndex = _dataManager.SkinIndex;
         var position= new Vector3(0.8f, -5.663f, 0);
         
@@ -77,10 +86,10 @@ public class GameManager : MonoBehaviour
     {
         maxScore.SetActive(false);
         PlayerMovement playerMovement = _pc.GetComponent<PlayerMovement>();
-        playerMovement.Button_l = Controllers[0];
-        playerMovement.Button_R = Controllers[1];
+        //playerMovement.Button_l = Controllers[0];
+       // playerMovement.Button_R = Controllers[1];
         playerMovement.Button_J = Controllers[2];
-        playerMovement.Button_A = Controllers[3];
+        //playerMovement.Button_A = Controllers[3];
         playerMovement.joystik = Controllers[4];
     }
 
@@ -137,9 +146,15 @@ public class GameManager : MonoBehaviour
 
     private void DeadMenu()
     {
+        if (isDeadMenu)
+            return;
         conteinerDead.SetActive(true);
         ScoreDiedTMP.SetText(_pc.PI.Score.ToString());
         DeadCoinsTMP.SetText(_pc.PI.Coins.ToString());
+
+        var child = conteinerDead.transform.GetChild(1);
+        //_pc.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        child.DOScale(Vector3.one, .5f).SetEase(Ease.InOutQuart);
         
         if (IsMaxScroe())
             maxScore.SetActive(true);
@@ -147,6 +162,8 @@ public class GameManager : MonoBehaviour
             //maxScore.SetActive(false);
         //SetScore();
         Time.timeScale = 0;
+        //DOTween.timeScale = 1f;
+        isDeadMenu = true;
     }
 
     private bool IsMaxScroe()
@@ -193,11 +210,21 @@ public class GameManager : MonoBehaviour
 
     public void RestarGame()
     {
+        StartCoroutine(RestartCourutine());
+    }
+
+    private IEnumerator RestartCourutine()
+    {
+        var child = conteinerDead.transform.GetChild(1);
+        //_pc.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        child.DOScale(Vector3.zero, .5f).SetEase(Ease.InOutQuart);
         SetScore();
         SetCoins();
         _dataManager.SaveData();
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        yield return new WaitForSeconds(.3f);
+        DOTween.KillAll();
+        SceneManager.LoadScene(1);
     }
 
     public void ReturnToMainMenu()
@@ -206,7 +233,9 @@ public class GameManager : MonoBehaviour
         SetCoins();
         
         _dataManager.SaveData();
-
+        //DOTween.KillAll();
         SceneManager.LoadScene(0);
     }
+    
+    
 }

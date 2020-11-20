@@ -11,7 +11,7 @@ namespace Game
 		//public Animator Animator;
 		public GameObject BuyingMenu, ConteinerMenu;
 
-		public List<Achievements> Achievements;
+		public List<Achievement> Achievements;
 		[SerializeField] private Customizer customizer;
 		[SerializeField]private SaveManager _saveManager;
 

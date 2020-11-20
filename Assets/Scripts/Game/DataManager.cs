@@ -10,6 +10,7 @@ public class DataManager : MonoBehaviour
     public List<Wallet> Wallet = new List<Wallet>();
     public int SkinIndex;
     public int MaxScore;
+    public Transform notification;
     [SerializeField] private SaveManager _saveManager;
 
     private void Awake()
