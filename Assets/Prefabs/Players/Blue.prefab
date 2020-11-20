@@ -297,7 +297,7 @@ MonoBehaviour:
   joystik: {fileID: 0}
   onSub: 0
   isGrounded: 1
-  Control: 0
+  Control: 2
 --- !u!1 &5247418380049459454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,27 +1280,18 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.7445698
-          inSlope: -0.9518534
-          outSlope: -0.9518534
+          value: 0.33695984
+          inSlope: 0.66304016
+          outSlope: 0.66304016
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.5138792
-          value: 0.25543213
-          inSlope: -0.067857504
-          outSlope: -0.067857504
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
           time: 1
-          value: 0.652174
-          inSlope: 0.8161384
-          outSlope: 0.8161384
+          value: 1
+          inSlope: 0.66304016
+          outSlope: 0.66304016
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -5038,7 +5029,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -354277503
   m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -5346,7 +5337,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9793,7 +9784,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -354277503
   m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -10101,7 +10092,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10799,27 +10790,18 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.7445698
-          inSlope: -0.9518534
-          outSlope: -0.9518534
+          value: 0.3206482
+          inSlope: 0.6793518
+          outSlope: 0.6793518
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.5138792
-          value: 0.25543213
-          inSlope: -0.067857504
-          outSlope: -0.067857504
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
           time: 1
-          value: 0.652174
-          inSlope: 0.8161384
-          outSlope: 0.8161384
+          value: 1
+          inSlope: 0.6793518
+          outSlope: 0.6793518
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -14557,7 +14539,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -354277503
   m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0

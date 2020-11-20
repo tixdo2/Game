@@ -77,10 +77,10 @@ public class GameManager : MonoBehaviour
     {
         maxScore.SetActive(false);
         PlayerMovement playerMovement = _pc.GetComponent<PlayerMovement>();
-        playerMovement.Button_l = Controllers[0];
-        playerMovement.Button_R = Controllers[1];
+        //playerMovement.Button_l = Controllers[0];
+        //playerMovement.Button_R = Controllers[1];
         playerMovement.Button_J = Controllers[2];
-        playerMovement.Button_A = Controllers[3];
+        //playerMovement.Button_A = Controllers[3];
         playerMovement.joystik = Controllers[4];
     }
 
