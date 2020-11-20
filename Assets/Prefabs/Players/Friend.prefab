@@ -5061,7 +5061,7 @@ MonoBehaviour:
   joystik: {fileID: 0}
   onSub: 0
   isGrounded: 1
-  Control: 0
+  Control: 2
 --- !u!1 &6517003936015790115
 GameObject:
   m_ObjectHideFlags: 0

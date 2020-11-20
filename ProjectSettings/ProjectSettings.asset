@@ -708,10 +708,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 704fd53d-99d2-4764-8152-a0e1ab0cb066
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: Marlow's Way
-  organizationId: unitydevn
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
