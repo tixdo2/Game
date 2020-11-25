@@ -5762,6 +5762,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420039}
   - component: {fileID: 519420035}
   - component: {fileID: 519420038}
   - component: {fileID: 519420037}
@@ -5819,7 +5820,7 @@ MonoBehaviour:
   AnimatorDead: {fileID: 0}
   _wallet: {fileID: 11400000, guid: c5d78c1de4bc3214eb7083b5f299c752, type: 2}
   _dataManager: {fileID: 519420037}
-  _gameComplexity: {fileID: 0}
+  _gameComplexity: {fileID: 519420039}
   maxScore: {fileID: 321417667}
 --- !u!20 &519420031
 Camera:
@@ -5997,6 +5998,7 @@ MonoBehaviour:
   Achievements:
   - {fileID: 11400000, guid: 7ecdcc0cb78cf3a40aedf583d26dd46f, type: 2}
   - {fileID: 11400000, guid: 82f6b178000f9564b8a0a580209bee9d, type: 2}
+  - {fileID: 11400000, guid: f8f02f7933b85354a996a52c5d54286f, type: 2}
   Wallet:
   - {fileID: 11400000, guid: c5d78c1de4bc3214eb7083b5f299c752, type: 2}
   SkinIndex: 0
@@ -6017,6 +6019,27 @@ MonoBehaviour:
   _wallet: {fileID: 0}
   _skins: []
   _achievements: []
+--- !u!114 &519420039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421e5cbb2065b314bb9202e4785e5b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PL: {fileID: 0}
+  Player: {fileID: 0}
+  SC: {fileID: 519420034}
+  PC: {fileID: 519420033}
+  BonusSpwn: 3
+  SpikesSpwn: 3
+  MobsSpwn: 1
+  SpikesBalance: 3
+  SpeedBoost: 0.2
 --- !u!1 &549946011
 GameObject:
   m_ObjectHideFlags: 0

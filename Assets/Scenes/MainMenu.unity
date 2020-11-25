@@ -2078,6 +2078,7 @@ MonoBehaviour:
   Achievements:
   - {fileID: 11400000, guid: 7ecdcc0cb78cf3a40aedf583d26dd46f, type: 2}
   - {fileID: 11400000, guid: 82f6b178000f9564b8a0a580209bee9d, type: 2}
+  - {fileID: 11400000, guid: f8f02f7933b85354a996a52c5d54286f, type: 2}
   Wallet:
   - {fileID: 11400000, guid: c5d78c1de4bc3214eb7083b5f299c752, type: 2}
   SkinIndex: 0
