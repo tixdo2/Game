@@ -406,7 +406,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289449024}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 20
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -1367,17 +1367,17 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0.14879642
           value: 0.79535025
-          inSlope: 0.6104858
-          outSlope: 0.6104858
+          inSlope: -6.304682
+          outSlope: -6.304682
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.22281156
-          value: 0.33895856
-          inSlope: 0.5332413
-          outSlope: 0.5332413
+          time: 0.18857084
+          value: 0
+          inSlope: -5.9130983
+          outSlope: -5.9130983
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -1392,10 +1392,10 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 1
         - serializedVersion: 3
-          time: 0.34966612
-          value: 0.35152188
-          inSlope: -0.4664502
-          outSlope: -0.4664502
+          time: 0.33369017
+          value: 0
+          inSlope: -3.8643265
+          outSlope: -3.8643265
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -1403,17 +1403,17 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0.42166626
           value: 0.78616035
-          inSlope: -1.5749204
-          outSlope: -1.5749204
+          inSlope: 0.089226246
+          outSlope: 0.089226246
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.4680543
-          value: 0.36001793
-          inSlope: -2.1491432
-          outSlope: -2.1491432
+          time: 0.51143503
+          value: 0
+          inSlope: 4.245341
+          outSlope: 4.245341
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -1421,33 +1421,33 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0.5577187
           value: 0.79831433
-          inSlope: -0.40834618
-          outSlope: -0.40834618
+          inSlope: 4.478339
+          outSlope: 4.478339
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.6288824
-          value: 0.3923339
-          inSlope: -0.16603637
-          outSlope: -0.16603637
+          time: 0.6539984
+          value: 0
+          inSlope: -2.1057231
+          outSlope: -2.1057231
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.70071673
-          value: 0.77828586
-          inSlope: 1.9512799
-          outSlope: 1.9512799
+          time: 0.771487
+          value: 0.4793738
+          inSlope: 1.0751932
+          outSlope: 1.0751932
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 0.9861053
-          value: 0.35869402
+          value: 0.06520647
           inSlope: -0.24290103
           outSlope: -0.24290103
           tangentMode: 0
@@ -5762,6 +5762,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420039}
   - component: {fileID: 519420035}
   - component: {fileID: 519420038}
   - component: {fileID: 519420037}
@@ -5818,6 +5819,7 @@ MonoBehaviour:
   AnimatorDead: {fileID: 0}
   _wallet: {fileID: 11400000, guid: c5d78c1de4bc3214eb7083b5f299c752, type: 2}
   _dataManager: {fileID: 519420037}
+  _gameComplexity: {fileID: 519420039}
   maxScore: {fileID: 321417667}
 --- !u!20 &519420031
 Camera:
@@ -5846,7 +5848,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5892,10 +5894,14 @@ MonoBehaviour:
   spwn: {fileID: 519420034}
   Platforms: []
   Player: {fileID: 0}
+  MovementBoost: 2
   Plat3x: {fileID: 3218659552156727817, guid: 51eec02b700a59b4480d3674ac3a7e8b, type: 3}
   Plat2x: {fileID: 150457252013194123, guid: f5018b4000def694b868c27a09bafbe9, type: 3}
   Plat1x: {fileID: 7569335860570375610, guid: fbb1ce3468c600444a1467ac19952212, type: 3}
   objPool: {fileID: 1440295330}
+  RandPlat1X: 35
+  RandPlat2X: 75
+  RandPlat3X: 100
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5912,6 +5918,18 @@ MonoBehaviour:
   bonus: []
   mobs: []
   spikes: []
+  RandHeal: 20
+  RandPoison: 75
+  RandSub: 85
+  RandDiplom: 95
+  RandChest: 100
+  RandSpikes1X: 40
+  RandSpikes2X: 80
+  RandSpikes3X: 100
+  BalanceForSpikes: 2
+  RandMobsSpwn: 0
+  RandSpikesSpwn: 0
+  RandBonusSpwn: 30
   objPool: {fileID: 1440295330}
 --- !u!114 &519420035
 MonoBehaviour:
@@ -5925,7 +5943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334d47c8a13acd9428aa31fb7712711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smooth: 5
+  smooth: 3
   offset: {x: 0, y: 2, z: -5}
   player: {fileID: 0}
 --- !u!114 &519420036
@@ -5998,6 +6016,27 @@ MonoBehaviour:
   _wallet: {fileID: 0}
   _skins: []
   _achievements: []
+--- !u!114 &519420039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421e5cbb2065b314bb9202e4785e5b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PL: {fileID: -5954779951259574875, guid: 51eec02b700a59b4480d3674ac3a7e8b, type: 3}
+  Player: {fileID: 0}
+  SC: {fileID: 0}
+  PC: {fileID: 0}
+  BonusSpwn: 3
+  SpikesSpwn: 3
+  MobsSpwn: 1
+  SpikesBalance: 3
+  SpeedBoost: 0.2
 --- !u!1 &549946011
 GameObject:
   m_ObjectHideFlags: 0

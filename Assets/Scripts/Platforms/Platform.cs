@@ -16,7 +16,8 @@ public class Platform : MonoBehaviour, IPooledInterface
 
     public List<GameObject> Children = new List<GameObject>(); // список дочерних элементов у каждой платформы
 
-    private Vector3 movement = Vector3.left * 3f; // скорость движения влево-вправо 1х Платформы
+    public float MovementBoost = 2f;
+    public Vector3 movement; // скорость движения влево-вправо 1х Платформы
 
     public bool curBonus = false; // текущий бонус на платформе
     public bool curMobs = false;
@@ -29,10 +30,13 @@ public class Platform : MonoBehaviour, IPooledInterface
 
     public Animator _animator;
 
+    public int RandIsMove = 21;
 
 
     public void OnObjectSpawn()
     {
+        movement = Vector3.left * MovementBoost;
+
         //Локальнаые данные обьекта на котором висит скрипт
         Tag = this.tag;
 
@@ -160,11 +164,6 @@ public class Platform : MonoBehaviour, IPooledInterface
                 MoveControl = true;
         }
     }
-    void FixedUpdate()
-    {
-        // Движение 1х платформы влево-вправо
-        
-    }
    
     void Update ()
     {
@@ -175,9 +174,9 @@ public class Platform : MonoBehaviour, IPooledInterface
         if(size==1 && MoveControl)
         {
             if (this.transform.position.x > 2.55f)
-                movement = Vector3.left * 3f;
+                movement = Vector3.left * MovementBoost;
             else if (this.transform.position.x < -2.55f)
-                movement = Vector3.right * 3f;
+                movement = Vector3.right * MovementBoost;
             this.transform.Translate(movement * Time.deltaTime);
         }
     }

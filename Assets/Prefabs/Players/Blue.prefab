@@ -179,7 +179,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
   m_Material: {fileID: 6200000, guid: ed462d12486a03548988439dcbf157ac, type: 2}
-  m_Interpolate: 1
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -290,14 +290,11 @@ MonoBehaviour:
   speedX: 6
   verticalImpulse: 9
   thrust: 0
-  Button_l: {fileID: 0}
-  Button_R: {fileID: 0}
   Button_J: {fileID: 0}
-  Button_A: {fileID: 0}
   joystik: {fileID: 0}
   onSub: 0
   isGrounded: 1
-  Control: 2
+  Control: 0
 --- !u!1 &5247418380049459454
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +335,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5247418380049459454}
   serializedVersion: 6
-  lengthInSec: 1
+  lengthInSec: 0.7
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -582,7 +579,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.3
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -898,7 +895,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 20
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -1163,7 +1160,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1280,18 +1277,27 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.33695984
-          inSlope: 0.66304016
-          outSlope: 0.66304016
+          value: 0.20108604
+          inSlope: 0.5568926
+          outSlope: 0.5568926
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
+          time: 0.49771687
+          value: 0.47826087
+          inSlope: -0.013698578
+          outSlope: -0.013698578
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 0.66304016
-          outSlope: 0.66304016
+          value: 0.18478203
+          inSlope: -0.5842897
+          outSlope: -0.5842897
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -5093,7 +5099,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5314440116298449737}
   serializedVersion: 6
-  lengthInSec: 1
+  lengthInSec: 0.7
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -5337,7 +5343,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5653,7 +5659,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 20
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -5918,7 +5924,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6035,18 +6041,27 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.4184723
-          inSlope: 0.5815277
-          outSlope: 0.5815277
+          value: 0.20108604
+          inSlope: 0.56781197
+          outSlope: 0.56781197
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
+          time: 0.49771687
+          value: 0.48369563
+          inSlope: -0.013648927
+          outSlope: -0.013648927
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 0.5815277
-          outSlope: 0.5815277
+          value: 0.18478203
+          inSlope: -0.5951098
+          outSlope: -0.5951098
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -9848,7 +9863,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5324622092021010387}
   serializedVersion: 6
-  lengthInSec: 1
+  lengthInSec: 0.7
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -10092,7 +10107,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10408,7 +10423,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 20
+    maxNumParticles: 10
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -10673,7 +10688,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10790,18 +10805,27 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.3206482
-          inSlope: 0.6793518
-          outSlope: 0.6793518
+          value: 0.20108604
+          inSlope: 0.5594589
+          outSlope: 0.5594589
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
+          time: 0.49543378
+          value: 0.47826087
+          inSlope: -0.0057067275
+          outSlope: -0.0057067275
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 0.6793518
-          outSlope: 0.6793518
+          value: 0.19021797
+          inSlope: -0.57087237
+          outSlope: -0.57087237
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334

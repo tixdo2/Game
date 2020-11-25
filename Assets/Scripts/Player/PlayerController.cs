@@ -53,8 +53,6 @@ public class PlayerController : MonoBehaviour
                 yield return null;  
             }
         }
-
-        StopCoroutines();
     }
 
     private IEnumerator DamageWait(float Count) 
@@ -69,12 +67,5 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        StopCoroutines();
     } 
-
-    private void StopCoroutines()
-    {
-        StopAllCoroutines();
-    } 
- 
 }

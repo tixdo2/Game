@@ -8,7 +8,7 @@ public class PlatformController : MonoBehaviour
     public SpawnController spwn;
     public List<GameObject> Platforms; // Список с платформами на сцене
     public GameObject Player;
-
+    public float MovementBoost = 2f;
     private float offset = 17; // смещение первой платформы при старте
 
     //Локальные данные для генерации обькта в нужных координатах
@@ -22,6 +22,8 @@ public class PlatformController : MonoBehaviour
     public GameObject Plat1x;
 
     public ObjectsPooler objPool;
+
+    public int RandPlat1X = 35, RandPlat2X = 75, RandPlat3X = 100; 
 
     // Инициализация списка до старта
     void Awake()
@@ -41,11 +43,11 @@ public class PlatformController : MonoBehaviour
     {
         // Шанс генерации определенных платформ
         int RandomValue = Random.Range(1, 101);
-        if (RandomValue <= 35)
+        if (RandomValue <= RandPlat1X)
             type = 1;
-        else if(RandomValue > 35 && RandomValue <= 75) 
+        else if(RandomValue > RandPlat1X && RandomValue <= RandPlat2X) 
             type = 2;
-        else if(RandomValue > 75 && RandomValue <= 100) 
+        else if(RandomValue > RandPlat2X && RandomValue <= RandPlat3X) 
             type = 3;
         
         // Генерация платформ в зависимости от выше рандомно-выбранного типа выше
@@ -54,7 +56,8 @@ public class PlatformController : MonoBehaviour
             case 1:
                 x = Random.Range(-2.57f, 2.58f); // Область по ширине, в которой будет генерироваться платформа
                 y += 2.7f; // Расстояние между платформами
-                GameObject go1 = objPool.SpawnFromPool("1xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity); // Создание платформы 
+                GameObject go1 = objPool.SpawnFromPool("1xPlatform", new Vector3(x, y+offset, 0), Quaternion.identity); // Создание платформы
+                go1.GetComponent<Platform>().MovementBoost = MovementBoost; 
                 Platforms.Add(go1); // Добавление платформы в список платформ
                 break;
             case 2:
@@ -85,8 +88,10 @@ public class PlatformController : MonoBehaviour
         if(Platforms[0] != null && Platforms[0].transform.position.y < Player.transform.position.y - 8.5f)
         {
             Platforms[0].SetActive(false);
+            Platforms[0].GetComponent<Platform>().MoveControl = false; 
             Platforms[0].GetComponent<Platform>().curBonus = false;
             Platforms[0].GetComponent<Platform>().curMobs = false;
+            Platforms[0].GetComponent<Platform>().curSpikes = false;
             foreach (Transform child in Platforms[0].transform)
             {
                 child.gameObject.SetActive(true);

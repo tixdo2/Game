@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     private DataManager _dataManager;
 
     [SerializeField]
+    private GameСomplexity _gameComplexity;
+
+    [SerializeField]
     private GameObject maxScore;
     
     private PlayerController _pc;
@@ -88,6 +91,8 @@ public class GameManager : MonoBehaviour
     {
         SpawnController spawnController = GetComponent<SpawnController>();
         spawnController.Player = _playerGO;
+
+        _gameComplexity.Player = _pc;
 
         _pc.HB = HealthBar;
 
