@@ -54,6 +54,7 @@ MonoBehaviour:
   MoveControl: 0
   Children: []
   curBonus: 0
+  curMobs: 0
   BrokeLeft: {fileID: 21300000, guid: e19cfa7e57745db45bde58c21d88caa2, type: 3}
   BrokeMiddle: {fileID: 21300000, guid: 8e1f9b35bdfe7fc4bb7f81f0c62754b5, type: 3}
   BrokeRight: {fileID: 21300000, guid: d8e55065416b0ea4883b2fff792911ea, type: 3}

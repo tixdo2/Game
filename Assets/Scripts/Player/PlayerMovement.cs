@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float horizontalSpeed;
+    
     public float speedX;
     public float verticalImpulse;
     public float thrust;
-    public GameObject Button_l,Button_R,Button_J,Button_A,joystik;
-    private VariableJoystick JoystikControl;
-    
+    public GameObject Button_J,joystik;
     public bool isGrounded=true;
-
+    public AudioSource FootStep;
     public enum ControlOfCharacter
     {
         Keyboard = 0,
-        Sensor1=1,
-        Sensor2=2
+        Sensor=1,
     }
     public ControlOfCharacter Control=ControlOfCharacter.Keyboard; 
 
     private float moveInput;
-    private bool facingRight = true;
-    private bool JumpBDown=false;
-
+    private bool facingRight = true,JumpBDown=false,inWave=false;
     private int _playerObject,_collideObject, _bonusObject;
+    private VariableJoystick JoystikControl;
+    private float horizontalSpeed;
     Animator anim;
     Rigidbody2D rb;
     Vector3 pos;
@@ -55,24 +52,6 @@ public class PlayerMovement : MonoBehaviour
             Physics2D.IgnoreLayerCollision(_playerObject, _collideObject, false);
             Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject, false);
         }
-        //Physics2D.IgnoreLayerCollision(_playerObject, _bonusObject,  false);
-        
-        //телепорт из-за границ экрана
-        /*
-        pos.y=transform.position.y;
-        if (transform.position.x>=4.26f)
-            {
-                pos.x=-4f;
-                transform.position=pos;
-            }
-            else if (transform.position.x<=-4.26f)
-            {
-                pos.x=4f;
-                transform.position=pos;
-            }; 
-        */ 
-
-        
     }
     
     void FixedUpdate()
@@ -81,84 +60,34 @@ public class PlayerMovement : MonoBehaviour
 
         if (Control==ControlOfCharacter.Keyboard) //Управление через клавиатуру
         {
-            Button_l.SetActive(false);
-            Button_R.SetActive(false);
             Button_J.SetActive(false);
-            Button_A.SetActive(false);
             joystik.SetActive(false);
             //Хотьба
-            rb.velocity = new Vector2(moveInput * speedX, rb.velocity.y);
+            if (!inWave)
+            {
+                rb.velocity = new Vector2(moveInput * speedX, rb.velocity.y);
+            }
             moveInput = Input.GetAxis("Horizontal");
             anim.SetFloat("Speed", Mathf.Abs(moveInput)); 
             anim.SetBool("Run",true);
 
             //Прыжок
-            if (Input.GetKey(KeyCode.Space) && isGrounded)                                              
+            if (Input.GetKey(KeyCode.Space) && isGrounded&&!inWave)                                              
             {
                 rb.velocity = Vector2.up * verticalImpulse;
                 anim.SetTrigger("Jump");
             }
 
-        }        
-        else if (Control==ControlOfCharacter.Sensor1) //Управление кнопками
+        }            
+        else if (Control==ControlOfCharacter.Sensor) //Управление сенсором
         {
-            Button_l.SetActive(true);
-            Button_R.SetActive(true);
             Button_J.SetActive(true);
-            Button_A.SetActive(true);
-            joystik.SetActive(false);
-            //Хотьба
-            rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
-            anim.SetFloat("Speed", 0.002f); 
-
-            //Прыжок
-            if (isGrounded&&JumpBDown)                                              
-            {
-                rb.velocity = Vector2.up * verticalImpulse;
-                anim.SetTrigger("Jump");
-            }
-        }        
-        else //Управление сенсором
-        {
-            Button_l.SetActive(false);
-            Button_R.SetActive(false);
-            Button_J.SetActive(true);
-            Button_A.SetActive(true);
             joystik.SetActive(true);
 
-           //Хотьба
-           /*
-           if (JoystikControl.Horizontal>0.1f&&JoystikControl.Horizontal<0.5)
-           {
-               OnClickRight();
-               anim.SetFloat("Speed", 0.002f);
-               rb.velocity = new Vector2(horizontalSpeed/2, rb.velocity.y); 
-           }
-           else if (JoystikControl.Horizontal>=0.5f)
-           {
-                OnClickRight();    
-                anim.SetFloat("Speed", 0.002f); 
-                rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
-           }
-           else if (JoystikControl.Horizontal<-0.1f&&JoystikControl.Horizontal>-0.5f)
-           {
-                OnClickLeft();    
-                anim.SetFloat("Speed", 0.002f); 
-                rb.velocity = new Vector2(horizontalSpeed/2, rb.velocity.y); 
-           }
-           else if (JoystikControl.Horizontal<=-0.5f)
-           {
-                OnClickLeft();    
-                anim.SetFloat("Speed", 0.002f); 
-                rb.velocity = new Vector2(horizontalSpeed, rb.velocity.y);
-           }
-           else
-           {
-                UpClick();
-           }
-
-           */
-            rb.velocity = new Vector2(JoystikControl.Horizontal*7, rb.velocity.y); 
+            if (!inWave)
+            {
+                rb.velocity = new Vector2(JoystikControl.Horizontal*7, rb.velocity.y); 
+            }
             if (JoystikControl.Horizontal>0.01f)
            {
                anim.SetBool("Run",true);
@@ -176,11 +105,8 @@ public class PlayerMovement : MonoBehaviour
                 UpClick();
            }
 
-
-
-
             //Прыжок
-            if (isGrounded&&JumpBDown)                                              
+            if (isGrounded&&JumpBDown&&!inWave)                                              
             {
                 rb.velocity = Vector2.up * verticalImpulse;
                 anim.SetTrigger("Jump");
@@ -198,6 +124,21 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    private IEnumerator PWaves ()
+    {
+        yield return new WaitForSeconds(0.2f);   
+        
+        if (inWave)  inWave = false;
+
+        //yield return new WaitForSeconds(0.3f);  
+        StopCoroutines(); 
+    }
+
+    private void StopCoroutines()
+    {
+        StopAllCoroutines();
+    } 
+
     void Flip()
     {
         facingRight = !facingRight;
@@ -209,15 +150,21 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {         
-        col.gameObject.TryGetComponent<ChildPlatform>(out var a);         //если в тригере что то есть и у обьекта тег платформы
-        if (a) 
-        isGrounded = true;                                                      //то включаем переменную "на земле"
+        col.gameObject.TryGetComponent<ChildPlatform>(out var a);         //если в тригере что то есть и у обьекта script
+        col.gameObject.TryGetComponent<EnemyRecorder>(out var b);    
+        if (a||b)
+        isGrounded = true;    
+        if (b&&col.isTrigger == true)
+        {inWave=true;}                                             //то включаем переменную "на земле"
     }
      void OnTriggerExit2D(Collider2D col)
      {   
         col.gameObject.TryGetComponent<ChildPlatform>(out var a);        //если из триггера что то вышло и у обьекта тег платформы
-        if (a) 
-        isGrounded = false;                                                     //то вЫключаем переменную "на земле"
+        col.gameObject.TryGetComponent<EnemyRecorder>(out var b);  
+        if (a||b) 
+        isGrounded = false;    
+        if (b&&col.isTrigger == true)
+        {StartCoroutine(PWaves());}                                                   //то вЫключаем переменную "на земле"
     }
 
 
