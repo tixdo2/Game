@@ -78,6 +78,7 @@
             <e p="Customizer.cs" t="Include" />
             <e p="DataManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
+            <e p="GameСomplexity.cs" t="Include" />
             <e p="HealthBar.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
             <e p="SaveManager.cs" t="Include" />

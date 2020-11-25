@@ -35,16 +35,19 @@ public class Achievement : ScriptableObject
         
         
         
-        if (numberOfComplete >= rewardsCoins.Count)
-        {
-            rewardSkin.isUnlock = true;
-            isDone = true;
-        }
+        
 
         if (count[numberOfComplete] == done)
         {
-            AchievementDone.Invoke(this); //an.Notification(this);
+            AchievementDone?.Invoke(this); //an.Notification(this);
             numberOfComplete++;
+        }
+        
+        if (numberOfComplete == count.Count)
+        {
+            Debug.Log(111);
+            rewardSkin.isUnlock = true;
+            isDone = true;
         }
     }
 

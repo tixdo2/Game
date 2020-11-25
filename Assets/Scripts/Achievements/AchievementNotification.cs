@@ -12,9 +12,9 @@ public class AchievementNotification : MonoBehaviour
     private DataManager _dataManager;
 
     [SerializeField] private TextMeshProUGUI Name;
-    [SerializeField] private TextMeshProUGUI Done;
-    [SerializeField] private TextMeshProUGUI Count;
-    [SerializeField] private GameObject isDone;
+    //[SerializeField] private TextMeshProUGUI Done;
+    //[SerializeField] private TextMeshProUGUI Count;
+    //[SerializeField] private GameObject isDone;
 
     
     
@@ -47,15 +47,16 @@ public class AchievementNotification : MonoBehaviour
 
     public void Notification(Achievement achievement)
     {
+        
         Name.SetText(achievement.name);
-        Done.SetText(achievement.done.ToString());
-        Count.SetText(achievement.count[achievement.numberOfComplete].ToString());
+        //Done.SetText(achievement.done.ToString());
+        //Count.SetText(achievement.count[achievement.numberOfComplete].ToString());
         
-        if(achievement.isDone)
-            isDone.SetActive(true);
+       // if(achievement.isDone)
+        //    isDone.SetActive(true);
         
-        if(achievement.isDone)
-            achievement.AchievementDone -= Notification;
+        //    if(achievement.isDone)
+            //achievement.AchievementDone -= Notification;
         StartCoroutine(NotificatonAnim());
     }
 

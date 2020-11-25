@@ -5815,11 +5815,11 @@ MonoBehaviour:
   conteinerMenu: {fileID: 1266351597}
   conteinerDead: {fileID: 50868134}
   HealthBar: {fileID: 1981970575}
-  AchievementNotification: {fileID: 0}
   AnimatorPause: {fileID: 0}
   AnimatorDead: {fileID: 0}
   _wallet: {fileID: 11400000, guid: c5d78c1de4bc3214eb7083b5f299c752, type: 2}
   _dataManager: {fileID: 519420037}
+  _gameComplexity: {fileID: 0}
   maxScore: {fileID: 321417667}
 --- !u!20 &519420031
 Camera:
@@ -5894,10 +5894,14 @@ MonoBehaviour:
   spwn: {fileID: 519420034}
   Platforms: []
   Player: {fileID: 0}
+  MovementBoost: 2
   Plat3x: {fileID: 3218659552156727817, guid: 51eec02b700a59b4480d3674ac3a7e8b, type: 3}
   Plat2x: {fileID: 150457252013194123, guid: f5018b4000def694b868c27a09bafbe9, type: 3}
   Plat1x: {fileID: 7569335860570375610, guid: fbb1ce3468c600444a1467ac19952212, type: 3}
   objPool: {fileID: 1440295330}
+  RandPlat1X: 35
+  RandPlat2X: 75
+  RandPlat3X: 100
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5914,6 +5918,18 @@ MonoBehaviour:
   bonus: []
   mobs: []
   spikes: []
+  RandHeal: 20
+  RandPoison: 75
+  RandSub: 85
+  RandDiplom: 95
+  RandChest: 100
+  RandSpikes1X: 40
+  RandSpikes2X: 80
+  RandSpikes3X: 100
+  BalanceForSpikes: 2
+  RandMobsSpwn: 0
+  RandSpikesSpwn: 0
+  RandBonusSpwn: 30
   objPool: {fileID: 1440295330}
 --- !u!114 &519420035
 MonoBehaviour:
@@ -8391,6 +8407,10 @@ MonoBehaviour:
     size: 15
   - tag: 3xSpikes
     prefab: {fileID: 1453143151052481871, guid: 356a4e73cd18b784ca7f3fc4b4e99fe7,
+      type: 3}
+    size: 15
+  - tag: NewYearHat
+    prefab: {fileID: 1403946858822345697, guid: 58ec3d30235cc2641b2478d1b8b151ce,
       type: 3}
     size: 15
 --- !u!4 &1440295331

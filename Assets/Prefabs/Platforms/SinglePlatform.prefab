@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 763311237773199366}
   m_Layer: 10
-  m_Name: StartPoint
+  m_Name: Point#1
   m_TagString: Point
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346530176358998184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.101, y: 0.312, z: 0}
+  m_LocalPosition: {x: -0.705, y: 0.312, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5335970860881073630}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8833485838543959805}
   m_Layer: 10
-  m_Name: EndPoint
+  m_Name: Point#2
   m_TagString: Point
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2340359111472396593}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.119, y: 0.312, z: 0}
+  m_LocalPosition: {x: 0.658, y: 0.312, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5335970860881073630}
@@ -4999,8 +4999,10 @@ MonoBehaviour:
   size: 0
   MoveControl: 0
   Children: []
+  MovementBoost: 2
   curBonus: 0
   curMobs: 0
+  curSpikes: 0
   BrokeLeft: {fileID: 21300000, guid: e19cfa7e57745db45bde58c21d88caa2, type: 3}
   BrokeMiddle: {fileID: 21300000, guid: 8e1f9b35bdfe7fc4bb7f81f0c62754b5, type: 3}
   BrokeRight: {fileID: 21300000, guid: d8e55065416b0ea4883b2fff792911ea, type: 3}
@@ -5010,3 +5012,4 @@ MonoBehaviour:
   StartPoint: {fileID: 763311237773199366}
   EndPoint: {fileID: 8833485838543959805}
   _animator: {fileID: 0}
+  RandIsMove: 21

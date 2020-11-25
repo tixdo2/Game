@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float speedX;
     public float verticalImpulse;
     public float thrust;
-    public GameObject Button_l,Button_R,Button_J,Button_A,joystik;
+    public GameObject Button_J,joystik;
     private VariableJoystick JoystikControl;
 
     public bool onSub = false;
@@ -102,10 +102,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Control==ControlOfCharacter.Keyboard) //Управление через клавиатуру
         {
-            //Button_l.SetActive(false);
-            //Button_R.SetActive(false);
+            
+            
             Button_J.SetActive(false);
-            //Button_A.SetActive(false);
+            
             joystik.SetActive(false);
             
             //Хотьба
@@ -132,10 +132,10 @@ public class PlayerMovement : MonoBehaviour
               
         else //Управление сенсором
         {
-            //Button_l.SetActive(false);
-            //Button_R.SetActive(false);
+            
+            
             Button_J.SetActive(true);
-            //Button_A.SetActive(true);
+            
             joystik.SetActive(true);
 
            //Хотьба
