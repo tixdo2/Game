@@ -70,8 +70,9 @@ using UnityEngine.UI;
                 //return;
             }
             Destroy(_go);
-            _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+            _go = Instantiate(MainPrefab, new Vector3(0, -196, 0), Quaternion.identity);
             _go.transform.SetParent(buyMenu);
+            _go.transform.localPosition = new Vector3(0, -196, 0);
             ChangeButton();
         }
 
@@ -90,9 +91,11 @@ using UnityEngine.UI;
             }   
             
             Destroy(_go);
-            _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+            
+            _go = Instantiate(MainPrefab, new Vector3(0, -196, 0), Quaternion.identity);
 
             _go.transform.SetParent(buyMenu);
+            _go.transform.localPosition = new Vector3(0, -196, 0);
             ChangeButton();
         }
 
@@ -139,8 +142,9 @@ using UnityEngine.UI;
             //Debug.Log(ActiveSkin);
             skinIndex = _dataManager.SkinIndex;
             if (!ActiveSkin.isUnlock) skinIndex = 0;
-            _go = Instantiate(MainPrefab, Vector3.zero, Quaternion.identity);
+            _go = Instantiate(MainPrefab, new Vector3(0, -196, 0), Quaternion.identity);
             _go.transform.SetParent(buyMenu);
+            _go.transform.localPosition = new Vector3(0, -196, 0);
         }
 
         private void ChangeCoinsUI() => coinsTMP.SetText(wallet.GetCoins().ToString());
@@ -156,10 +160,13 @@ using UnityEngine.UI;
             if (ActiveSkin.isAchievement && !ActiveSkin.isUnlock)
             {
                 _go.GetComponent<SpriteRenderer>().color = Color.black;
+                _go.transform.GetChild(0).gameObject.SetActive(true);
                 //buttonCost.SetActive(true);
                 buttonCost.transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText("Achievement skin");
                 return;
             }
+            _go.transform.GetChild(0).gameObject.SetActive(!ActiveSkin.isUnlock);
+
 
             
             buttonCost.SetActive(!ActiveSkin.isUnlock);

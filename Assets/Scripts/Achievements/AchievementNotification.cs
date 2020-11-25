@@ -8,44 +8,54 @@ using UnityEngine.Events;
 [System.Serializable]
 public class AchievementNotification : MonoBehaviour
 {
-    public List<Achievement> Achievements;
-
-    
-    //private Transform notification;
-
     [SerializeField] 
     private DataManager _dataManager;
+
+    [SerializeField] private TextMeshProUGUI Name;
+    [SerializeField] private TextMeshProUGUI Done;
+    [SerializeField] private TextMeshProUGUI Count;
+    [SerializeField] private GameObject isDone;
+
+    
     
     private void Start()
     {
-        InitAchievements();
         InitEvents();
         DOTween.Init();
         DOTween.SetTweensCapacity(2000, 100);
         DOTween.defaultTimeScaleIndependent = true;
     }
-
-    private void InitAchievements()
-    {
-        Achievements = _dataManager.Achievements;
-    }
+    
 
     private void InitEvents()
     {
-        foreach (var item in Achievements)
+        foreach (var item in _dataManager.Achievements)
         {
-            item.an = this;
+            if(!item.isDone)
+                item.AchievementDone += Notification;
         }
     }
 
+    public void UnsubEvents()
+    {
+        foreach (var item in _dataManager.Achievements)
+        {
+            item.AchievementDone -= Notification;
+        }
+    }
+    
+
     public void Notification(Achievement achievement)
     {
-        transform.GetChild(0).GetComponent<TextMeshProUGUI>().SetText(achievement.name);
-        transform.GetChild(1).GetComponent<TextMeshProUGUI>().SetText(achievement.done.ToString());
-        transform.GetChild(2).GetComponent<TextMeshProUGUI>().SetText(achievement.count.ToString());
+        Name.SetText(achievement.name);
+        Done.SetText(achievement.done.ToString());
+        Count.SetText(achievement.count[achievement.numberOfComplete].ToString());
         
         if(achievement.isDone)
-            transform.GetChild(3).gameObject.SetActive(true);
+            isDone.SetActive(true);
+        
+        if(achievement.isDone)
+            achievement.AchievementDone -= Notification;
         StartCoroutine(NotificatonAnim());
     }
 

@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     
     public HealthBar HealthBar;
 
+    public AchievementNotification AchievementNotification;
+
     public Animator AnimatorPause,AnimatorDead;
     static public GameManager Instance;
 
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
         
         InitUI();
         InitContollers();
+        InitEvents();
         
         
         _startPostionY = _pc.transform.position.y;
@@ -105,6 +108,32 @@ public class GameManager : MonoBehaviour
 
         CameraController cameraController = GetComponent<CameraController>();
         cameraController.player = _playerGO.transform;
+    }
+
+    private void InitEvents()
+    {
+        foreach (var item in _dataManager.Achievements)
+        {
+            if(!item.isDone)
+                item.AchievementDone += AchievmentDone;
+        }
+    }
+
+    private void UnsubEvent()
+    {
+        foreach (var item in _dataManager.Achievements)
+        {
+            item.AchievementDone -= AchievmentDone;
+        }
+    }
+
+    private void AchievmentDone(Achievement achievement)
+    {
+        if (achievement.isCoinsReward())
+        {
+            Debug.Log(achievement.numberOfComplete);
+            _wallet.AddCoins(achievement.rewardsCoins[achievement.numberOfComplete]);
+        }
     }
 
 
@@ -173,7 +202,7 @@ public class GameManager : MonoBehaviour
 
     private void SetScore()
     {
-        Debug.Log(_dataManager.MaxScore);
+        
         int maxScore = _dataManager.MaxScore;
 
         if (maxScore < _pc.PI.Score)
@@ -221,6 +250,7 @@ public class GameManager : MonoBehaviour
         SetScore();
         SetCoins();
         _dataManager.SaveData();
+        AchievementNotification.UnsubEvents();
         Time.timeScale = 1f;
         yield return new WaitForSeconds(.3f);
         DOTween.KillAll();
@@ -232,8 +262,10 @@ public class GameManager : MonoBehaviour
         SetScore();
         SetCoins();
         
+        AchievementNotification.UnsubEvents();
+        UnsubEvent();
         _dataManager.SaveData();
-        //DOTween.KillAll();
+        DOTween.KillAll();
         SceneManager.LoadScene(0);
     }
     

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Healing
   m_EditorClassIdentifier: 
   name: Pick up heal
-  count: 1
-  done: 1
-  rewardType: 0
+  count: 010000000200000003000000
+  done: 0
+  rewardsCoins: 640000002c010000
+  numberOfComplete: 0
   rewardSkin: {fileID: 11400000, guid: c661e36fe3b73f343b4e2320b4e8187a, type: 2}
-  rewardCoins: 0
-  rewardDiamonds: 0
-  isDone: 1
+  isDone: 0

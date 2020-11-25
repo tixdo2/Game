@@ -96,10 +96,14 @@ public class Save
    public struct achievement
    {
       public int done;
+      public bool isDone;
+      public int numberOfComplete;
 
       public achievement(Achievement achievement)
       {
          this.done = achievement.done;
+         this.isDone = achievement.isDone;
+         this.numberOfComplete = achievement.numberOfComplete;
       }
    }
 
@@ -149,8 +153,8 @@ public class Save
       foreach (var item in _achievements)
       {
          data.Achievements[i].done = item.done;
-         if (data.Achievements[i].count <= data.Achievements[i].done)
-            data.Achievements[i].isDone = true;
+         data.Achievements[i].isDone = item.isDone;
+         data.Achievements[i].numberOfComplete = item.numberOfComplete;
          i++;
       }
       

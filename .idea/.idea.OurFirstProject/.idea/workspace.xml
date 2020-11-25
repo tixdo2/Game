@@ -23,11 +23,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06108718-f80a-48bc-b21f-048ce73f904a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixel Font - Tripfive/Fonts/19783 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel Font - Tripfive/Fonts/19783 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/Diploma.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Achievements/Diploma.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Achievements/Healing.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Achievements/Healing.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Blue.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Friend.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Friend.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Fall.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Fall.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Idle.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Idle.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Jump.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Jump.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/MarlowFriend.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/MarlowFriend.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Run.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/Run.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Jump_f/MarlowJump-7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/Run_f/MarlowRun-8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Marlow/idle_f/MarlowIdle-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/MarlowBlueSheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowBlue/MarlowBlueSheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendSheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowFriend/MarlowFriendSheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievements/AchievementNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Achievements/AchievementNotification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/DataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SaveManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +86,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ScreenManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Wallet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.3.1/Runtime/2D/Light2D.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bonus/NewYearHat.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -60,21 +105,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Coin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Test 1.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievements.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Wallet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Skin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/DataManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ScreenManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Diploma.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/DataManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/SaveManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/HealingSlave.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/Diploma.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/MainMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/AchievementNotification.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AchievementMenuManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/AchievementChild.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/TampleteAchievement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/NewYearHat.cs" />
       </list>
     </option>
   </component>
@@ -84,6 +133,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -143,6 +194,9 @@
       <workItem from="1605620763668" duration="13239000" />
       <workItem from="1605731284595" duration="14194000" />
       <workItem from="1605792819575" duration="16498000" />
+      <workItem from="1605862417409" duration="14318000" />
+      <workItem from="1606226679430" duration="11137000" />
+      <workItem from="1606294794094" duration="7690000" />
     </task>
     <servers />
   </component>
@@ -171,10 +225,74 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="536" y="164" key="#Inspection_severity/0.0.1920.1040@0.0.1920.1040" timestamp="1604924217975" />
-    <state x="670" y="208" key="RiderGenerateDialog" timestamp="1604925647735">
+    <state width="1877" height="364" key="GridCell.Tab.0.bottom" timestamp="1606235779798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="670" y="208" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604925647735" />
+    <state width="1877" height="364" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.0.center" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.0.left" timestamp="1606235779793">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779793" />
+    <state width="1877" height="364" key="GridCell.Tab.0.right" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.1.bottom" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.1.center" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.1.left" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.1.right" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.2.bottom" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.2.center" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.2.left" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.2.right" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.3.bottom" timestamp="1606235779799">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779799" />
+    <state width="1877" height="364" key="GridCell.Tab.3.center" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.3.left" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state width="1877" height="364" key="GridCell.Tab.3.right" timestamp="1606235779798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="364" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606235779798" />
+    <state x="670" y="208" key="RiderGenerateDialog" timestamp="1606231391633">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="670" y="208" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606231391633" />
     <state x="233" y="138" key="SettingsEditor" timestamp="1604597330733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

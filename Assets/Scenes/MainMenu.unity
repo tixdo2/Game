@@ -300,7 +300,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 109562520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -309,12 +309,13 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 1000, y: 200}
-  m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
 --- !u!1 &168158595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1047,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -57.300293}
+  m_AnchoredPosition: {x: 0, y: -57.30078}
   m_SizeDelta: {x: 0, y: -685.3865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525019996
@@ -2049,12 +2050,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73faca848a81e5448981dfe94fc9cf6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tamplate: {fileID: 343049827}
+  tamplate: {fileID: 6261056882988205095, guid: 5ff8050ffbf868740b62d1b15bc40762,
+    type: 3}
   mainMenuConteiner: {fileID: 718889911}
   AchievementsConteiner: {fileID: 467276760}
   content: {fileID: 109562520}
   achievementses:
   - {fileID: 11400000, guid: 7ecdcc0cb78cf3a40aedf583d26dd46f, type: 2}
+  - {fileID: 11400000, guid: 82f6b178000f9564b8a0a580209bee9d, type: 2}
 --- !u!114 &913722179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2071,6 +2074,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2a8ee2205a6771419e007a446572120, type: 2}
   - {fileID: 11400000, guid: c661e36fe3b73f343b4e2320b4e8187a, type: 2}
   - {fileID: 11400000, guid: 76005924b0a97ea4d9e0f900af2227f0, type: 2}
+  - {fileID: 11400000, guid: 748b7d4948caff9448755dcfcc46b57c, type: 2}
   Achievements:
   - {fileID: 11400000, guid: 7ecdcc0cb78cf3a40aedf583d26dd46f, type: 2}
   - {fileID: 11400000, guid: 82f6b178000f9564b8a0a580209bee9d, type: 2}
@@ -2437,7 +2441,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 0.9841535, b: 1, a: 1}
   m_Intensity: 0.5
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000519e9481b187dbc1892e1478e5e5a5418127e2ea535a48d4
+  m_ApplyToSortingLayers: 519e9481
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -2650,7 +2654,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.6
+  m_Intensity: 1
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 8127e2ea
   m_LightCookieSprite: {fileID: 0}

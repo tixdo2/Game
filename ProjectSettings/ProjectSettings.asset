@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: zts.cc
+  companyName: newstar.ztl
   productName: Marlow's Way
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -712,7 +712,7 @@ PlayerSettings:
   cloudProjectId: 2ee1348b-14ab-4773-992b-555098cf8ef1
   framebufferDepthMemorylessMode: 0
   projectName: Marlow's Way
-  organizationId: zts-cc
+  organizationId: newstar-ztl
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

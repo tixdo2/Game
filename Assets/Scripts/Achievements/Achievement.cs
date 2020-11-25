@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,15 +10,14 @@ using UnityEngine.Events;
 public class Achievement : ScriptableObject
 {
     public string name;
-    public int count;
+    public List<int> count;
     public int done;
-    public REWARD rewardType;
+    public List<int> rewardsCoins;
+    //public List<int> rewarsdDiamonds;
+    public int numberOfComplete = 0;
     public Skin rewardSkin;
-    public int rewardCoins;
-    public int rewardDiamonds;
     public bool isDone;
-
-    public AchievementNotification an;
+    
 
     public delegate void Notification(Achievement achievement);
     public event Notification AchievementDone;
@@ -26,16 +26,35 @@ public class Achievement : ScriptableObject
     
     public void Action()
     {
-        if(done < count)
+        if (isDone)
+        {
+            done = count.Last();
             return;
-        
-        
-        rewardSkin.isUnlock = true;
-        done = count;
-        isDone = true;
-        an.Notification(this);
 
+        }
+        
+        
+        
+        if (numberOfComplete >= rewardsCoins.Count)
+        {
+            rewardSkin.isUnlock = true;
+            isDone = true;
+        }
+
+        if (count[numberOfComplete] == done)
+        {
+            AchievementDone.Invoke(this); //an.Notification(this);
+            numberOfComplete++;
+        }
     }
+
+    public bool isCoinsReward()
+    {
+        return numberOfComplete < rewardsCoins.Count;
+    }
+    
+    
+    
     
 }
 
