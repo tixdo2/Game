@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pick up diploma
   count: 0500000019000000
-  done: 1
+  done: 0
   rewardsCoins: 64000000
   numberOfComplete: 0
   rewardSkin: {fileID: 11400000, guid: 76005924b0a97ea4d9e0f900af2227f0, type: 2}
+  wallet: {fileID: 11400000, guid: c5d78c1de4bc3214eb7083b5f299c752, type: 2}
   isDone: 0

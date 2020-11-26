@@ -24,9 +24,13 @@ public class SpawnController : MonoBehaviour
     // пул обьектов для спавна
     public ObjectsPooler objPool;
 
+    public static SpawnController Controller;
+
     // кеширование списков
     void Awake()
     {
+        Controller = this;
+        
         bonus = new List<GameObject>();
         mobs = new List<GameObject>();
         spikes = new List<GameObject>();

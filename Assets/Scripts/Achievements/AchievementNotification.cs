@@ -8,15 +8,12 @@ using UnityEngine.Events;
 [System.Serializable]
 public class AchievementNotification : MonoBehaviour
 {
-    [SerializeField] 
-    private DataManager _dataManager;
-
     [SerializeField] private TextMeshProUGUI Name;
-    //[SerializeField] private TextMeshProUGUI Done;
-    //[SerializeField] private TextMeshProUGUI Count;
-    //[SerializeField] private GameObject isDone;
-
-    
+    public static AchievementNotification ANotification;
+    private void Awake()
+    {
+        ANotification = this;
+    }
     
     private void Start()
     {
@@ -29,7 +26,7 @@ public class AchievementNotification : MonoBehaviour
 
     private void InitEvents()
     {
-        foreach (var item in _dataManager.Achievements)
+        foreach (var item in DataManager.Data.Achievements)
         {
             if(!item.isDone)
                 item.AchievementDone += Notification;
@@ -38,7 +35,7 @@ public class AchievementNotification : MonoBehaviour
 
     public void UnsubEvents()
     {
-        foreach (var item in _dataManager.Achievements)
+        foreach (var item in DataManager.Data.Achievements)
         {
             item.AchievementDone -= Notification;
         }
@@ -49,14 +46,7 @@ public class AchievementNotification : MonoBehaviour
     {
         
         Name.SetText(achievement.name);
-        //Done.SetText(achievement.done.ToString());
-        //Count.SetText(achievement.count[achievement.numberOfComplete].ToString());
-        
-       // if(achievement.isDone)
-        //    isDone.SetActive(true);
-        
-        //    if(achievement.isDone)
-            //achievement.AchievementDone -= Notification;
+
         StartCoroutine(NotificatonAnim());
     }
 

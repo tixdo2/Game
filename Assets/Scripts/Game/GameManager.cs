@@ -6,36 +6,19 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public List<GameObject> Skins;
-
-    public List<GameObject> Controllers;
     
-    public Sprite skin;
-
-    public int skinIndex;
-
     public TextMeshProUGUI ScoreTMP, ScoreDiedTMP, CoinsTMP,DeadCoinsTMP;
 
     public GameObject conteinerGame, conteinerMenu, conteinerDead;
+
     
-    public HealthBar HealthBar;
-
-    public Animator AnimatorPause,AnimatorDead;
-    static public GameManager Instance;
-
-    [SerializeField]
-    private Wallet _wallet;
-
-    [SerializeField] 
-    private DataManager _dataManager;
-
-    [SerializeField]
-    private GameСomplexity _gameComplexity;
+    static public GameManager Game;
+    
 
     [SerializeField]
     private GameObject maxScore;
     
-    private PlayerController _pc;
+    public PlayerController _pc;
 
     private GameObject _playerGO;
 
@@ -52,58 +35,28 @@ public class GameManager : MonoBehaviour
     private int _skinIndex = 0; // = PlayerPrefs.GetInt("skinIndex");
 
 
+    private void Awake()
+    {
+        //if(Game!=null)
+        Game = this;
 
+    }
     private void Start()
     {
+        Game = this;
         Time.timeScale = 1f;
-        Instance = this;
-        Init();
+        //Init();
+        
     }
 
-    private void Init()
+    public void InitPlayer(PlayerController playerController)
     {
-        _skinIndex = _dataManager.SkinIndex;
-        var position= new Vector3(0.8f, -5.663f, 0);
-        
-        _playerGO = Instantiate(Skins[_skinIndex], position, Quaternion.identity);
-        _pc = _playerGO.GetComponent<PlayerController>();
-        
-        InitUI();
-        InitContollers();
-        
-        
-        _startPostionY = _pc.transform.position.y;
-        _maxPosition = _pc.transform.position;
+        _pc = playerController;
+        var position = _pc.transform.position;
+        _startPostionY = position.y;
+        _maxPosition = position;
     }
-
-    private void InitUI()
-    {
-        maxScore.SetActive(false);
-        PlayerMovement playerMovement = _pc.GetComponent<PlayerMovement>();
-        //playerMovement.Button_l = Controllers[0];
-        //playerMovement.Button_R = Controllers[1];
-        playerMovement.Button_J = Controllers[2];
-        //playerMovement.Button_A = Controllers[3];
-        playerMovement.joystik = Controllers[4];
-    }
-
-    private void InitContollers()
-    {
-        SpawnController spawnController = GetComponent<SpawnController>();
-        spawnController.Player = _playerGO;
-
-        _gameComplexity.Player = _pc;
-
-        _pc.HB = HealthBar;
-
-        PlatformController platformController = GetComponent<PlatformController>();
-        platformController.Player = _playerGO;
-
-        CameraController cameraController = GetComponent<CameraController>();
-        cameraController.player = _playerGO.transform;
-    }
-
-
+    
     private void Update()
     {
         if(_pc.PI.isAlive)
@@ -148,30 +101,28 @@ public class GameManager : MonoBehaviour
         
         if (IsMaxScroe())
             maxScore.SetActive(true);
-        //else
-            //maxScore.SetActive(false);
-        //SetScore();
+
         Time.timeScale = 0;
     }
 
     private bool IsMaxScroe()
     {
-        return _pc.PI.Score > _dataManager.MaxScore;
+        return _pc.PI.Score > DataManager.Data.MaxScore;
     }
 
     private void SetScore()
     {
-        Debug.Log(_dataManager.MaxScore);
-        int maxScore = _dataManager.MaxScore;
+        Debug.Log(DataManager.Data.MaxScore);
+        int dataMaxScore = DataManager.Data.MaxScore;
 
-        if (maxScore < _pc.PI.Score)
-            _dataManager.MaxScore = _pc.PI.Score;
+        if (dataMaxScore < _pc.PI.Score)
+            DataManager.Data.MaxScore = _pc.PI.Score;
         
     }
 
     private void SetCoins()
     {
-        _wallet.AddCoins(_pc.PI.Coins);
+        DataManager.Data.Wallet[0].AddCoins(_pc.PI.Coins);
     }
     
     public void PauseMenu()
@@ -200,8 +151,10 @@ public class GameManager : MonoBehaviour
     {
         SetScore();
         SetCoins();
-        _dataManager.SaveData();
-        Time.timeScale = 1f;
+        
+        AchievementNotification.ANotification.UnsubEvents();
+        
+        DataManager.Data.SaveData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -210,8 +163,9 @@ public class GameManager : MonoBehaviour
         SetScore();
         SetCoins();
         
-        _dataManager.SaveData();
-
+        AchievementNotification.ANotification.UnsubEvents();
+        
+        DataManager.Data.SaveData();
         SceneManager.LoadScene(0);
     }
 }

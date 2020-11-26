@@ -17,3 +17,4 @@ MonoBehaviour:
   isUnlock: 1
   isAchievement: 1
   cost: 0
+  color: {r: 0.83137256, g: 0, b: 0.05490196, a: 1}

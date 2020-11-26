@@ -13,10 +13,11 @@ public class Achievement : ScriptableObject
     public List<int> count;
     public int done;
     public List<int> rewardsCoins;
-    //public List<int> rewarsdDiamonds;
     public int numberOfComplete = 0;
     public Skin rewardSkin;
+    public Wallet wallet;
     public bool isDone;
+    public bool isCoinsReward => numberOfComplete < rewardsCoins.Count;
     
 
     public delegate void Notification(Achievement achievement);
@@ -36,27 +37,24 @@ public class Achievement : ScriptableObject
         
         
         
-
+        if(isCoinsReward)
+            wallet.AddCoins(rewardsCoins[numberOfComplete]);
+        else
+            rewardSkin.isUnlock = true;
+        
         if (count[numberOfComplete] == done)
         {
             AchievementDone?.Invoke(this); //an.Notification(this);
             numberOfComplete++;
         }
         
+        
         if (numberOfComplete == count.Count)
         {
-            Debug.Log(111);
-            rewardSkin.isUnlock = true;
+            
             isDone = true;
         }
     }
-
-    public bool isCoinsReward()
-    {
-        return numberOfComplete < rewardsCoins.Count;
-    }
-    
-    
     
     
 }

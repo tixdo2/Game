@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: NewYearHat
   m_EditorClassIdentifier: 
   name: Pick up NY Hat
-  count: 07000000
-  done: 0
+  count: 01000000
+  done: 1
   rewardsCoins: 
-  numberOfComplete: 0
+  numberOfComplete: 1
   rewardSkin: {fileID: 11400000, guid: 748b7d4948caff9448755dcfcc46b57c, type: 2}
+  wallet: {fileID: 11400000, guid: c5d78c1de4bc3214eb7083b5f299c752, type: 2}
   isDone: 1
