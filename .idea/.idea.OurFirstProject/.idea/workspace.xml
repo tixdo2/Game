@@ -23,46 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06108718-f80a-48bc-b21f-048ce73f904a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/BlueMenu.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowBlue/BlueMenu.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/MarlowFriendMenu.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/MarlowFriend/MarlowFriendMenu.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/PlayerMenu.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Animations/PlayerMenu.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Neon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Neon.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Neon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Samples/Neon2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameСomplexity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameСomplexity.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OurFirstProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Friend.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainMenu/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/DoublePlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/SinglePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/SinglePlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Platforms/TriplePlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Friend.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Friend.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/New Yaar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/New Yaar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes/DoubleSpikes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikes/DoubleSpikes.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes/SingleSpikes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikes/SingleSpikes.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Spikes/TripleSpikes.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Spikes/TripleSpikes.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/tamplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/tamplate.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/NewYearHat/NewYearHat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/NewYearHat/NewYearHat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/Bonus/NewYearHat/NewYearHat.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/Bonus/NewYearHat/NewYearHat.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Samples/MarlowNewYear/MarlowNewYearSheet.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Samples/MarlowNewYear/MarlowNewYearSheet.psd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Achievements/AchievementNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Achievements/AchievementNotification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bonus/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bonus/SpawnController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/Platform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Platforms/PlatformController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,8 +78,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/TampleteAchievement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Customizer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bonus/NewYearHat.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/AchievementNotification.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Achievements/Achievement.cs" />
       </list>
     </option>
   </component>
@@ -187,7 +152,7 @@
       <workItem from="1605792819575" duration="16498000" />
       <workItem from="1605862417409" duration="14318000" />
       <workItem from="1606226679430" duration="11137000" />
-      <workItem from="1606294794094" duration="8994000" />
+      <workItem from="1606294794094" duration="9838000" />
     </task>
     <servers />
   </component>
