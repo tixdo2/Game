@@ -11,16 +11,10 @@ public class GameСomplexity : MonoBehaviour
 
     private float PlayerHP;
     private bool HealChanceUp = false;
-    private float PosToUP = 100f;
+    private float PosToUP = 50f;
 
     [SerializeField]
     private float BonusSpwn, SpikesSpwn, MobsSpwn, SpikesBalance, SpeedBoost;
-
-    void Awake()
-    {
-        SC = GetComponent<SpawnController>();
-        PC = GetComponent<PlatformController>();
-    }
 
     public void DifficultUp()
     {
@@ -33,11 +27,10 @@ public class GameСomplexity : MonoBehaviour
 
     void Update()
     {
-        float camPos = transform.position.y;
-
-        if(camPos >= PosToUP)
+        float PlayerPos = Player.gameObject.transform.position.y;
+        if(PlayerPos >= PosToUP)
         {
-            PosToUP+=100f;
+            PosToUP+=50f;
             DifficultUp();
         }
     }

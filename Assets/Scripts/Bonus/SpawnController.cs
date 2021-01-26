@@ -16,8 +16,9 @@ public class SpawnController : MonoBehaviour
     public List<GameObject> mobs;
     public List<GameObject> spikes;
 
+
     // Шансы спавна обьектов для их последующего баланса
-    public float RandHeal = 20, RandPoison = 75, RandSub = 85, RandDiplom = 95, RandChest = 100;
+    public float RandHeal = 20, RandCoin = 115, RandPoison = 75, RandSub = 85, RandDiplom = 90, RandChest = 100;
     public float RandSpikes1X = 40, RandSpikes2X = 80, RandSpikes3X = 100, BalanceForSpikes = 2;
     public float RandMobsSpwn = 0, RandSpikesSpwn = 0, RandBonusSpwn = 30;
 
@@ -41,21 +42,19 @@ public class SpawnController : MonoBehaviour
     {
         if(platform.GetComponent<Platform>().curBonus == false)
         {
-            int ItemToSpawn = Random.Range(1, 101);
-
+            int ItemToSpawn = Random.Range(1, 121);
+            
                 if (ItemToSpawn <= RandHeal)
                     ItemBonus = "Healing";
                 else if(ItemToSpawn > RandHeal && ItemToSpawn <= RandPoison)
                     ItemBonus = "Poison";
                 else if(ItemToSpawn > RandPoison && ItemToSpawn <= RandSub)
                     ItemBonus = "Sub";
-                else if(ItemToSpawn > RandSub && ItemToSpawn <= RandDiplom)
-                {     
+                else if(ItemToSpawn > RandSub && ItemToSpawn <= RandDiplom)   
                     ItemBonus = "Diplom"; 
-                }
                 else if(ItemToSpawn > RandDiplom && ItemToSpawn <= RandChest)
                     ItemBonus = "Chest";
-                        
+
             int RandomBonusSpawn = Random.Range(1, 101);
             
                 if (RandomBonusSpawn <= RandBonusSpwn)
@@ -209,7 +208,7 @@ public class SpawnController : MonoBehaviour
                 bonus[0].TryGetComponent<CoinChest>(out var coinchest);
                 if(coinchest&&coinchest.isCoinDrop)
                 {
-                    foreach(GameObject drop in coinchest.Coins)
+                    foreach(GameObject drop in coinchest.Items)
                     {
                         drop.SetActive(false);
                     }

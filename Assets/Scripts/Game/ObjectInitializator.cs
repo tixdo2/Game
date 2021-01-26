@@ -68,6 +68,9 @@ public class ObjectInitializator : MonoBehaviour
         SpawnController.Controller.Player = _playerGO;
 
         _gameComplexity.Player = _playerController;
+        
+        _gameComplexity.SC = SpawnController.Controller;
+        _gameComplexity.PC = SpawnController.Controller.GetComponent<PlatformController>();
 
         _playerController.HB = HealthBar;
         
